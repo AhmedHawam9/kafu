@@ -1,0 +1,183 @@
+$PrimaryColor: #058A94;
+$SecondColor: #E4AA3C;
+
+@font-face {
+  font-family: "light";
+  src: url("../fonts/Poppins-Light.otf");
+}
+
+@font-face {
+  font-family: "regular";
+  src: url("../fonts/Poppins-Regular.otf");
+}
+
+@font-face {
+  font-family: "medium";
+  src: url("../fonts/Poppins-Medium.otf");
+}
+
+@font-face {
+  font-family: "semibold";
+  src: url("../fonts/Poppins-SemiBold.otf");
+}
+
+@font-face {
+  font-family: "bold";
+  src: url("../fonts/Poppins-Bold.otf");
+}
+
+@import "./navBar.scss";
+@import "./sideBar.scss";
+@import "./auth.scss";
+
+body {
+  overflow-x: hidden;
+  direction: ltr;
+}
+.accordion-button {
+  text-align: start !important;
+}
+.chart-container {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+}
+table tbody tr td {
+  vertical-align: middle;
+}
+
+.swal2-title {
+  font-family: "semibold";
+  font-size: 1.5rem !important;
+  margin: 0 !important;
+}
+
+.swal2-html-container {
+  font-family: "regular";
+  font-size: 0.9rem !important;
+  margin: 0 !important;
+}
+
+.swal2-container.swal2-center>.swal2-popup {
+  padding: 2rem;
+}
+
+.show_project_swal {
+  background-color: $PrimaryColor;
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: "semibold";
+  padding: 0.75rem 2rem;
+  margin-top: 1rem;
+}
+
+.show_project_swal {
+
+  &:active,
+  &:focus {
+    background-color: $PrimaryColor;
+    border-color: transparent;
+    color: #fff;
+    font-size: 0.8rem;
+    font-family: "semibold";
+    padding: 0.75rem 2rem;
+    margin-top: 1rem;
+  }
+}
+
+.show_project_swal:hover {
+  border-color: transparent;
+  background-color: $PrimaryColor;
+  color: #fff;
+}
+
+.index_cards {
+  // padding: 0;
+  // background-color: #fff;
+  // width: 100%;
+  // position: relative;
+
+  div.dataTables_wrapper div.dataTables_filter input {
+    margin-inline-start: 1rem;
+  }
+
+  div.dataTables_wrapper div.dataTables_length select {
+    margin: 0 0.5rem;
+  }
+
+  .active>.page-link,
+  .page-link.active {
+    background-color: $PrimaryColor;
+    border-color: $PrimaryColor;
+  }
+
+  .pagination {
+    --bs-pagination-border-radius: 0;
+  }
+
+  .title_head {
+    font-family: "semibold";
+    color: #011c1e;
+    margin-bottom: 0;
+  }
+
+  .btn {
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: transparent;
+    }
+  }
+
+  .content {}
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .index_cards {
+    .content {
+      
+    }
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .index_cards .content .single_project .tab-content .supervisors_project .filter, .index_cards .content .single_project .tab-content .team_work .filter{
+    width: 33%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tableAllProjects {
+    padding: 1rem 1rem 5rem !important;
+    .dataTables_length {
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+      left: 10%;
+      width: 80%;  
+    }
+  }
+  .index_cards .content .single_project .tab-content .supervisors_project .filter, .index_cards .content .single_project .tab-content .team_work .filter{
+    width: 50%;
+  }
+  .sidebar.open {
+    .nav-pills {
+      .nav-item {
+        width: 20%;
+        .nav-link {
+          span {
+            font-size: .5rem;
+          }
+        }
+        &.disable_mobile {
+          display: none;
+        }
+      }
+    }
+  }
+  .navbar .d-flex.w-25 {
+    width: 50% !important;
+  }
+}
