@@ -65,6 +65,7 @@
     <!-- ? Main JavaScript -->
 
     <!-- ? Custom JavaScript -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- ? Custom JavaScript -->
 
     <!-- ? Title -->
@@ -90,7 +91,7 @@
             <div class="row">
                 <div class="col-lg-5 col-12 p-0">
                     <div class="register_head">
-                        <img src="./media/image/register.png" class="register_img" alt="register">
+                        <img src="./media/image/login.png" class="register_img" alt="login">
                         <h5>Let's Build Something Amazing Today and every day</h5>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                             invidunt
@@ -99,24 +100,16 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-12 p-0">
-                    <!-- start form register -->
+                    <!-- start form login -->
                     <form class="register_card">
-                        <h4>Create New Account</h4>
+                        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_6niurjte.json"
+                            background="transparent" speed="1" loop autoplay></lottie-player>
+                        <h4>Welcome Back</h4>
                         <p>it's easy and free</p>
-                        <div class="form-group">
-                            <i class="fa-solid fa-building"></i>
-                            <label for="">Commercial Name</label>
-                            <input type="text" name="" id="" class="form-control" placeholder="company commercial name">
-                        </div>
                         <div class="form-group">
                             <i class="fa-solid fa-envelope"></i>
                             <label for="">E-mail Address</label>
                             <input type="email" name="" id="" class="form-control" placeholder="company@example.com">
-                        </div>
-                        <div class="form-group">
-                            <i class="fa-solid fa-phone"></i>
-                            <label for="">Phone Number</label>
-                            <input type="number" name="" id="" class="form-control" placeholder="+966 00 0000 000">
                         </div>
                         <div class="form-group">
                             <i class="fa-solid fa-lock"></i>
@@ -148,40 +141,19 @@
                             // passwordInput.addEventListener('keyup', checkInput, false);
                         </script>
                         <!-- =========== show password =========== -->
-                        <div class="form-group">
-                            <i class="fa-solid fa-lock"></i>
-                            <label for="">Confirm Password</label>
-                            <input type="password" id="txtPasswordCheck" class="form-control" name="txtPasswordCheck"
-                                placeholder="**********">
-                            <button type="button" id="btnToggleCheck" class="togglePassword btn"><i id="eyeIcon"
-                                    class="fas fa-eye-slash"></i></button>
+                        <div class="d-flex justify-content-between">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Remember me
+                                </label>
+                            </div>
+                            <a href="forget_pawword.html" class="forget_password">Forget Password?</a>
                         </div>
-                        <!-- =========== show password =========== -->
-                        <script>
-                            let passwordInputCheck = document.getElementById('txtPasswordCheck'),
-                                toggleCheck = document.getElementById('btnToggleCheck'),
-                                iconCheck = document.getElementById('eyeIcon');
-
-                            function togglePassword() {
-                                if (passwordInputCheck.type === 'password') {
-                                    passwordInputCheck.type = 'text';
-                                    iconCheck.classList.add("fa-eye-slash");
-                                    toggleCheck.innerHTML = '<i class="fa fa-eye"></i>';
-                                } else {
-                                    passwordInputCheck.type = 'password';
-                                    iconCheck.classList.remove("fa-eye-slash");
-                                    toggleCheck.innerHTML = '<i class="fas fa-eye-slash"></i>';
-                                }
-                            }
-
-                            toggleCheck.addEventListener('click', togglePassword, false);
-                            // passwordInputCheck.addEventListener('keyup', checkInput, false);
-                        </script>
-                        <!-- =========== show password =========== -->
-                        <button type="submit" class="btn submit_btn">Register</button>
-                        <p class="have_login">Already have an account? <a href="login.html">Log in</a></p>
+                        <button type="submit" class="btn submit_btn">Login</button>
+                        <p class="have_login">Already have an account? <a href="register.html">Register</a></p>
                     </form>
-                    <!-- End form register -->
+                    <!-- End form login -->
                 </div>
             </div>
         </div>

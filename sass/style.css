@@ -435,13 +435,21 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   position: relative;
 }
 .register .register_head .register_img {
   width: 75%;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
+  z-index: 9;
+}
+.register .register_head .password_verification_img {
+  width: 50%;
+  height: 600px;
+  display: block;
+  margin: 0 auto 5rem;
   z-index: 9;
 }
 .register .register_head h5 {
@@ -467,25 +475,170 @@
   left: 0;
   z-index: 1;
   opacity: 0.05;
+  width: 100%;
 }
 .register .register_card {
   height: 80vh;
   margin: 10vh 0;
+  width: 70%;
+  -webkit-margin-start: 10% !important;
+          margin-inline-start: 10% !important;
+  -webkit-margin-end: 20% !important;
+          margin-inline-end: 20% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.register .register_card lottie-player {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.5rem;
+}
+.register .register_card h4 {
+  color: #011C1E;
+  font-family: "medium";
+}
+.register .register_card p {
+  color: #828C8D;
+  font-family: "regular";
+  margin-bottom: 3rem;
+  font-size: 0.9rem;
 }
 .register .register_card .form-group {
   margin-bottom: 1rem;
   position: relative;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
 }
 .register .register_card .form-group svg {
   position: absolute;
-  top: 57%;
+  top: 60%;
   left: 1%;
+  color: #B0B9B9;
+}
+.register .register_card .form-group label {
+  font-family: "regular";
+  color: #011C1E;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 .register .register_card .form-group input {
-  -webkit-padding-start: 2rem;
-          padding-inline-start: 2rem;
+  -webkit-padding-start: 2rem !important;
+          padding-inline-start: 2rem !important;
+  font-family: "regular";
+  color: #B0B9B9;
+  font-size: 0.8rem;
+  padding: 0.75rem 1.5rem;
+}
+.register .register_card .form-group input::-webkit-outer-spin-button,
+.register .register_card .form-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.register .register_card .form-group input[type=number] {
+  -moz-appearance: textfield;
+}
+.register .register_card .form-group .togglePassword {
+  position: absolute;
+  top: 47%;
+  right: 0;
+}
+.register .register_card .form-group .togglePassword svg {
+  position: unset;
+}
+.register .register_card .form-group .togglePassword:hover, .register .register_card .form-group .togglePassword:focus {
+  border-color: transparent;
+}
+.register .register_card .form-check {
+  color: #596364;
+  font-family: "regular";
+  margin-bottom: 1rem;
+}
+.register .register_card .forget_password {
+  font-family: "regular";
+  color: #011C1E;
+  text-decoration: none;
+}
+.register .register_card .submit_btn {
+  background-color: #058A94;
+  color: #fff;
+  font-family: "medium";
+  padding: 1rem;
+  font-size: 0.9rem;
+  width: 100%;
+  margin-top: 0.7rem;
+}
+.register .register_card .submit_btn:hover {
+  border-color: transparent !important;
+}
+.register .register_card .have_login {
+  color: #596364;
+  font-family: "medium";
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 4rem;
+}
+.register .register_card .have_login a {
+  color: #058A94;
+  text-decoration: none;
 }
 
+@media only screen and (max-width: 991.98px) {
+  .register .register_head {
+    background-color: #058A94;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
+    padding: 3rem 0;
+  }
+  .register .register_head .register_img {
+    width: 75%;
+    display: block;
+    margin: 0 auto 5rem;
+    z-index: 9;
+  }
+  .register .register_head h5 {
+    width: 90%;
+  }
+  .register .register_head p {
+    width: 90%;
+  }
+  .register .register_card {
+    width: 80%;
+    -webkit-margin-end: 10% !important;
+            margin-inline-end: 10% !important;
+    -webkit-margin-start: 10% !important;
+            margin-inline-start: 10% !important;
+    height: 90%;
+    margin: 5% 0;
+  }
+  .register .register_card .form-group svg {
+    left: 2%;
+  }
+  .register .register_card .have_login {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .register .register_card .form-group input {
+    -webkit-padding-start: 1.7rem !important;
+            padding-inline-start: 1.7rem !important;
+  }
+  .register .register_card .form-check {
+    font-size: 0.8rem;
+  }
+  .register .register_card .forget_password {
+    font-size: 0.8rem;
+  }
+}
 body {
   overflow-x: hidden;
   direction: ltr;
@@ -570,7 +723,8 @@ table tbody tr td {
   border-color: transparent;
 }
 @media only screen and (max-width: 991.98px) {
-  .index_cards .content .single_project .tab-content .supervisors_project .filter, .index_cards .content .single_project .tab-content .team_work .filter {
+  .index_cards .content .single_project .tab-content .supervisors_project .filter,
+.index_cards .content .single_project .tab-content .team_work .filter {
     width: 33%;
   }
 }
@@ -585,7 +739,8 @@ table tbody tr td {
     left: 10%;
     width: 80%;
   }
-  .index_cards .content .single_project .tab-content .supervisors_project .filter, .index_cards .content .single_project .tab-content .team_work .filter {
+  .index_cards .content .single_project .tab-content .supervisors_project .filter,
+.index_cards .content .single_project .tab-content .team_work .filter {
     width: 50%;
   }
   .sidebar.open .nav-pills .nav-item {
