@@ -874,7 +874,7 @@ table tbody tr td {
 }
 .index_cards .content {
   background-color: #F7F7F7;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   min-height: 100vh;
   height: 100%;
 }
@@ -1157,6 +1157,334 @@ table tbody tr td {
   font-size: 0.8rem;
   text-align: start;
 }
+.index_cards .content .orders {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+}
+.index_cards .content .orders h5 {
+  font-family: "medium";
+  color: #011C1E;
+  margin-bottom: 0;
+}
+.index_cards .content .orders .dropdown .dropdown-toggle::after {
+  content: unset;
+}
+.index_cards .content .orders .dropdown .dropdown-menu .dropdown-item {
+  font-family: "regular";
+  font-size: 0.8rem;
+}
+.index_cards .content .orders .card_order {
+  background-color: #FAFAFA;
+  width: 48%;
+  margin-top: 1rem;
+  -webkit-margin-end: 1.5%;
+          margin-inline-end: 1.5%;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 1rem;
+}
+.index_cards .content .orders .card_order .title {
+  font-family: "medium";
+  color: #011C1E;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+.index_cards .content .orders .card_order .status {
+  padding: 0.25rem 0.5rem;
+  color: #058A94;
+  background-color: rgba(5, 138, 148, 0.08);
+  font-family: "regular";
+  font-size: 0.8rem;
+}
+.index_cards .content .orders .card_order .position {
+  font-family: "regular";
+  color: #B0B9B9;
+  font-size: 0.8rem;
+}
+.index_cards .content .orders .card_order .details {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.index_cards .content .orders .card_order .details .price svg,
+.index_cards .content .orders .card_order .details .time svg,
+.index_cards .content .orders .card_order .details .posted svg {
+  color: #011C1E;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+}
+.index_cards .content .orders .card_order .details .price span,
+.index_cards .content .orders .card_order .details .time span,
+.index_cards .content .orders .card_order .details .posted span {
+  color: #828C8D;
+  font-family: "regular";
+  font-size: 0.8rem;
+}
+.index_cards .content .orders .card_order .description {
+  margin: 1rem 0;
+  font-family: "regular";
+  color: #596364;
+  font-size: 0.8rem;
+}
+.index_cards .content .orders .card_order .job_applicants {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.index_cards .content .orders .card_order .job_applicants svg {
+  color: #828C8D;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+}
+.index_cards .content .orders .card_order .job_applicants span {
+  color: #828C8D;
+  font-family: "regular";
+  margin-bottom: 0;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+}
+.index_cards .content .orders .card_order .job_applicants p {
+  color: #011C1E;
+  font-family: "medium";
+  margin-bottom: 0;
+}
+.index_cards .content .employment_rate {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 1rem 0;
+}
+.index_cards .content .employment_rate h5 {
+  font-family: "medium";
+  color: #011C1E;
+  margin-bottom: 0;
+}
+.index_cards .content .employment_rate .dropdown .dropdown-toggle {
+  background-color: rgba(143, 146, 161, 0.05);
+  font-family: "regular";
+  font-size: 0.8rem;
+}
+.index_cards .content .employment_rate .dropdown .dropdown-menu .dropdown-item {
+  font-size: 0.8rem;
+  font-family: "regular";
+}
+.index_cards .content .departments {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  width: 100%;
+  display: inline-block;
+}
+.index_cards .content .departments .dropdown-toggle::after {
+  content: none;
+}
+.index_cards .content .departments .dropdown-item {
+  font-size: 0.8rem;
+  text-align: start;
+  font-family: "regular";
+}
+.index_cards .content .departments .card_department {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.index_cards .content .departments .card_department .title {
+  font-family: "medium";
+  color: #011C1E;
+  margin-bottom: 0;
+}
+.index_cards .content .departments .card_department .tag {
+  font-family: "regular";
+  color: #828C8D;
+  font-size: 0.8rem;
+}
+.index_cards .content .departments .card_department .circle {
+  background-color: #E4AA3C;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-family: "regular";
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.index_cards .content .departments .card_department:last-child {
+  margin-bottom: 0;
+}
+.index_cards .content .departments .add_department {
+  border: 1px solid #058A94;
+  color: #058A94;
+  text-decoration: none;
+  font-family: "regular";
+  width: 100%;
+  display: block;
+  padding: 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .departments .add_department:hover {
+  background-color: #058A94;
+  color: #fff;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .visitors_year {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  width: 100%;
+  display: inline-block;
+}
+.index_cards .content .visitors_year .number_visitor_year p {
+  margin-bottom: 0;
+  font-family: "medium";
+  color: #171717;
+  font-size: 1.2rem;
+}
+.index_cards .content .visitors_year .number_visitor_year span {
+  font-family: "regular";
+  color: #8F92A1;
+  font-size: 0.8rem;
+}
+.index_cards .content .visitors_year .increase {
+  color: #E4AA3C;
+  font-family: "regular";
+}
+.index_cards .content .visitors_year .increase svg {
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+}
+.index_cards .content .emplyees_locations {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 1rem 0;
+}
+.index_cards .content .emplyees_locations h5 {
+  font-family: "medium";
+  color: #011C1E;
+  margin-bottom: 0;
+}
+.index_cards .content .emplyees_locations img {
+  width: 90%;
+  height: 380px;
+  display: block;
+  margin: 0 auto;
+}
+.index_cards .content .emplyees_locations .statistics {
+  width: 90%;
+  margin: 0 auto;
+}
+.index_cards .content .emplyees_locations .statistics .increase {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.index_cards .content .emplyees_locations .statistics .increase .customers p {
+  margin-bottom: 0;
+  font-family: "regular";
+  color: #171717;
+  font-size: 1.4rem;
+}
+.index_cards .content .emplyees_locations .statistics .increase .customers span {
+  font-family: "regular";
+  color: #8F92A1;
+  font-size: 0.8rem;
+}
+.index_cards .content .emplyees_locations .statistics .increase .increase_number {
+  color: #058A94;
+  font-family: "regular";
+}
+.index_cards .content .emplyees_locations .statistics .card_emplyees_locations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+.index_cards .content .emplyees_locations .statistics .card_emplyees_locations:last-child {
+  margin-bottom: 0;
+}
+.index_cards .content .emplyees_locations .statistics .card_emplyees_locations:nth-child(2) {
+  background-color: rgba(5, 138, 148, 0.05);
+}
+.index_cards .content .emplyees_locations .statistics .card_emplyees_locations:nth-child(3) {
+  background-color: rgba(228, 170, 60, 0.05);
+}
+.index_cards .content .emplyees_locations .statistics .card_emplyees_locations:nth-child(4) {
+  background-color: rgba(210, 86, 86, 0.05);
+}
+.index_cards .content .emplyees_locations .statistics .card_emplyees_locations:nth-child(5) {
+  background-color: rgba(0, 82, 204, 0.05);
+}
+.index_cards .content .emplyees_locations .statistics .card_emplyees_locations:nth-child(6) {
+  background-color: rgba(109, 204, 0, 0.05);
+}
+.index_cards .content .emplyees_locations .statistics .card_emplyees_locations:nth-child(7) {
+  background-color: rgba(245, 255, 0, 0.05);
+}
+.index_cards .content .emplyees_locations .statistics .card_emplyees_locations p {
+  margin-bottom: 0;
+  font-family: "regular";
+  color: #171717;
+}
+.index_cards .content .staff_rate {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  width: 100%;
+  display: inline-block;
+}
+.index_cards .content .staff_rate .dropdown-toggle::after {
+  content: none;
+}
+.index_cards .content .staff_rate .dropdown-item {
+  font-size: 0.8rem;
+  text-align: start;
+  font-family: "regular";
+}
+.index_cards .content .staff_rate .card_staff_rate {
+  width: 23%;
+  -webkit-margin-end: 1%;
+          margin-inline-end: 1%;
+  display: inline-block;
+  background-color: #FAFAFA;
+  border-radius: 6px;
+  padding: 1rem;
+}
+.index_cards .content .staff_rate .card_staff_rate img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.index_cards .content .staff_rate .card_staff_rate .name {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-family: "medium";
+  color: #011C1E;
+  font-size: 1rem;
+}
+.index_cards .content .staff_rate .card_staff_rate .title {
+  font-family: "regular";
+  color: #058A94;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+.index_cards .content .staff_rate .card_staff_rate .time, .index_cards .content .staff_rate .card_staff_rate .date {
+  color: #828C8D;
+  font-family: "regular";
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
 
 /* ======= 4K style ======= */
 @media (min-width: 1600px) and (max-width: 2600px) {
@@ -1206,9 +1534,28 @@ table tbody tr td {
   }
 }
 @media only screen and (max-width: 991.98px) {
-  .index_cards .content .single_project .tab-content .supervisors_project .filter,
-.index_cards .content .single_project .tab-content .team_work .filter {
-    width: 33%;
+  .index_cards .content .emplyees_locations img {
+    height: 350px;
+    margin-top: 1rem;
+  }
+  .index_cards .content .emplyees_locations .statistics .card_emplyees_locations {
+    width: 48%;
+    -webkit-margin-end: 1%;
+            margin-inline-end: 1%;
+    display: inline-flex;
+  }
+  .index_cards .content .staff_rate .card_staff_rate {
+    width: 48%;
+    margin-top: 1rem;
+  }
+  .index_cards .content .orders .card_order .details {
+    flex-direction: column;
+  }
+  .index_cards .content .orders .card_order .details .price, .index_cards .content .orders .card_order .details .time, .index_cards .content .orders .card_order .details .posted {
+    margin-bottom: 0.5rem;
+  }
+  .index_cards .content .orders .card_order .job_applicants {
+    font-size: 0.7rem;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1222,10 +1569,6 @@ table tbody tr td {
     left: 10%;
     width: 80%;
   }
-  .index_cards .content .single_project .tab-content .supervisors_project .filter,
-.index_cards .content .single_project .tab-content .team_work .filter {
-    width: 50%;
-  }
   .sidebar.open .nav-pills .nav-item {
     width: 20%;
   }
@@ -1238,7 +1581,24 @@ table tbody tr td {
   .navbar .d-flex.w-25 {
     width: 50% !important;
   }
-  .index_cards .content .nav-pills .nav-link {
-    font-size: 0.7rem;
+  .index_cards .content .orders .card_order {
+    width: 100%;
+    -webkit-margin-end: 0;
+            margin-inline-end: 0;
+    margin-bottom: 0.5rem;
+  }
+  .index_cards .content .departments .card_department .department_title {
+    width: 70%;
+  }
+  .index_cards .content .emplyees_locations img {
+    height: 200px;
+  }
+  .index_cards .content .emplyees_locations .statistics .card_emplyees_locations {
+    width: 100%;
+  }
+  .index_cards .content .staff_rate .card_staff_rate {
+    width: 100%;
+    -webkit-margin-end: 0;
+            margin-inline-end: 0;
   }
 }/*# sourceMappingURL=style.css.map */

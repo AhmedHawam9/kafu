@@ -245,130 +245,563 @@
       <!-- ======= Start Content ======= -->
       <section class="content">
         <div class="container">
-          <div class="row">
-            <div class="welcome">
-              <h5>
-                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_6niurjte.json"
-                            background="transparent" speed="1" loop autoplay></lottie-player>
-                Good Morning Crazy Idea
-              </h5>
-              <!-- Button trigger modal -->
-              <button class="new_job btn" data-bs-toggle="modal" data-bs-target="#newJobModal">add new job</button>
+          <div class="welcome">
+            <h5>
+              <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_6niurjte.json" background="transparent"
+                speed="1" loop autoplay></lottie-player>
+              Good Morning Crazy Idea
+            </h5>
+            <!-- Button trigger modal -->
+            <button class="new_job btn" data-bs-toggle="modal" data-bs-target="#newJobModal">add new job</button>
 
-              <!-- Modal -->
-              <div class="modal fade" id="newJobModal" tabindex="-1" aria-labelledby="newJobModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="newJobModalLabel">الوظائف المضافة مؤخرا <span>(32)</span></h5>
-                    </div>
-                    <div class="modal-body">
-                      <div>
-                        <table class="table" id="newJob">
-                          <thead class="d-none">
-                            <tr>
-                              <th scope="col"></th>
-                              <th scope="col"></th>
-                              <th scope="col"></th>
-                              <th scope="col"></th>
-                              <th scope="col"></th>
-                              <th scope="col"></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><i class="fa-solid fa-circle text-success"></i></td>
-                              <td class="title">مصمم وجهات مستخدم بواسطة فيجما</td>
-                              <td>مشروع ال 100 مصمم ....</td>
-                              <td>مايو 22 , 2022</td>
-                              <td>100 ريال سعودي</td>
-                              <td class="menu">
-                                <div class="dropdown">
-                                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                  </button>
-                                  <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">عرض التفاصيل</a></li>
-                                  </ul>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><i class="fa-solid fa-circle text-success"></i></td>
-                              <td class="title">مصمم وجهات مستخدم بواسطة فيجما</td>
-                              <td>مشروع ال 100 مصمم ....</td>
-                              <td>مايو 22 , 2022</td>
-                              <td>100 ريال سعودي</td>
-                              <td class="menu">
-                                <div class="dropdown">
-                                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                  </button>
-                                  <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">عرض التفاصيل</a></li>
-                                  </ul>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><i class="fa-solid fa-circle text-success"></i></td>
-                              <td class="title">مصمم وجهات مستخدم بواسطة فيجما</td>
-                              <td>مشروع ال 100 مصمم ....</td>
-                              <td>مايو 22 , 2022</td>
-                              <td>100 ريال سعودي</td>
-                              <td class="menu">
-                                <div class="dropdown">
-                                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                  </button>
-                                  <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">عرض التفاصيل</a></li>
-                                  </ul>
-                                </div>
-                              </td>
-                            </tr>
-                            <script>
-                              $(document).ready(function () {
-                                $('#newJob').DataTable({
-                                  language: {
-                                    search: "البحث",
-                                    lengthMenu: "عرض" + " _MENU_ " + "الوظائف",
-                                    paginate: {
-                                      first: "الأول",
-                                      last: "الأخير",
-                                      next: "التالي",
-                                      previous: "السابق",
-                                    },
-                                    info: "عرض" + " _START_ " + "من" + " _END_ " + "الى" + " _TOTAL_ " + "الوظائف",
+            <!-- Modal -->
+            <div class="modal fade" id="newJobModal" tabindex="-1" aria-labelledby="newJobModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="newJobModalLabel">الوظائف المضافة مؤخرا <span>(32)</span></h5>
+                  </div>
+                  <div class="modal-body">
+                    <div>
+                      <table class="table" id="newJob">
+                        <thead class="d-none">
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><i class="fa-solid fa-circle text-success"></i></td>
+                            <td class="title">مصمم وجهات مستخدم بواسطة فيجما</td>
+                            <td>مشروع ال 100 مصمم ....</td>
+                            <td>مايو 22 , 2022</td>
+                            <td>100 ريال سعودي</td>
+                            <td class="menu">
+                              <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                  aria-expanded="false">
+                                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">عرض التفاصيل</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><i class="fa-solid fa-circle text-success"></i></td>
+                            <td class="title">مصمم وجهات مستخدم بواسطة فيجما</td>
+                            <td>مشروع ال 100 مصمم ....</td>
+                            <td>مايو 22 , 2022</td>
+                            <td>100 ريال سعودي</td>
+                            <td class="menu">
+                              <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                  aria-expanded="false">
+                                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">عرض التفاصيل</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><i class="fa-solid fa-circle text-success"></i></td>
+                            <td class="title">مصمم وجهات مستخدم بواسطة فيجما</td>
+                            <td>مشروع ال 100 مصمم ....</td>
+                            <td>مايو 22 , 2022</td>
+                            <td>100 ريال سعودي</td>
+                            <td class="menu">
+                              <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                  aria-expanded="false">
+                                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">عرض التفاصيل</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <script>
+                            $(document).ready(function () {
+                              $('#newJob').DataTable({
+                                language: {
+                                  search: "البحث",
+                                  lengthMenu: "عرض" + " _MENU_ " + "الوظائف",
+                                  paginate: {
+                                    first: "الأول",
+                                    last: "الأخير",
+                                    next: "التالي",
+                                    previous: "السابق",
                                   },
-                                });
+                                  info: "عرض" + " _START_ " + "من" + " _END_ " + "الى" + " _TOTAL_ " + "الوظائف",
+                                },
                               });
-                            </script>
-                          </tbody>
-                        </table>
-                      </div>
+                            });
+                          </script>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- ======= Start When the content is empty ======= -->
-            <!-- <div class="empty">
-              <img src="./media/image/empty_home.png" alt="empty_home">
-              <h6>أهلا بك في منصة كاش شيفت للموارد البشرية و خدمات التوظيف</h6>
-              <p>ابدأ معنا الآن لإضافة بيانات شركتك ومشاريعك والبحث عن الموظفين المطلوبين ... ومتابعة أنشطتك ومخططاتك لكافة الأنشطة</p>
-              <a href="project.html" class="btn">+ مشروع جديد</a>
-            </div> -->
-            <!-- ======= End When the content is empty ======= -->
-
-            <!-- ======= Start When there is content ======= -->
-            
-            <!-- ======= End When there is content ======= -->
           </div>
+
+          <!-- ======= Start When there is content ======= -->
+
+          <!-- Start order section -->
+          <div class="orders">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5>My Orders</h5>
+              <div class="dropdown">
+                <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">view all</a></li>
+                  <li><a class="dropdown-item" href="#">add new job</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Start Card order -->
+            <div class="card_order">
+              <div class="d-flex justify-content-between align-items-center">
+                <h6 class="title">UI /UX Designer Needed for websites and apps (XD / FIGMA)</h6>
+                <span class="status">New</span>
+              </div>
+              <span class="position">Design Department</span>
+              <div class="details">
+                <div class="price">
+                  <i class="fa-solid fa-wallet"></i>
+                  <span>Price: 4000 /month</span>
+                </div>
+                <div class="time">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>Full Time: 9 AM - 5 PM</span>
+                </div>
+                <div class="posted">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <span>Posted: 22 may 2022</span>
+                </div>
+              </div>
+              <p class="description">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata
+              </p>
+              <div class="job_applicants">
+                <i class="fa-solid fa-user-group"></i>
+                <span>Job applicants: </span>
+                <p>There are no applicants yet</p>
+              </div>
+            </div>
+            <!-- End Card order -->
+
+            <!-- Start Card order -->
+            <div class="card_order">
+              <div class="d-flex justify-content-between align-items-center">
+                <h6 class="title">UI /UX Designer Needed for websites and apps (XD / FIGMA)</h6>
+                <span class="status">New</span>
+              </div>
+              <span class="position">Design Department</span>
+              <div class="details">
+                <div class="price">
+                  <i class="fa-solid fa-wallet"></i>
+                  <span>Price: 4000 /month</span>
+                </div>
+                <div class="time">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>Full Time: 9 AM - 5 PM</span>
+                </div>
+                <div class="posted">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <span>Posted: 22 may 2022</span>
+                </div>
+              </div>
+              <p class="description">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata
+              </p>
+              <div class="job_applicants">
+                <i class="fa-solid fa-user-group"></i>
+                <span>Job applicants: </span>
+                <p>There are no applicants yet</p>
+              </div>
+            </div>
+            <!-- End Card order -->
+          </div>
+          <!-- End order section -->
+
+          <!-- Start Employment Rate In The Recent Period -->
+          <div class="employment_rate">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5>Employment Rate In The Recent Period</h5>
+              <div class="dropdown">
+                <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Show: This month
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">This Week</a></li>
+                  <li><a class="dropdown-item" href="#">This month</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="chart-containers">
+              <canvas id="Rates"></canvas>
+              <script>
+                var barChartDataRates = {
+                  labels: [
+                    "10Mar",
+                    "11Mar",
+                    "12Mar",
+                    "13Mar",
+                    "14Mar",
+                    "15Mar",
+                    "16Mar",
+                  ],
+                  datasets: [
+                    {
+                      type: "line",
+                      label: "Current month",
+                      backgroundColor: "#E4AA3C",
+                      borderColor: "#E4AA3C",
+                      borderWidth: 1,
+                      tension: 0.1,
+                      data: [40, 43, 45, 46, 47, 50, 49]
+                    },
+                    {
+                      type: "line",
+                      label: "Last month",
+                      backgroundColor: "#058A94",
+                      borderColor: "#058A94",
+                      borderWidth: 1,
+                      tension: 0.1,
+                      data: [42, 40, 50, 45, 43, 49, 44]
+                    },
+                  ]
+                };
+
+                var chartOptionsRates = {
+                  responsive: true,
+                  legend: {
+                    position: "top"
+                  },
+                  title: {
+                    display: true,
+                    text: "Chart.js Bar Chart"
+                  },
+                  scales: {
+                    yAxes: [{
+                      display: true,
+                      ticks: {
+                        beginAtZero: true,
+                        // steps: 10,
+                        stepSize: 10,
+                        max: 100
+                      }
+                    }]
+                  },
+                }
+              </script>
+            </div>
+            <!-- ======= End employment rates ======= -->
+          </div>
+          <!-- End Employment Rate In The Recent Period -->
+
+          <div class="row">
+            <!-- Start Departments section -->
+            <div class="col-lg-6 col-12">
+              <div class="departments">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <h5>Departments</h5>
+                  <div class="dropdown">
+                    <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">view all</a></li>
+                      <li><a class="dropdown-item" href="#">add new department</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Start card department -->
+                <div class="card_department">
+                  <div class="department_title">
+                    <p class="title">Developing , Back , Front End Department</p>
+                    <span class="tag">@Programming</span>
+                  </div>
+                  <div class="circle">+30</div>
+                </div>
+                <!-- End card department -->
+
+                <!-- Start card department -->
+                <div class="card_department">
+                  <div class="department_title">
+                    <p class="title">Graphic , Ui/Ux Design Department</p>
+                    <span class="tag">@Design</span>
+                  </div>
+                  <div class="circle">+30</div>
+                </div>
+                <!-- End card department -->
+
+                <!-- Start card department -->
+                <div class="card_department">
+                  <div class="department_title">
+                    <p class="title">Sales , Marketing Department</p>
+                    <span class="tag">@Sales</span>
+                  </div>
+                  <div class="circle">+30</div>
+                </div>
+                <!-- End card department -->
+
+                <a class="add_department" href="add_department.html">+ add new department</a>
+              </div>
+            </div>
+            <!-- End Departments section -->
+
+            <!-- Start Visitors this year -->
+            <div class="col-lg-6 col-12">
+              <div class="visitors_year">
+                <div class="chart-containers">
+                  <canvas id="percentageProjectsDay"></canvas>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="number_visitor_year">
+                      <p>$21.2K</p>
+                      <span>Visitors this year</span>
+                    </div>
+                    <div class="increase"><i class="fa-solid fa-arrow-up-long"></i> 105.23 %</div>
+                  </div>
+                  <script>
+                    var barChartDataProjectsDay = {
+                      labels: [
+                        "sat",
+                        "sun",
+                        "mon",
+                        "tue",
+                        "wed",
+                        "thu",
+                        "fri",
+                      ],
+                      datasets: [
+                        {
+                          type: "line",
+                          label: "Visitors this year",
+                          backgroundColor: "#058A94",
+                          borderColor: "#058A94",
+                          borderWidth: 1,
+                          tension: 0.1,
+                          data: [6, 9, 7, 5, 10, 9, 8]
+                        },
+                      ]
+                    };
+
+                    var chartOptionsProjectsDay = {
+                      responsive: true,
+                      legend: {
+                        position: "top"
+                      },
+                      title: {
+                        display: true,
+                        text: "Chart.js Bar Chart"
+                      },
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+            <!-- End Visitors this year -->
+          </div>
+
+          <div class="emplyees_locations">
+            <h5>Emplyees Locations</h5>
+            <div class="row">
+              <div class="col-lg-3 col-12">
+                <div class="statistics">
+                  <div class="increase">
+                    <div class="customers">
+                      <p>21.2K</p>
+                      <span>Our customers</span>
+                    </div>
+                    <div class="increase_number"><i class="fa-solid fa-arrow-up-long"></i> 105.23 %</div>
+                  </div>
+                  <!-- Start card emplyees locations -->
+                  <div class="card_emplyees_locations">
+                    <p>Al -Reyad</p>
+                    <p>12.8K</p>
+                  </div>
+                  <!-- End card emplyees locations -->
+
+                  <!-- Start card emplyees locations -->
+                  <div class="card_emplyees_locations">
+                    <p>Al -Damam</p>
+                    <p>12.8K</p>
+                  </div>
+                  <!-- End card emplyees locations -->
+
+                  <!-- Start card emplyees locations -->
+                  <div class="card_emplyees_locations">
+                    <p>Jeddah</p>
+                    <p>12.8K</p>
+                  </div>
+                  <!-- End card emplyees locations -->
+
+                  <!-- Start card emplyees locations -->
+                  <div class="card_emplyees_locations">
+                    <p>El-Khobar</p>
+                    <p>12.8K</p>
+                  </div>
+                  <!-- End card emplyees locations -->
+                </div>
+              </div>
+              <div class="col-lg-9 col-12">
+                <img src="./media/image/map.png" alt="map">
+              </div>
+            </div>
+          </div>
+
+          <!-- Start Staff rate section -->
+          <div class="staff_rate">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h5>Staff Rate</h5>
+              <div class="dropdown">
+                <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">view all</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Start Card staff rate -->
+            <div class="card_staff_rate">
+              <div class="d-flex justify-content-between">
+                <img src="./media/image/7w7w.jpg" alt="staff">
+                <div class="dropdown">
+                  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">view details</a></li>
+                    <li><a class="dropdown-item" href="#">rate</a></li>
+                  </ul>
+                </div>
+              </div>
+              <p class="name">Ahmed Hawam</p>
+              <span class="title">UI / UX Designer</span>
+              <div class="time">
+                <i class="fa-solid fa-clock"></i>
+                <span>Full Time: 9 AM - 5 PM</span>
+              </div>
+              <div class="date">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Finishing Date: 22 may </span>
+              </div>
+            </div>
+            <!-- End Card staff rate -->
+
+            <!-- Start Card staff rate -->
+            <div class="card_staff_rate">
+              <div class="d-flex justify-content-between">
+                <img src="./media/image/7w7w.jpg" alt="staff">
+                <div class="dropdown">
+                  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">view details</a></li>
+                    <li><a class="dropdown-item" href="#">rate</a></li>
+                  </ul>
+                </div>
+              </div>
+              <p class="name">Ahmed Hawam</p>
+              <span class="title">UI / UX Designer</span>
+              <div class="time">
+                <i class="fa-solid fa-clock"></i>
+                <span>Full Time: 9 AM - 5 PM</span>
+              </div>
+              <div class="date">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Finishing Date: 22 may </span>
+              </div>
+            </div>
+            <!-- End Card staff rate -->
+
+            <!-- Start Card staff rate -->
+            <div class="card_staff_rate">
+              <div class="d-flex justify-content-between">
+                <img src="./media/image/7w7w.jpg" alt="staff">
+                <div class="dropdown">
+                  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">view details</a></li>
+                    <li><a class="dropdown-item" href="#">rate</a></li>
+                  </ul>
+                </div>
+              </div>
+              <p class="name">Ahmed Hawam</p>
+              <span class="title">UI / UX Designer</span>
+              <div class="time">
+                <i class="fa-solid fa-clock"></i>
+                <span>Full Time: 9 AM - 5 PM</span>
+              </div>
+              <div class="date">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Finishing Date: 22 may </span>
+              </div>
+            </div>
+            <!-- End Card staff rate -->
+
+            <!-- Start Card staff rate -->
+            <div class="card_staff_rate">
+              <div class="d-flex justify-content-between">
+                <img src="./media/image/7w7w.jpg" alt="staff">
+                <div class="dropdown">
+                  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">view details</a></li>
+                    <li><a class="dropdown-item" href="#">rate</a></li>
+                  </ul>
+                </div>
+              </div>
+              <p class="name">Ahmed Hawam</p>
+              <span class="title">UI / UX Designer</span>
+              <div class="time">
+                <i class="fa-solid fa-clock"></i>
+                <span>Full Time: 9 AM - 5 PM</span>
+              </div>
+              <div class="date">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Finishing Date: 22 may </span>
+              </div>
+            </div>
+            <!-- End Card staff rate -->
+          </div>
+          <!-- End Staff rate section -->
+
+          <!-- ======= End When there is content ======= -->
         </div>
       </section>
       <!-- ======= End Content ======= -->
@@ -383,30 +816,36 @@
   <!-- ======= Chart onload =========== -->
   <script>
     window.onload = function () {
-      var percentageJobs = document.getElementById("percentageJobs").getContext("2d");
-      window.myBar = new Chart(percentageJobs, {
-        data: barChartDataJobs,
-        options: chartOptionsJobs
-      });
-      var percentageProjectsDay = document.getElementById("percentageProjectsDay").getContext("2d");
-      window.myBar = new Chart(percentageProjectsDay, {
-        data: barChartDataProjectsDay,
-        options: chartOptionsProjectsDay
-      });
-      var percentageProjectsWeek = document.getElementById("percentageProjectsWeek").getContext("2d");
-      window.myBar = new Chart(percentageProjectsWeek, {
-        data: barChartDataProjectsWeek,
-        options: chartOptionsProjectsWeek
-      });
-      var percentageProjectsMonth = document.getElementById("percentageProjectsMonth").getContext("2d");
-      window.myBar = new Chart(percentageProjectsMonth, {
-        data: barChartDataProjectsMonth,
-        options: chartOptionsProjectsMonth
-      });
       var Rates = document.getElementById("Rates").getContext("2d");
       window.myBar = new Chart(Rates, {
         data: barChartDataRates,
         options: chartOptionsRates
+      });
+      var percentageProjectsDay = document.getElementById("percentageProjectsDay").getContext("2d");
+      window.myBar = new Chart(percentageProjectsDay, {
+        data: barChartDataProjectsDay,
+        options: chartOptionsProjectsDay,
+        options: {
+          scales: {
+            x: {
+              display: false,
+              grid: {
+                display: false,
+              }
+            },
+            y: {
+              display: false,
+              grid: {
+                display: false
+              }
+            },
+          },
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
       });
     };
   </script>
