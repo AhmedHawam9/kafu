@@ -98,7 +98,7 @@
   text-align: start;
 }
 .sidebar.open .nav-pills .nav-link svg.dot, .sidebar.opened .nav-pills .nav-link svg.dot {
-  color: #fff;
+  color: #828C8D;
   font-size: 0.5rem;
   -webkit-margin-start: 1.5rem;
           margin-inline-start: 1.5rem;
@@ -183,7 +183,7 @@
   float: right;
   font-size: 1.1rem;
   margin-top: 0.2rem;
-  color: #fff;
+  color: #828C8D;
   transform: rotate(0deg);
   display: none;
 }
@@ -220,7 +220,7 @@
   display: none;
 }
 .sidebar .nav-pills .nav-item ul li .nav-link span {
-  color: #fff;
+  color: #828C8D;
 }
 .sidebar .nav-pills .nav-item ul .nav-link.active {
   -webkit-border-end: 0;
@@ -878,6 +878,61 @@ table tbody tr td {
   min-height: 100vh;
   height: 100%;
 }
+.index_cards .content .title_section {
+  font-family: "medium";
+  color: #011C1E;
+  margin-bottom: 2rem;
+}
+.index_cards .content .btn_title_page {
+  font-family: "semibold";
+  background-color: #058A94;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1.5rem;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .btn_title_page:hover {
+  background-color: transparent;
+  border: 1px solid #058A94;
+  color: #058A94;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+}
+.index_cards .content .empty h6 {
+  color: #102b21;
+  margin: 1rem 0;
+  font-family: "semibold";
+}
+.index_cards .content .empty p {
+  color: #828282;
+  font-family: "semibold";
+  width: 30%;
+  font-size: 0.8rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.index_cards .content .empty .btn {
+  background-color: #058A94;
+  color: #fff;
+  font-family: "semibold";
+  font-size: 0.8rem;
+  padding: 0.75rem 2.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+.index_cards .content .empty img {
+  width: 20%;
+}
 .index_cards .content .nav-pills {
   width: 30%;
   -webkit-padding-end: 5%;
@@ -1479,13 +1534,56 @@ table tbody tr td {
   margin-bottom: 1rem;
   display: block;
 }
-.index_cards .content .staff_rate .card_staff_rate .time, .index_cards .content .staff_rate .card_staff_rate .date {
+.index_cards .content .staff_rate .card_staff_rate .time,
+.index_cards .content .staff_rate .card_staff_rate .date {
   color: #828C8D;
   font-family: "regular";
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
-
+.index_cards .content .empty_departments_page {
+  background-color: #fff;
+  padding: 5rem 0;
+}
+.index_cards .content .empty_departments_page img {
+  width: 20%;
+  display: block;
+  margin: 0 auto 2rem;
+}
+.index_cards .content .empty_departments_page h5 {
+  font-family: "medium";
+  color: #011C1E;
+  text-align: center;
+  margin: 1rem 0;
+}
+.index_cards .content .empty_departments_page p {
+  font-family: "regular";
+  color: #596364;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0 auto;
+  width: 30%;
+}
+.index_cards .content .empty_departments_page .add_department {
+  background-color: #058A94;
+  color: #fff;
+  text-decoration: none;
+  font-family: "regular";
+  width: 30%;
+  margin: 2rem auto 0;
+  display: block;
+  padding: 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .empty_departments_page .add_department:hover {
+  background-color: #fff;
+  border: 1px solid #058A94;
+  color: #058A94;
+  transition: 0.7s ease-in-out;
+}
 /* ======= 4K style ======= */
 @media (min-width: 1600px) and (max-width: 2600px) {
   .container {
@@ -1551,7 +1649,9 @@ table tbody tr td {
   .index_cards .content .orders .card_order .details {
     flex-direction: column;
   }
-  .index_cards .content .orders .card_order .details .price, .index_cards .content .orders .card_order .details .time, .index_cards .content .orders .card_order .details .posted {
+  .index_cards .content .orders .card_order .details .price,
+.index_cards .content .orders .card_order .details .time,
+.index_cards .content .orders .card_order .details .posted {
     margin-bottom: 0.5rem;
   }
   .index_cards .content .orders .card_order .job_applicants {
