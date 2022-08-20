@@ -446,8 +446,8 @@
   z-index: 9;
 }
 .register .register_head .password_verification_img {
-  width: 50%;
-  height: 600px;
+  width: 45%;
+  height: 550px;
   display: block;
   margin: 0 auto 5rem;
   z-index: 9;
@@ -549,6 +549,58 @@
 .register .register_card .form-group .togglePassword:hover, .register .register_card .form-group .togglePassword:focus {
   border-color: transparent;
 }
+.register .register_card .form-group .number-code {
+  display: flex;
+}
+.register .register_card .form-group .number-code input {
+  width: 16%;
+  -webkit-margin-end: 1%;
+          margin-inline-end: 1%;
+  -webkit-padding-start: 0.5rem !important;
+          padding-inline-start: 0.5rem !important;
+  -webkit-padding-end: 0.5rem !important;
+          padding-inline-end: 0.5rem !important;
+  height: 75px;
+  font-size: 2rem;
+  text-align: center;
+}
+.register .register_card .form-group .number-code input:last-child {
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+}
+.register .register_card .form-group .receive_code {
+  display: block;
+  width: 100%;
+  text-align: end;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  text-decoration: none;
+  font-family: "regular";
+  color: #011C1E;
+}
+.register .register_card .resend_code {
+  background-color: #E4AA3C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.register .register_card .resend_code p {
+  font-family: "regular";
+  color: #fff;
+  width: 50%;
+  margin-bottom: 0;
+}
+.register .register_card .resend_code .btn {
+  background-color: #fff;
+  color: #011C1E;
+  font-family: "medium";
+  font-size: 0.8rem;
+  padding: 0.75rem 1rem;
+}
+.register .register_card .resend_code .btn:hover {
+  border-color: transparent;
+}
 .register .register_card .form-check {
   color: #596364;
   font-family: "regular";
@@ -581,6 +633,80 @@
 .register .register_card .have_login a {
   color: #058A94;
   text-decoration: none;
+}
+.register .password_verification {
+  width: 50%;
+}
+
+.reset_password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.reset_password .card_reset_password {
+  width: 50%;
+  margin: 0 auto;
+  border: 0.7px solid #989898;
+  padding: 4rem;
+  border-radius: 8px;
+}
+.reset_password .card_reset_password h4 {
+  font-family: "medium";
+  text-align: center;
+  color: #011C1E;
+}
+.reset_password .card_reset_password p {
+  font-family: "regular";
+  color: #828C8D;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 0.8rem;
+}
+.reset_password .card_reset_password .form-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+.reset_password .card_reset_password .form-group label {
+  font-family: "regular";
+  color: #011C1E;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.reset_password .card_reset_password .form-group input {
+  -webkit-padding-start: 2rem !important;
+          padding-inline-start: 2rem !important;
+  font-family: "regular";
+  color: #B0B9B9;
+  font-size: 0.8rem;
+  padding: 0.75rem 1.5rem;
+}
+.reset_password .card_reset_password .form-group svg {
+  position: absolute;
+  top: 60%;
+  left: 2%;
+  color: #B0B9B9;
+}
+.reset_password .card_reset_password .form-group .togglePassword {
+  position: absolute;
+  top: 47%;
+  right: 0;
+}
+.reset_password .card_reset_password .form-group .togglePassword svg {
+  position: unset;
+}
+.reset_password .card_reset_password .form-group .togglePassword:hover, .reset_password .card_reset_password .form-group .togglePassword:focus {
+  border-color: transparent;
+}
+.reset_password .card_reset_password .submit_btn {
+  background-color: #058A94;
+  color: #fff;
+  font-family: "medium";
+  font-size: 0.8rem;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  width: 100%;
 }
 
 @media only screen and (max-width: 991.98px) {
@@ -628,6 +754,9 @@
   }
 }
 @media only screen and (max-width: 600px) {
+  .register .register_head .password_verification_img {
+    height: 300px;
+  }
   .register .register_card .form-group input {
     -webkit-padding-start: 1.7rem !important;
             padding-inline-start: 1.7rem !important;
@@ -660,18 +789,30 @@ table tbody tr td {
 
 .swal2-title {
   font-family: "semibold";
-  font-size: 1.5rem !important;
+  font-size: 0.9rem !important;
   margin: 0 !important;
 }
 
 .swal2-html-container {
   font-family: "regular";
-  font-size: 0.9rem !important;
-  margin: 0 !important;
+  font-size: 0.8rem !important;
+  width: 90% !important;
+  margin: 1rem auto 0 !important;
+}
+.swal2-html-container .need_help {
+  font-family: "medium";
+  color: #596364;
+  margin-top: 1.5rem;
+  display: block;
+}
+.swal2-html-container .need_help a {
+  font-family: "medium";
+  text-decoration: none;
+  color: #058A94;
 }
 
 .swal2-container.swal2-center > .swal2-popup {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .show_project_swal {
@@ -722,6 +863,24 @@ table tbody tr td {
 .index_cards .btn:hover, .index_cards .btn:focus, .index_cards .btn:active {
   border-color: transparent;
 }
+.index_cards .content {
+  background-color: #F7F7F7;
+}
+.index_cards .content .nav-pills {
+  width: 30%;
+}
+.index_cards .content .nav-pills h4 {
+  font-family: "medium";
+  color: #011C1E;
+}
+
+/* ======= 4K style ======= */
+@media (min-width: 1600px) and (max-width: 2600px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+/* ======= 4K style ======= */
 @media only screen and (max-width: 991.98px) {
   .index_cards .content .single_project .tab-content .supervisors_project .filter,
 .index_cards .content .single_project .tab-content .team_work .filter {

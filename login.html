@@ -55,6 +55,7 @@
     <!-- ? Main CSS -->
 
     <!-- ? Custom CSS -->
+    <link rel="stylesheet" href="css/sweet-alert.css" />
     <!-- ? Custom CSS -->
 
     <!-- ? Main JavaScript -->
@@ -66,6 +67,7 @@
 
     <!-- ? Custom JavaScript -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="js/sweet-alert.min.js"></script>
     <!-- ? Custom JavaScript -->
 
     <!-- ? Title -->
@@ -151,6 +153,29 @@
                             <a href="forget_pawword.html" class="forget_password">Forget Password?</a>
                         </div>
                         <button type="submit" class="btn submit_btn">Login</button>
+                        <!-- Start sweet alert when company without verification -->
+
+                        <!-- <button type="button" class="btn submit_btn" onclick="successAlert()">Login</button>
+                        <script>
+                            function successAlert() {
+                                Swal.fire({
+                                    html:
+                                        '<img src="./media/image/company_verification.png" alt="add">' +
+                                        '<h6 class="swal2-title">Sorry ! You cant login without company verification</h6>' +
+                                        '<p class="swal2-html-container">you have to wait until the site administration Verfiy your account  , you will get the verification soon</p>' +
+                                        '<span class="need_help">Need help? <a href="#">Contact Us</a></span>',
+                                    showClass: {
+                                        popup: 'animate__animated animate__fadeInDown'
+                                    },
+                                    hideClass: {
+                                        popup: 'animate__animated animate__fadeOutUp'
+                                    },
+                                    showConfirmButton: false,
+                                })
+                            };
+                        </script> -->
+                        <!-- End sweet alert when company without verification -->
+
                         <p class="have_login">Already have an account? <a href="register.html">Register</a></p>
                     </form>
                     <!-- End form login -->
