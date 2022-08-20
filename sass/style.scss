@@ -150,6 +150,8 @@ table tbody tr td {
   .content {
     background-color: #F7F7F7;
     padding: 5rem 0;
+    min-height: 100vh;
+    height: 100%;
 
     .nav-pills {
       width: 30%;
@@ -192,7 +194,12 @@ table tbody tr td {
     .tab-content {
       width: 100%;
 
-      h4 {
+      .tab-pane {
+        background-color: #fff;
+        padding: 3rem;
+      }
+
+      h5 {
         font-family: "medium";
         color: #011C1E;
         margin-bottom: 2rem;
@@ -249,7 +256,7 @@ table tbody tr td {
       }
 
       .data {
-        width: 100%;
+        width: 75%;
         margin-inline-start: 3rem;
 
         .form-group {
@@ -268,6 +275,7 @@ table tbody tr td {
             font-family: "regular";
             color: #011C1E;
             margin-bottom: .5rem;
+            display: block;
           }
 
           input {
@@ -276,6 +284,14 @@ table tbody tr td {
             color: #B0B9B9;
             font-family: "regular";
             padding-inline-start: 2rem;
+          }
+
+          textarea {
+            font-size: .8rem;
+            padding: .75rem;
+            color: #B0B9B9;
+            font-family: "regular";
+            resize: none;
           }
 
           /* Chrome, Safari, Edge, Opera */
@@ -304,9 +320,162 @@ table tbody tr td {
               }
             }
           }
+
           .dropdown-item {
             font-family: "regular";
             font-size: .8rem;
+          }
+
+          .location {
+            display: inline-block;
+            border: 0.7px solid #cccccc;
+            border-radius: 5px;
+            padding: 1.2rem 1.5rem;
+
+            svg {
+              stroke: $PrimaryColor;
+              stroke-width: 40px;
+              color: transparent;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: unset;
+              font-size: 1rem;
+            }
+          }
+
+          .lat {
+            display: inline-block;
+            font-family: "regular";
+            margin-inline-start: 0.5rem;
+          }
+        }
+
+        .submit_btn {
+          background-color: $PrimaryColor;
+          color: #fff;
+          font-family: "medium";
+          width: 100%;
+          font-size: .8rem;
+          padding: 1rem .75rem;
+          transition: .7s ease-in-out;
+
+          &:hover {
+            background-color: #fff;
+            border: 1px solid $PrimaryColor;
+            color: $PrimaryColor;
+            transition: .7s ease-in-out;
+          }
+        }
+      }
+
+      form.data {
+        margin-inline-start: 0;
+        width: 90%;
+
+        .col-lg-6 {
+          svg {
+            left: 2% !important;
+          }
+        }
+      }
+    }
+    .welcome {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h5 {
+        font-family: "semibold";
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        
+        lottie-player {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      .new_job {
+        font-family: "semibold";
+        background-color: $PrimaryColor;
+        color: #fff;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+        padding: 0.75rem 1.5rem;
+        float: left;
+      }
+
+      .edit_btn {
+        font-family: "semibold";
+        background-color: $PrimaryColor;
+        color: #fff;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+        padding: 0.75rem 1.5rem;
+        margin-inline-start: 1rem;
+        float: left;
+      }
+
+      .delete_btn {
+        font-family: "semibold";
+        border-color: $PrimaryColor;
+        color: $PrimaryColor;
+        background-color: transparent;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+        padding: 0.75rem 1.5rem;
+        float: left;
+      }
+
+      .modal {
+        .modal-dialog {
+          max-width: 45%;
+          font-family: "regular";
+          font-size: 0.8rem;
+
+          .modal-header {
+            border-bottom: none;
+
+            .modal-title {
+              margin-bottom: 0;
+              font-size: 1rem;
+
+              span {
+                margin-inline-start: 1rem;
+              }
+            }
+          }
+
+          table {
+            margin-top: 2rem !important;
+
+            td {
+              font-family: "regular";
+              color: #011c1e;
+              font-size: 0.8rem;
+            }
+
+            .title {
+              font-family: "semibold";
+              font-size: 0.9rem;
+            }
+
+            .menu {
+              font-size: 1rem;
+
+              .dropdown-toggle::after {
+                content: none;
+              }
+
+              .dropdown-item {
+                font-size: 0.8rem;
+                text-align: start;
+              }
+            }
           }
         }
       }
@@ -326,7 +495,52 @@ table tbody tr td {
 
 @media only screen and (max-width: 1200px) {
   .index_cards {
-    .content {}
+    .content {
+      .flex-tab {
+        flex-direction: column;
+        .nav-pills{
+          width: 100%;
+          flex-direction: row !important;
+          margin-bottom: 1rem;
+          .nav-link {
+            width: 48%;
+            margin-inline-end: 2%;
+          }
+        }
+      }
+      .nav-pills {
+        padding-inline-end: 2%;
+        .nav-link {
+          font-size: .8rem;
+          padding: .5rem;
+        }
+      }
+
+      .tab-content {
+        .data {
+          .form-group {
+            svg {
+              left: 2%;
+            }
+          }
+        }
+        form.data {
+          width: 100%;
+        }
+        .tab-pane {
+          .company_form_info {
+            flex-direction: column;
+          }
+        }
+        .avatar-upload {
+          margin-bottom: 2rem;
+        }
+        .data {
+          width: 100%;
+          margin-inline-start: 0;
+        }
+      }
+    }
   }
 }
 
@@ -376,5 +590,15 @@ table tbody tr td {
 
   .navbar .d-flex.w-25 {
     width: 50% !important;
+  }
+
+  .index_cards {
+    .content {
+      .nav-pills {
+        .nav-link {
+          font-size: .7rem;
+        }
+      }
+    }
   }
 }

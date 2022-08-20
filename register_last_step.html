@@ -140,7 +140,7 @@
             <!-- ======= Start Content ======= -->
             <section class="content">
                 <div class="container">
-                    <div class="d-flex align-items-start">
+                    <div class="d-flex align-items-start flex-tab">
                         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
                             aria-orientation="vertical">
                             <h4>The Last Step</h4>
@@ -157,8 +157,8 @@
                         <div class="tab-content" id="v-pills-tabContent">
                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                                 aria-labelledby="v-pills-home-tab" tabindex="0">
-                                <h4>Company Information</h4>
-                                <form class="d-flex justify-content-between">
+                                <h5>Company Information</h5>
+                                <form class="d-flex justify-content-between company_form_info">
                                     <div class="avatar-upload">
                                         <div class="avatar-preview">
                                             <div id="imagePreview" class="imagePreview">
@@ -189,7 +189,8 @@
                                         <div class="form-group">
                                             <label for="">Company field *</label>
                                             <i class="fa-solid fa-building"></i>
-                                            <select name="" id="" class="selectpicker form-control" title="ex : marketing , designs ...etc">
+                                            <select name="" id="" class="selectpicker form-control"
+                                                title="ex : marketing , designs ...etc">
                                                 <option value="">test</option>
                                                 <option value="">test</option>
                                             </select>
@@ -197,26 +198,99 @@
                                         <div class="form-group">
                                             <label for="">Tax Number *</label>
                                             <i class="fa-solid fa-note-sticky"></i>
-                                            <input type="number" name="" id="" class="form-control" placeholder="000 00">
+                                            <input type="number" name="" id="" class="form-control"
+                                                placeholder="000 00">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Commercial Registration No *</label>
                                             <i class="fa-solid fa-note-sticky"></i>
-                                            <input type="number" name="" id="" class="form-control" placeholder="000 00">
+                                            <input type="number" name="" id="" class="form-control"
+                                                placeholder="000 00">
                                         </div>
                                         <div class="form-group">
                                             <label for="">City *</label>
                                             <i class="fa-solid fa-earth-africa"></i>
-                                            <select name="" id="" class="selectpicker form-control" title="choose the city">
+                                            <select name="" id="" class="selectpicker form-control"
+                                                title="choose the city">
                                                 <option value="">test</option>
                                                 <option value="">test</option>
                                             </select>
                                         </div>
+                                        <div class="form-group">
+                                            <label for="">Address *</label>
+                                            <button class="btn location" type="button" onclick="getLocation()"><i
+                                                    class="fa-solid fa-location-dot"></i></button>
+                                            <p id="lat" class="lat"></p>
+                                            <script>
+                                                var lat = document.getElementById("lat");
+
+                                                function getLocation() {
+                                                    if (navigator.geolocation) {
+                                                        navigator.geolocation.getCurrentPosition(showCurrentPosition);
+                                                    } else {
+                                                        lat.innerHTML = "Geolocation is not supported by this browser.";
+                                                    }
+                                                }
+
+                                                function showCurrentPosition(position) {
+                                                    lat.innerHTML = "Latitude: " + position.coords.latitude +
+                                                        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Longitude: " + position.coords.longitude;
+                                                }
+                                            </script>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">About Company *</label>
+                                            <textarea name="" id="" cols="30" rows="5" class="form-control"
+                                                placeholder="enter a description for your company ….."></textarea>
+                                        </div>
+                                        <button type="submit" href class="btn submit_btn">Save And Continue</button>
                                     </div>
                                 </form>
                             </div>
                             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                aria-labelledby="v-pills-profile-tab" tabindex="0">...</div>
+                                aria-labelledby="v-pills-profile-tab" tabindex="0">
+                                <h5>Supervisor Information</h5>
+                                <form action="" class="data">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Supervisor Name *</label>
+                                                <i class="fa-solid fa-circle-user"></i>
+                                                <input type="number" name="" id="" class="form-control"
+                                                    placeholder="enter full name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group">
+                                                <label for="">E-mail Address *</label>
+                                                <i class="fa-solid fa-envelope"></i>
+                                                <input type="number" name="" id="" class="form-control"
+                                                    placeholder="company@example.com">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="form-group">
+                                                <label for="">Phone Number *</label>
+                                                <i class="fa-solid fa-phone"></i>
+                                                <input type="number" name="" id="" class="form-control"
+                                                    placeholder="00 0000 000 000">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Position *</label>
+                                                <i class="fa-solid fa-location-dot"></i>
+                                                <select name="" id="" class="selectpicker form-control"
+                                                    title="ex : executive director">
+                                                    <option value="">test</option>
+                                                    <option value="">test</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn submit_btn">Save And Continue</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

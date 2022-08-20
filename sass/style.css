@@ -117,7 +117,7 @@
   display: flex;
 }
 
-.sidebar.open ~ .index_cards {
+.sidebar.open ~ .index_cards, .sidebar.opened ~ .index_cards {
   width: 85%;
   transition: 1s ease-in-out;
 }
@@ -138,7 +138,7 @@
   margin-right: 0%;
   width: 5%;
   transition: 0.7s;
-  background-color: #058A94;
+  background-color: #fff;
   min-height: 100vh;
   padding: 2rem 0;
 }
@@ -235,22 +235,27 @@
 .sidebar .nav-pills .nav-item .nav-link img {
   width: 25px;
   height: 25px;
-  filter: brightness(0) invert(1);
   display: block;
   margin: 0 auto;
 }
 .sidebar .nav-pills .nav-item .nav-link.active {
   background-color: rgba(255, 255, 255, 0.12);
-  -webkit-border-end: 3px solid #fff;
-          border-inline-end: 3px solid #fff;
+  -webkit-border-end: 3px solid #E4AA3C;
+          border-inline-end: 3px solid #E4AA3C;
   border-radius: 0;
+}
+.sidebar .nav-pills .nav-item .nav-link.active span {
+  color: #E4AA3C;
+}
+.sidebar .nav-pills .nav-item .nav-link.active img {
+  filter: invert(60%) sepia(40%) saturate(3280%) hue-rotate(382deg) brightness(100%) contrast(115%);
 }
 .sidebar .nav-pills .nav-link {
   text-align: center;
 }
 .sidebar .nav-pills .nav-link span {
   margin: 0 5%;
-  color: #fff;
+  color: #828C8D;
   display: none;
   font-size: 0.8rem;
 }
@@ -281,7 +286,11 @@
   font-size: 0.8rem;
   text-align: center;
   width: 90%;
-  margin: 0 auto;
+  margin: 1rem auto 0;
+}
+.sidebar .contact_us p a {
+  text-decoration: none;
+  color: #058A94;
 }
 .sidebar .contact_us .btn {
   background-color: #058A94;
@@ -866,6 +875,8 @@ table tbody tr td {
 .index_cards .content {
   background-color: #F7F7F7;
   padding: 5rem 0;
+  min-height: 100vh;
+  height: 100%;
 }
 .index_cards .content .nav-pills {
   width: 30%;
@@ -903,7 +914,11 @@ table tbody tr td {
 .index_cards .content .tab-content {
   width: 100%;
 }
-.index_cards .content .tab-content h4 {
+.index_cards .content .tab-content .tab-pane {
+  background-color: #fff;
+  padding: 3rem;
+}
+.index_cards .content .tab-content h5 {
   font-family: "medium";
   color: #011C1E;
   margin-bottom: 2rem;
@@ -949,7 +964,7 @@ table tbody tr td {
   background-position: center;
 }
 .index_cards .content .tab-content .data {
-  width: 100%;
+  width: 75%;
   -webkit-margin-start: 3rem;
           margin-inline-start: 3rem;
 }
@@ -970,6 +985,7 @@ table tbody tr td {
   font-family: "regular";
   color: #011C1E;
   margin-bottom: 0.5rem;
+  display: block;
 }
 .index_cards .content .tab-content .data .form-group input {
   font-size: 0.8rem;
@@ -978,6 +994,13 @@ table tbody tr td {
   font-family: "regular";
   -webkit-padding-start: 2rem;
           padding-inline-start: 2rem;
+}
+.index_cards .content .tab-content .data .form-group textarea {
+  font-size: 0.8rem;
+  padding: 0.75rem;
+  color: #B0B9B9;
+  font-family: "regular";
+  resize: none;
 }
 .index_cards .content .tab-content .data .form-group input::-webkit-outer-spin-button,
 .index_cards .content .tab-content .data .form-group input::-webkit-inner-spin-button {
@@ -1003,6 +1026,137 @@ table tbody tr td {
   font-family: "regular";
   font-size: 0.8rem;
 }
+.index_cards .content .tab-content .data .form-group .location {
+  display: inline-block;
+  border: 0.7px solid #cccccc;
+  border-radius: 5px;
+  padding: 1.2rem 1.5rem;
+}
+.index_cards .content .tab-content .data .form-group .location svg {
+  stroke: #058A94;
+  stroke-width: 40px;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: unset;
+  font-size: 1rem;
+}
+.index_cards .content .tab-content .data .form-group .lat {
+  display: inline-block;
+  font-family: "regular";
+  -webkit-margin-start: 0.5rem;
+          margin-inline-start: 0.5rem;
+}
+.index_cards .content .tab-content .data .submit_btn {
+  background-color: #058A94;
+  color: #fff;
+  font-family: "medium";
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 1rem 0.75rem;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .tab-content .data .submit_btn:hover {
+  background-color: #fff;
+  border: 1px solid #058A94;
+  color: #058A94;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .tab-content form.data {
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  width: 90%;
+}
+.index_cards .content .tab-content form.data .col-lg-6 svg {
+  left: 2% !important;
+}
+.index_cards .content .welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.index_cards .content .welcome h5 {
+  font-family: "semibold";
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+.index_cards .content .welcome h5 lottie-player {
+  width: 50px;
+  height: 50px;
+}
+.index_cards .content .welcome .new_job {
+  font-family: "semibold";
+  background-color: #058A94;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1.5rem;
+  float: left;
+}
+.index_cards .content .welcome .edit_btn {
+  font-family: "semibold";
+  background-color: #058A94;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1.5rem;
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+  float: left;
+}
+.index_cards .content .welcome .delete_btn {
+  font-family: "semibold";
+  border-color: #058A94;
+  color: #058A94;
+  background-color: transparent;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1.5rem;
+  float: left;
+}
+.index_cards .content .welcome .modal .modal-dialog {
+  max-width: 45%;
+  font-family: "regular";
+  font-size: 0.8rem;
+}
+.index_cards .content .welcome .modal .modal-dialog .modal-header {
+  border-bottom: none;
+}
+.index_cards .content .welcome .modal .modal-dialog .modal-header .modal-title {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+.index_cards .content .welcome .modal .modal-dialog .modal-header .modal-title span {
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+}
+.index_cards .content .welcome .modal .modal-dialog table {
+  margin-top: 2rem !important;
+}
+.index_cards .content .welcome .modal .modal-dialog table td {
+  font-family: "regular";
+  color: #011c1e;
+  font-size: 0.8rem;
+}
+.index_cards .content .welcome .modal .modal-dialog table .title {
+  font-family: "semibold";
+  font-size: 0.9rem;
+}
+.index_cards .content .welcome .modal .modal-dialog table .menu {
+  font-size: 1rem;
+}
+.index_cards .content .welcome .modal .modal-dialog table .menu .dropdown-toggle::after {
+  content: none;
+}
+.index_cards .content .welcome .modal .modal-dialog table .menu .dropdown-item {
+  font-size: 0.8rem;
+  text-align: start;
+}
 
 /* ======= 4K style ======= */
 @media (min-width: 1600px) and (max-width: 2600px) {
@@ -1011,6 +1165,46 @@ table tbody tr td {
   }
 }
 /* ======= 4K style ======= */
+@media only screen and (max-width: 1200px) {
+  .index_cards .content .flex-tab {
+    flex-direction: column;
+  }
+  .index_cards .content .flex-tab .nav-pills {
+    width: 100%;
+    flex-direction: row !important;
+    margin-bottom: 1rem;
+  }
+  .index_cards .content .flex-tab .nav-pills .nav-link {
+    width: 48%;
+    -webkit-margin-end: 2%;
+            margin-inline-end: 2%;
+  }
+  .index_cards .content .nav-pills {
+    -webkit-padding-end: 2%;
+            padding-inline-end: 2%;
+  }
+  .index_cards .content .nav-pills .nav-link {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .index_cards .content .tab-content .data .form-group svg {
+    left: 2%;
+  }
+  .index_cards .content .tab-content form.data {
+    width: 100%;
+  }
+  .index_cards .content .tab-content .tab-pane .company_form_info {
+    flex-direction: column;
+  }
+  .index_cards .content .tab-content .avatar-upload {
+    margin-bottom: 2rem;
+  }
+  .index_cards .content .tab-content .data {
+    width: 100%;
+    -webkit-margin-start: 0;
+            margin-inline-start: 0;
+  }
+}
 @media only screen and (max-width: 991.98px) {
   .index_cards .content .single_project .tab-content .supervisors_project .filter,
 .index_cards .content .single_project .tab-content .team_work .filter {
@@ -1043,5 +1237,8 @@ table tbody tr td {
   }
   .navbar .d-flex.w-25 {
     width: 50% !important;
+  }
+  .index_cards .content .nav-pills .nav-link {
+    font-size: 0.7rem;
   }
 }/*# sourceMappingURL=style.css.map */
