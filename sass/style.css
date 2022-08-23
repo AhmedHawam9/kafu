@@ -2405,7 +2405,7 @@ table tbody tr td {
   background-color: #fff;
   color: #058a94;
   position: absolute;
-  top: 3.7rem;
+  top: 1.7rem;
   left: 2%;
 }
 .index_cards .content .department_details .tab-content .employees div.dataTables_wrapper div.dataTables_length label {
@@ -2414,6 +2414,7 @@ table tbody tr td {
 }
 .index_cards .content .department_details .tab-content .employees .table_details {
   position: relative;
+  padding: 0 2rem 2rem 2rem;
 }
 .index_cards .content .department_details .tab-content .employees .table {
   border: 1px solid #ccc;
@@ -2443,9 +2444,13 @@ table tbody tr td {
           margin-inline-end: 1.5%;
   margin-top: 0;
 }
+.index_cards .content .department_details .tab-content .employees .table .tr:nth-child(3n) {
+  -webkit-margin-end: 0%;
+          margin-inline-end: 0%;
+}
 .index_cards .content .department_details .tab-content .employees .tr {
   transition: all 0.8s ease-in-out;
-  width: 31% !important;
+  width: 32.3% !important;
   margin-top: 15px;
   margin-bottom: 1rem;
   transition: all 0.2s ease-in-out;
@@ -3115,9 +3120,13 @@ table tbody tr td {
           margin-inline-end: 1.5%;
   margin-top: 0;
 }
+.index_cards .content .job_orders .table .tr:nth-child(3n) {
+  -webkit-margin-end: 0%;
+          margin-inline-end: 0%;
+}
 .index_cards .content .job_orders .tr {
   transition: all 0.8s ease-in-out;
-  width: 31% !important;
+  width: 32.3% !important;
   margin-top: 15px;
   margin-bottom: 1rem;
   transition: all 0.2s ease-in-out;
@@ -3260,7 +3269,8 @@ table tbody tr td {
   color: #058a94;
   transition: 0.7s ease-in-out;
 }
-.index_cards .content .job_details .actions .reorder, .index_cards .content .job_details .actions .work {
+.index_cards .content .job_details .actions .reorder,
+.index_cards .content .job_details .actions .work {
   background-color: #058a94;
   color: #fff;
   border-radius: 8px;
@@ -3269,7 +3279,8 @@ table tbody tr td {
   padding: 0.75rem 1.5rem;
   transition: 0.7s ease-in-out;
 }
-.index_cards .content .job_details .actions .reorder:hover, .index_cards .content .job_details .actions .work:hover {
+.index_cards .content .job_details .actions .reorder:hover,
+.index_cards .content .job_details .actions .work:hover {
   background-color: #fff;
   border: 1px solid #058a94;
   color: #058a94;
@@ -3354,7 +3365,7 @@ table tbody tr td {
 }
 .index_cards .content .job_details .description_card span {
   font-family: "regular";
-  color: #B0B9B9;
+  color: #b0b9b9;
   font-size: 0.7rem;
   -webkit-margin-start: 1rem;
           margin-inline-start: 1rem;
@@ -3403,7 +3414,7 @@ table tbody tr td {
 .index_cards .content .job_details .skills .skill_box {
   display: inline-block;
   padding: 0.4rem 1rem;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: #596364;
   font-family: "regular";
   border-radius: 14px;
@@ -3616,6 +3627,970 @@ table tbody tr td {
   background-color: rgba(210, 86, 86, 0.08);
   color: #d25656;
 }
+.index_cards .content .employees_tables {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+}
+.index_cards .content .employees_tables .nav-tabs .nav-item {
+  margin: 0 0.5rem;
+}
+.index_cards .content .employees_tables .nav-tabs .nav-item .nav-link {
+  color: #828c8d;
+  font-family: "Medium";
+  font-size: 0.9rem;
+}
+.index_cards .content .employees_tables .nav-tabs .nav-item .nav-link:hover, .index_cards .content .employees_tables .nav-tabs .nav-item .nav-link:focus {
+  border-color: transparent;
+  outline: unset;
+}
+.index_cards .content .employees_tables .nav-tabs .nav-item .nav-link:focus-visible {
+  outline: unset;
+}
+.index_cards .content .employees_tables .nav-tabs .nav-item .nav-link.active {
+  border: 0;
+  border-bottom: 3px solid #058a94;
+  color: #011c1e;
+}
+.index_cards .content .employees_tables .tab-content {
+  margin-top: 2rem;
+}
+.index_cards .content .employees_tables .tab-content .dataTables_length,
+.index_cards .content .employees_tables .tab-content .dataTables_filter {
+  display: none;
+}
+.index_cards .content .employees_tables .tab-content .filters {
+  display: flex;
+  margin-bottom: 0;
+  padding: 0 2rem 0 2rem;
+  -webkit-margin-start: 2rem;
+          margin-inline-start: 2rem;
+}
+.index_cards .content .employees_tables .tab-content .filters .form-group {
+  position: relative;
+  width: 15%;
+  -webkit-margin-start: 1%;
+          margin-inline-start: 1%;
+}
+.index_cards .content .employees_tables .tab-content .filters .form-group input {
+  font-family: "regular";
+  color: #828c8d;
+  font-size: 0.8rem;
+  padding: 0.75rem;
+  -webkit-padding-start: 1.8rem;
+          padding-inline-start: 1.8rem;
+  background-color: rgba(143, 146, 161, 0.05);
+  border: 0;
+}
+.index_cards .content .employees_tables .tab-content .filters .form-group svg {
+  position: absolute;
+  top: 32%;
+  left: 0.5rem;
+  color: #828c8d;
+}
+.index_cards .content .employees_tables .tab-content .filters .form-group:first-child {
+  width: 53%;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+}
+.index_cards .content .employees_tables .tab-content .filters .form-group .bootstrap-select .dropdown-toggle {
+  padding: 0.7rem;
+  font-size: 0.8rem;
+  font-family: "regular";
+  background-color: rgba(143, 146, 161, 0.05);
+}
+.index_cards .content .employees_tables .tab-content .filters .form-group .bootstrap-select .dropdown-toggle:hover {
+  background-color: rgba(143, 146, 161, 0.05);
+}
+.index_cards .content .employees_tables .tab-content .filters .form-group .bootstrap-select .dropdown-menu .dropdown-item {
+  font-family: "regular";
+  font-size: 0.8rem;
+}
+.index_cards .content .employees_tables .tab-content table .status {
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  width: 100px;
+  display: block;
+  text-align: center;
+}
+.index_cards .content .employees_tables .tab-content table .full-time {
+  background-color: rgba(5, 138, 148, 0.08);
+  color: #058a94;
+}
+.index_cards .content .employees_tables .tab-content table .part-time {
+  background-color: rgba(228, 170, 60, 0.08);
+  color: #e4aa3c;
+}
+.index_cards .content .employees_tables .tab-content table .new {
+  background-color: rgba(210, 86, 86, 0.08);
+  color: #d25656;
+}
+.index_cards .content .employees_tables .tab-content .all .toggleBtn,
+.index_cards .content .employees_tables .tab-content .all .toggleBtnCurrentEmployees,
+.index_cards .content .employees_tables .tab-content .all .toggleBtnNewEmployees,
+.index_cards .content .employees_tables .tab-content .new .toggleBtn,
+.index_cards .content .employees_tables .tab-content .new .toggleBtnCurrentEmployees,
+.index_cards .content .employees_tables .tab-content .new .toggleBtnNewEmployees,
+.index_cards .content .employees_tables .tab-content .current .toggleBtn,
+.index_cards .content .employees_tables .tab-content .current .toggleBtnCurrentEmployees,
+.index_cards .content .employees_tables .tab-content .current .toggleBtnNewEmployees {
+  border: 3px solid #ebeaed;
+  background-color: #fff;
+  color: #058a94;
+  position: absolute;
+  top: 0rem;
+  left: 2%;
+}
+.index_cards .content .employees_tables .tab-content .all div.dataTables_wrapper div.dataTables_length label,
+.index_cards .content .employees_tables .tab-content .new div.dataTables_wrapper div.dataTables_length label,
+.index_cards .content .employees_tables .tab-content .current div.dataTables_wrapper div.dataTables_length label {
+  -webkit-margin-start: 8%;
+          margin-inline-start: 8%;
+}
+.index_cards .content .employees_tables .tab-content .all .table_details,
+.index_cards .content .employees_tables .tab-content .new .table_details,
+.index_cards .content .employees_tables .tab-content .current .table_details {
+  position: relative;
+  padding: 0 2rem 2rem 2rem;
+}
+.index_cards .content .employees_tables .tab-content .all .table_details .actions,
+.index_cards .content .employees_tables .tab-content .new .table_details .actions,
+.index_cards .content .employees_tables .tab-content .current .table_details .actions {
+  display: flex;
+  justify-content: end;
+  margin-top: 1rem;
+}
+.index_cards .content .employees_tables .tab-content .all .table_details .actions .accept,
+.index_cards .content .employees_tables .tab-content .new .table_details .actions .accept,
+.index_cards .content .employees_tables .tab-content .current .table_details .actions .accept {
+  background-color: #058a94;
+  color: #fff;
+  font-family: "regular";
+  font-size: 0.8rem;
+  padding: 0.75rem 1.5rem;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employees_tables .tab-content .all .table_details .actions .accept:hover,
+.index_cards .content .employees_tables .tab-content .new .table_details .actions .accept:hover,
+.index_cards .content .employees_tables .tab-content .current .table_details .actions .accept:hover {
+  background-color: #fff;
+  border: 1px solid #058a94;
+  color: #058a94;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employees_tables .tab-content .all .table_details .actions .refuse,
+.index_cards .content .employees_tables .tab-content .new .table_details .actions .refuse,
+.index_cards .content .employees_tables .tab-content .current .table_details .actions .refuse {
+  background-color: #d25656;
+  color: #fff;
+  font-family: "regular";
+  font-size: 0.8rem;
+  padding: 0.75rem 1.5rem;
+  -webkit-margin-start: 0.5rem;
+          margin-inline-start: 0.5rem;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employees_tables .tab-content .all .table_details .actions .refuse:hover,
+.index_cards .content .employees_tables .tab-content .new .table_details .actions .refuse:hover,
+.index_cards .content .employees_tables .tab-content .current .table_details .actions .refuse:hover {
+  background-color: #fff;
+  border: 1px solid #d25656;
+  color: #d25656;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employees_tables .tab-content .all .table,
+.index_cards .content .employees_tables .tab-content .new .table,
+.index_cards .content .employees_tables .tab-content .current .table {
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  transition: all 0.8s cubic-bezier(0.01, 0.98, 0.99, 0.06);
+  margin-top: 0 !important;
+}
+.index_cards .content .employees_tables .tab-content .all .table tbody,
+.index_cards .content .employees_tables .tab-content .new .table tbody,
+.index_cards .content .employees_tables .tab-content .current .table tbody {
+  display: flex;
+  flex-wrap: wrap;
+}
+.index_cards .content .employees_tables .tab-content .all .table tbody.tbody,
+.index_cards .content .employees_tables .tab-content .new .table tbody.tbody,
+.index_cards .content .employees_tables .tab-content .current .table tbody.tbody {
+  display: table-row-group;
+}
+.index_cards .content .employees_tables .tab-content .all .table .form-check .form-check-input,
+.index_cards .content .employees_tables .tab-content .new .table .form-check .form-check-input,
+.index_cards .content .employees_tables .tab-content .current .table .form-check .form-check-input {
+  transform: scale(1.3);
+}
+.index_cards .content .employees_tables .tab-content .all .table .form-check .form-check-input:checked,
+.index_cards .content .employees_tables .tab-content .new .table .form-check .form-check-input:checked,
+.index_cards .content .employees_tables .tab-content .current .table .form-check .form-check-input:checked {
+  background-color: #e4aa3c;
+  border-color: #e4aa3c;
+}
+.index_cards .content .employees_tables .tab-content .all .table .tr,
+.index_cards .content .employees_tables .tab-content .new .table .tr,
+.index_cards .content .employees_tables .tab-content .current .table .tr {
+  border: 0;
+  padding: 5px;
+  transition: all 0.4s ease-in-out;
+  border: 1px solid #ebeaed;
+  transition: all 0.5s cubic-bezier(0.97, 0.86, 0.09, 0.23);
+  border-radius: 4px;
+  -webkit-margin-end: 1.5%;
+          margin-inline-end: 1.5%;
+  margin-top: 0;
+}
+.index_cards .content .employees_tables .tab-content .all .table .tr:nth-child(3n),
+.index_cards .content .employees_tables .tab-content .new .table .tr:nth-child(3n),
+.index_cards .content .employees_tables .tab-content .current .table .tr:nth-child(3n) {
+  -webkit-margin-end: 0%;
+          margin-inline-end: 0%;
+}
+.index_cards .content .employees_tables .tab-content .all .tr,
+.index_cards .content .employees_tables .tab-content .new .tr,
+.index_cards .content .employees_tables .tab-content .current .tr {
+  transition: all 0.8s ease-in-out;
+  width: 32.3% !important;
+  margin-top: 15px;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease-in-out;
+  height: auto;
+}
+.index_cards .content .employees_tables .tab-content .all .table.tableCard .th,
+.index_cards .content .employees_tables .tab-content .all .table.tableCard .td,
+.index_cards .content .employees_tables .tab-content .new .table.tableCard .th,
+.index_cards .content .employees_tables .tab-content .new .table.tableCard .td,
+.index_cards .content .employees_tables .tab-content .current .table.tableCard .th,
+.index_cards .content .employees_tables .tab-content .current .table.tableCard .td {
+  padding: 10px 5%;
+  width: 90%;
+}
+.index_cards .content .employees_tables .tab-content .all .table.tableCard .id,
+.index_cards .content .employees_tables .tab-content .all .table.tableCard .checkbox,
+.index_cards .content .employees_tables .tab-content .new .table.tableCard .id,
+.index_cards .content .employees_tables .tab-content .new .table.tableCard .checkbox,
+.index_cards .content .employees_tables .tab-content .current .table.tableCard .id,
+.index_cards .content .employees_tables .tab-content .current .table.tableCard .checkbox {
+  display: none;
+}
+.index_cards .content .employees_tables .tab-content .all .table .th,
+.index_cards .content .employees_tables .tab-content .new .table .th,
+.index_cards .content .employees_tables .tab-content .current .table .th {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.index_cards .content .employees_tables .tab-content .all .table,
+.index_cards .content .employees_tables .tab-content .new .table,
+.index_cards .content .employees_tables .tab-content .current .table {
+  border: 0 !important;
+}
+.index_cards .content .employees_tables .tab-content .all .table > :not(caption) > * > *,
+.index_cards .content .employees_tables .tab-content .new .table > :not(caption) > * > *,
+.index_cards .content .employees_tables .tab-content .current .table > :not(caption) > * > * {
+  border-bottom-width: 1px !important;
+  padding: 0.9rem 0.5rem;
+}
+.index_cards .content .employees_tables .tab-content .all .table.tableCard > :not(caption) > * > *,
+.index_cards .content .employees_tables .tab-content .new .table.tableCard > :not(caption) > * > *,
+.index_cards .content .employees_tables .tab-content .current .table.tableCard > :not(caption) > * > * {
+  border-bottom-width: 0 !important;
+}
+.index_cards .content .employees_tables .tab-content .all .table.tableCard .flex_mobile,
+.index_cards .content .employees_tables .tab-content .new .table.tableCard .flex_mobile,
+.index_cards .content .employees_tables .tab-content .current .table.tableCard .flex_mobile {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+.index_cards .content .employees_tables .tab-content .all .table.tableCard .flex_mobile .dropdown .dropdown-toggle,
+.index_cards .content .employees_tables .tab-content .new .table.tableCard .flex_mobile .dropdown .dropdown-toggle,
+.index_cards .content .employees_tables .tab-content .current .table.tableCard .flex_mobile .dropdown .dropdown-toggle {
+  padding: 0;
+}
+.index_cards .content .employees_tables .tab-content .all .table.tableCard .flex_mobile .status,
+.index_cards .content .employees_tables .tab-content .new .table.tableCard .flex_mobile .status,
+.index_cards .content .employees_tables .tab-content .current .table.tableCard .flex_mobile .status {
+  padding: 0.3rem 1rem;
+}
+.index_cards .content .employees_tables .tab-content .all .table .thead,
+.index_cards .content .employees_tables .tab-content .new .table .thead,
+.index_cards .content .employees_tables .tab-content .current .table .thead {
+  display: none;
+}
+.index_cards .content .employees_tables .tab-content .all .tr,
+.index_cards .content .employees_tables .tab-content .new .tr,
+.index_cards .content .employees_tables .tab-content .current .tr {
+  height: auto;
+}
+.index_cards .content .employees_tables .tab-content .all .td,
+.index_cards .content .employees_tables .tab-content .new .td,
+.index_cards .content .employees_tables .tab-content .current .td {
+  display: block;
+  border-top: none !important;
+}
+.index_cards .content .employees_tables .tab-content .all .td:first-child,
+.index_cards .content .employees_tables .tab-content .new .td:first-child,
+.index_cards .content .employees_tables .tab-content .current .td:first-child {
+  border-bottom: 1px solid #ebeaed;
+}
+.index_cards .content .employees_tables .tab-content .all .td .name,
+.index_cards .content .employees_tables .tab-content .new .td .name,
+.index_cards .content .employees_tables .tab-content .current .td .name {
+  justify-content: space-between;
+}
+.index_cards .content .employees_tables .tab-content .all .table .td,
+.index_cards .content .employees_tables .tab-content .new .table .td,
+.index_cards .content .employees_tables .tab-content .current .table .td {
+  display: block;
+  text-align: end;
+  font-size: 13px;
+  background-color: #fff;
+}
+.index_cards .content .employees_tables .tab-content .all .table .td:last-child,
+.index_cards .content .employees_tables .tab-content .new .table .td:last-child,
+.index_cards .content .employees_tables .tab-content .current .table .td:last-child {
+  border-bottom: 0;
+}
+.index_cards .content .employees_tables .tab-content .all .table .td:before,
+.index_cards .content .employees_tables .tab-content .new .table .td:before,
+.index_cards .content .employees_tables .tab-content .current .table .td:before {
+  content: attr(data-label);
+  float: left;
+  text-align: start;
+  width: 50%;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.index_cards .content .employees_tables .tab-content .all .table .td:after,
+.index_cards .content .employees_tables .tab-content .new .table .td:after,
+.index_cards .content .employees_tables .tab-content .current .table .td:after {
+  float: right;
+  width: 50%;
+}
+.index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog {
+  max-width: 30%;
+}
+.index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog .modal-body {
+  padding: 3rem 2rem;
+}
+.index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog .modal-body img {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+.index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog .modal-body h6 {
+  text-align: center;
+  font-family: "semibold";
+  color: #011c1e;
+}
+.index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog .modal-body .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog .modal-body .buttons .yes {
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+  background-color: #058a94;
+  color: #fff;
+  font-family: "regular";
+  font-size: 0.8rem;
+  padding: 0.6rem 2.5rem;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog .modal-body .buttons .yes:hover {
+  background-color: #fff;
+  border: 1px solid #058a94;
+  color: #058a94;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog .modal-body .buttons .back {
+  background-color: rgba(5, 138, 148, 0.08);
+  color: #058a94;
+  font-family: "regular";
+  font-size: 0.8rem;
+  padding: 0.6rem 2.5rem;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog .modal-body .buttons .back:hover {
+  background-color: #fff;
+  border: 1px solid #058a94;
+  color: #058a94;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employee_description {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+}
+.index_cards .content .employee_description .employee_title {
+  display: flex;
+  align-items: center;
+}
+.index_cards .content .employee_description .employee_title img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+}
+.index_cards .content .employee_description .employee_title .title {
+  font-family: "Medium";
+  color: #011c1e;
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+.index_cards .content .employee_description .employee_title .country {
+  display: block;
+  color: #828c8d;
+  font-family: "regular";
+  font-size: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+.index_cards .content .employee_description .employee_title .email {
+  display: block;
+  color: #596364;
+  font-family: "regular";
+  font-size: 0.8rem;
+}
+.index_cards .content .employee_description .actions .btn {
+  font-size: 0.8rem;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-family: "Medium";
+}
+.index_cards .content .employee_description .actions .cv {
+  border: 0.5px solid #c9c9c9;
+  color: #011c1e;
+  transition: 0.7s ease-in-out;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+}
+.index_cards .content .employee_description .actions .cv:hover {
+  background-color: #fff;
+  color: #058a94;
+  border: 1px solid #058a94;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employee_description .actions .decline {
+  background-color: #d25656;
+  color: #fff;
+  transition: 0.7s ease-in-out;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+}
+.index_cards .content .employee_description .actions .decline:hover {
+  background-color: #fff;
+  color: #d25656;
+  border: 1px solid #d25656;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employee_description .actions .accept {
+  background-color: #058a94;
+  color: #fff;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employee_description .actions .accept:hover {
+  background-color: #fff;
+  color: #058a94;
+  border: 1px solid #058a94;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .employee_description .nav-tabs {
+  margin: 2rem 0;
+}
+.index_cards .content .employee_description .nav-tabs .nav-item .nav-link {
+  font-family: "Medium";
+  color: #828c8d;
+  font-size: 0.8rem;
+}
+.index_cards .content .employee_description .nav-tabs .nav-item .nav-link:hover {
+  border-color: transparent;
+}
+.index_cards .content .employee_description .nav-tabs .nav-item .nav-link.active {
+  color: #011c1e;
+  border-color: transparent;
+  border-bottom: 3px solid #058a94;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .contact_information {
+  -webkit-margin-end: 1.5%;
+          margin-inline-end: 1.5%;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .contact_information,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_information {
+  width: 48.5%;
+  display: inline-block;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .contact_information ul,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_information ul {
+  border: 0.5px solid #979797;
+  border-radius: 6px;
+  padding: 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .contact_information ul li,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_information ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 0.5px solid #979797;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .contact_information ul li span,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_information ul li span {
+  font-family: "regular";
+  color: #828c8d;
+  font-size: 0.8rem;
+  display: block;
+  width: 50%;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .contact_information ul li .title,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_information ul li .title {
+  color: #011c1e;
+  font-family: "Medium";
+  font-size: 0.9rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .contact_information ul li .title svg,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_information ul li .title svg {
+  color: #828c8d;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .contact_information ul li p,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_information ul li p {
+  font-family: "regular";
+  color: #011c1e;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  width: 50%;
+  text-align: start;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .contact_information ul li:last-child,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_information ul li:last-child {
+  border-bottom: 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .about {
+  margin-top: 2rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .about .title_section {
+  margin-bottom: 1rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .about .text {
+  font-family: "regular";
+  color: #828c8d;
+  font-size: 0.9rem;
+  width: 70%;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .about .about_card {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  -webkit-margin-end: 2.5rem;
+          margin-inline-end: 2.5rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .about .about_card svg {
+  color: #e4aa3c;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .about .about_card span {
+  color: #011c1e;
+  font-family: "regular";
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .skills,
+.index_cards .content .employee_description .tab-content .tab-pane.general .additional_experience {
+  margin-top: 2rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .skills .title_section,
+.index_cards .content .employee_description .tab-content .tab-pane.general .additional_experience .title_section {
+  margin-bottom: 1rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .skills .skill,
+.index_cards .content .employee_description .tab-content .tab-pane.general .skills .additional,
+.index_cards .content .employee_description .tab-content .tab-pane.general .additional_experience .skill,
+.index_cards .content .employee_description .tab-content .tab-pane.general .additional_experience .additional {
+  padding: 0.5rem 1.5rem;
+  background-color: #f0f0f0;
+  color: #596364;
+  font-family: "regular";
+  font-size: 0.8rem;
+  border-radius: 14px;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .skills .skill:last-child,
+.index_cards .content .employee_description .tab-content .tab-pane.general .skills .additional:last-child,
+.index_cards .content .employee_description .tab-content .tab-pane.general .additional_experience .skill:last-child,
+.index_cards .content .employee_description .tab-content .tab-pane.general .additional_experience .additional:last-child {
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .availability_times,
+.index_cards .content .employee_description .tab-content .tab-pane.general .rest_days {
+  margin-top: 2rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .availability_times .title_section,
+.index_cards .content .employee_description .tab-content .tab-pane.general .rest_days .title_section {
+  margin-bottom: 1rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .availability_times ul,
+.index_cards .content .employee_description .tab-content .tab-pane.general .rest_days ul {
+  list-style: none;
+  padding: 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .availability_times ul li,
+.index_cards .content .employee_description .tab-content .tab-pane.general .rest_days ul li {
+  font-family: "regular";
+  color: #011c1e;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .availability_times ul li:before,
+.index_cards .content .employee_description .tab-content .tab-pane.general .rest_days ul li:before {
+  color: transparent;
+  font-size: 1px;
+  content: " ";
+  margin-left: -1.3em;
+  margin-right: 15px;
+  padding: 6px;
+  background-color: #40d82f;
+  border-radius: 50%;
+  -webkit-mask-size: cover;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .rest_days ul li:before {
+  background-color: #d25656;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates {
+  margin-top: 2rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .title_section {
+  margin-bottom: 0.5rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .text_rate {
+  font-size: 0.8rem;
+  display: block;
+  width: 30%;
+  font-family: "regular";
+  color: #828c8d;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates {
+  margin-top: 2rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .rate span {
+  font-family: "Medium";
+  color: #011c1e;
+  font-size: 0.9rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .rate .star svg {
+  color: #e4aa3c;
+  opacity: 0.4;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .rate .star svg.active {
+  opacity: 1;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .progress_bar {
+  margin-top: 1rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .progress_bar span {
+  font-family: "regular";
+  color: #011c1e;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .progress_bar .percentage {
+  display: flex;
+  align-items: center;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .progress_bar .percentage .meter {
+  border-radius: 25px;
+  background-color: rgba(5, 138, 148, 0.1);
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  height: 15px;
+  width: 20%;
+  margin-bottom: 0;
+  position: relative;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .progress_bar .percentage p {
+  display: inline-block;
+  margin-bottom: 0;
+  font-family: "Medium";
+  color: #011c1e;
+  font-size: 0.9rem;
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .progress_bar .percentage .meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #058a94;
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3) inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: width 2s ease-out;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .text_rates {
+  font-family: "regular";
+  color: #828c8d;
+  font-size: 0.8rem;
+  width: 70%;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery {
+  margin-top: 2rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .title_section {
+  margin-bottom: 1rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .swiper {
+  width: 100%;
+  height: 100%;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .swiper-button-prev,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .swiper-rtl .swiper-button-next,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .swiper-button-next,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .swiper-rtl .swiper-button-prev {
+  background-color: #fff;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .swiper-button-prev:after,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .swiper-rtl .swiper-button-next:after,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .swiper-button-next:after,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_gallery .swiper-rtl .swiper-button-prev:after {
+  font-size: 1.5rem;
+  filter: invert(1) brightness(0);
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .empty_attendance {
+  margin: 2rem 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .empty_attendance img {
+  display: block;
+  margin: 0 auto;
+  width: 13%;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .empty_attendance h4 {
+  width: 30%;
+  text-align: center;
+  margin: 2rem auto 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table {
+  border: 0.7px solid #EBEAED;
+  padding: 1.5rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table .form-group {
+  position: relative;
+  width: 15%;
+  margin-bottom: 2rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table .form-group svg {
+  position: absolute;
+  top: 32%;
+  left: 0.5rem;
+  color: #828c8d;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table .form-group input {
+  font-family: "regular";
+  color: #828c8d;
+  font-size: 0.8rem;
+  padding: 0.75rem;
+  -webkit-padding-start: 1.8rem;
+  padding-inline-start: 1.8rem;
+  background-color: rgba(143, 146, 161, 0.05);
+  border: 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table thead {
+  background-color: #F5F5F5;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table thead tr th {
+  color: #828282;
+  font-family: "regular";
+  font-size: 0.8rem;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr th, .index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr td {
+  color: #102B21;
+  font-family: "regular";
+  font-size: 0.8rem;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr th .absence, .index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr td .absence {
+  background-color: rgba(210, 86, 86, 0.1);
+  color: #D25656;
+  padding: 0.3rem 0.7rem;
+  border-radius: 34px;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr th .vacation, .index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr td .vacation {
+  background-color: rgba(36, 104, 79, 0.1);
+  color: #24684F;
+  padding: 0.3rem 0.7rem;
+  border-radius: 34px;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .empty_financial {
+  margin: 2rem 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .empty_financial img {
+  display: block;
+  margin: 0 auto;
+  width: 13%;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .empty_financial h4 {
+  width: 30%;
+  text-align: center;
+  margin: 2rem auto 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions {
+  margin-bottom: 2rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions {
+  width: 32%;
+  height: 200px;
+  padding: 2rem;
+  -webkit-margin-end: 2%;
+          margin-inline-end: 2%;
+  border-radius: 8px;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions:last-child {
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions .head span {
+  color: #fff;
+  font-family: "regular";
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions .head svg {
+  color: #fff;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions .cost {
+  color: #fff;
+  text-align: center;
+  font-family: "semibold";
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions .title {
+  color: #fff;
+  text-align: center;
+  font-family: "regular";
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions:nth-child(1) {
+  background-color: #011C1E;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions:nth-child(2) {
+  background-color: #E4AA3C;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions:nth-child(3) {
+  background-color: #058A94;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .history .title_section {
+  margin-bottom: 1rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .history .dropdown {
+  margin-bottom: 1rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .history .dropdown .dropdown-toggle {
+  background-color: rgba(143, 146, 161, 0.05);
+  font-size: 0.8rem;
+  padding: 0.75rem 1.5rem;
+  font-family: "regular";
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .history .dropdown .dropdown-menu .dropdown-item {
+  font-family: "regular";
+  font-size: 0.8rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .history .card_history {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .history .card_history .title {
+  display: flex;
+  align-items: center;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .history .card_history .title p {
+  font-family: "regular";
+  color: #011c1e;
+  font-size: 0.9rem;
+  width: 70%;
+  margin-bottom: 0;
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .history .card_history.increase .title svg {
+  background-color: rgba(5, 138, 148, 0.08);
+  color: #058a94;
+  padding: 0.8rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .history .card_history.decrease .title svg {
+  background-color: rgba(210, 86, 86, 0.08);
+  color: #D25656;
+  padding: 0.8rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.index_cards .content .employee_description .tab-content .tab-pane.financial .history .card_history .date {
+  font-family: "regular";
+  color: #828282;
+  font-size: 0.8rem;
+}
 
 /* ======= 4K style ======= */
 @media (min-width: 1600px) and (max-width: 2600px) {
@@ -3797,6 +4772,61 @@ table tbody tr td {
   .index_cards .content .job_details .modal .modal-dialog {
     max-width: 60%;
   }
+  .index_cards .content .employees_tables .tab-content .filters {
+    padding: 0;
+    -webkit-margin-start: 2.5rem;
+            margin-inline-start: 2.5rem;
+  }
+  .index_cards .content .employees_tables .tab-content .filters .form-group {
+    width: 18%;
+  }
+  .index_cards .content .employees_tables .tab-content .filters .form-group:first-child {
+    width: 44%;
+  }
+  .index_cards .content .employees_tables .tab-content .form-check .form-check-input {
+    float: right;
+  }
+  .index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog {
+    max-width: 60%;
+  }
+  .index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog .modal-body .buttons .btn {
+    padding: 0.6rem 1rem;
+  }
+  .index_cards .content .employee_description .flex-mobile {
+    flex-wrap: wrap;
+  }
+  .index_cards .content .employee_description .flex-mobile .employee_title {
+    width: 100%;
+  }
+  .index_cards .content .employee_description .flex-mobile .actions {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-top: 2rem;
+  }
+  .index_cards .content .employee_description .tab-content .tab-pane.general .flex-mobile {
+    flex-wrap: wrap;
+  }
+  .index_cards .content .employee_description .tab-content .tab-pane.general .flex-mobile .contact_information,
+.index_cards .content .employee_description .tab-content .tab-pane.general .flex-mobile .work_information {
+    width: 100%;
+  }
+  .index_cards .content .employee_description .tab-content .tab-pane.general .about .text {
+    width: 90%;
+  }
+  .index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .progress_bar .percentage .meter {
+    width: 45%;
+  }
+  .index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .card_employee_rates .text_rates {
+    width: 85%;
+  }
+  .index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .d-flex {
+    flex-wrap: wrap;
+  }
+  .index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .d-flex .card_financial_transactions {
+    width: 80%;
+    margin: 0 auto 1rem;
+  }
 }
 @media only screen and (max-width: 600px) {
   .tableAllProjects {
@@ -3885,7 +4915,8 @@ table tbody tr td {
   .index_cards .content .job_details .modal .modal-dialog {
     max-width: 100%;
   }
-  .index_cards .content .job_details .modal .modal-dialog .modal-body .buttons .back, .index_cards .content .job_details .modal .modal-dialog .modal-body .buttons .yes {
+  .index_cards .content .job_details .modal .modal-dialog .modal-body .buttons .back,
+.index_cards .content .job_details .modal .modal-dialog .modal-body .buttons .yes {
     padding: 0.6rem 1rem;
   }
   .index_cards .content .job_details .description_card p {
@@ -3896,5 +4927,73 @@ table tbody tr td {
   }
   .index_cards .content .job_details .job_details_card .location_box {
     width: 100%;
+  }
+  .index_cards .content .employees_tables .nav-tabs {
+    flex-wrap: nowrap;
+  }
+  .index_cards .content .employees_tables .nav-tabs .nav-link {
+    font-size: 0.6rem !important;
+  }
+  .index_cards .content .employees_tables .tab-content .filters {
+    -webkit-margin-start: 0;
+            margin-inline-start: 0;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  .index_cards .content .employees_tables .tab-content .filters .form-group {
+    width: 32% !important;
+    margin-bottom: 0.5rem;
+  }
+  .index_cards .content .employees_tables .tab-content .filters .form-group:first-child {
+    width: 100% !important;
+  }
+  .index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog {
+    max-width: 100%;
+  }
+  .index_cards .content .employees_tables .tab-content .newEmployees .modal .modal-dialog .modal-body .buttons .btn {
+    padding: 0.6rem 1rem;
+  }
+  .index_cards .content .employee_description {
+    padding: 1rem;
+  }
+  .index_cards .content .employee_description .actions .btn {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.7rem;
+  }
+  .index_cards .content .employee_description .nav-tabs {
+    border-bottom: 0;
+  }
+  .index_cards .content .employee_description .nav-tabs .nav-item {
+    width: 100%;
+  }
+  .index_cards .content .employee_description .nav-tabs .nav-item .nav-link {
+    padding: 0.5rem 0;
+  }
+  .index_cards .content .employee_description .tab-content .tab-pane.general .contact_information ul li span,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_information ul li span {
+    width: 45%;
+  }
+  .index_cards .content .employee_description .tab-content .tab-pane.general .contact_information ul li p,
+.index_cards .content .employee_description .tab-content .tab-pane.general .work_information ul li p {
+    width: 55%;
+  }
+  .index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .text_rate {
+    width: 70%;
+  }
+  .index_cards .content .employees_tables .tab-content .all .table_details,
+.index_cards .content .employees_tables .tab-content .new .table_details,
+.index_cards .content .employees_tables .tab-content .current .table_details {
+    padding: 0;
+  }
+  .index_cards .content .employees_tables .tab-content .all .toggleBtn,
+.index_cards .content .employees_tables .tab-content .all .toggleBtnCurrentEmployees,
+.index_cards .content .employees_tables .tab-content .all .toggleBtnNewEmployees,
+.index_cards .content .employees_tables .tab-content .new .toggleBtn,
+.index_cards .content .employees_tables .tab-content .new .toggleBtnCurrentEmployees,
+.index_cards .content .employees_tables .tab-content .new .toggleBtnNewEmployees,
+.index_cards .content .employees_tables .tab-content .current .toggleBtn,
+.index_cards .content .employees_tables .tab-content .current .toggleBtnCurrentEmployees,
+.index_cards .content .employees_tables .tab-content .current .toggleBtnNewEmployees {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
