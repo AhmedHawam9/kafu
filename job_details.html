@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html id="langHtml" lang="en">
+
+<head>
+    <!-- ? Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- ? Required meta tags -->
+
+    <!-- ? Main CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <!-- <link rel="stylesheet" href="sass/style.css" /> -->
+    <script>
+        if (localStorage.getItem("lang") == "ar") {
+            var cssId = 'myCss';  // you could encode the css path itself to generate id..
+            if (!document.getElementById(cssId)) {
+                var head = document.getElementsByTagName('head')[0];
+                var link = document.createElement('link');
+                link.id = cssId;
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'sass/style.css';
+                link.media = 'all';
+                head.appendChild(link);
+            }
+        }
+        else if (localStorage.getItem("lang") == "en") {
+            var cssId = 'myCss';  // you could encode the css path itself to generate id..
+            if (!document.getElementById(cssId)) {
+                var head = document.getElementsByTagName('head')[0];
+                var link = document.createElement('link');
+                link.id = cssId;
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'sass/style_ltr.css';
+                link.media = 'all';
+                head.appendChild(link);
+            }
+        }
+        else {
+            var cssId = 'myCss';  // you could encode the css path itself to generate id..
+            if (!document.getElementById(cssId)) {
+                var head = document.getElementsByTagName('head')[0];
+                var link = document.createElement('link');
+                link.id = cssId;
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'sass/style.css';
+                link.media = 'all';
+                head.appendChild(link);
+            }
+        }
+    </script>
+    <!-- ? Main CSS -->
+
+    <!-- ? Custom CSS -->
+    <link rel="stylesheet" href="css/circle.css" />
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="css/daterangepicker.css" />
+    <!-- ? Custom CSS -->
+
+    <!-- ? Main JavaScript -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/fontawesome.min.js"></script>
+    <!-- ? Main JavaScript -->
+
+    <!-- ? Custom JavaScript -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap5.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.min.js"></script>
+    <!-- ? Custom JavaScript -->
+
+    <!-- ? Title -->
+    <title>kafu</title>
+    <!-- ? Title -->
+
+    <!-- ? Favicon -->
+    <link rel="icon" href="media/image/logo.ico" type="image" />
+    <!-- ? Favicon -->
+
+    <script>
+        console.log(
+            "%c <== 7w7w++ ==>  ",
+            "background: #FFD100; color: #3A3838; padding-left:10px; border-radius: 20px; font-weight: bold;"
+        );
+    </script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar">
+    <div class="d-flex sidemobile p-0">
+        <!-- ======= Start Sidebar ======= -->
+        <section class="sidebar open">
+            <ul class="
+        nav nav-pills
+        flex-column
+        mb-sm-auto mb-0
+        align-items-center align-items-sm-start
+      " id="menu">
+                <div class="image_logo">
+                    <img src="./media/image/logo.png" alt="logo_sidebar" class="logo" />
+                </div>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link align-middle">
+                        <img src="./media/image/icon/home.svg" alt="icon" />
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#submenulibrary" data-bs-toggle="collapse"
+                        class="nav-link accordion-button align-middle collapsed">
+                        <img src="./media/image/icon/departments.svg" alt="icon" />
+                        <span>Departments</span>
+                        <i class="fa-solid fa-angle-up"></i>
+                    </a>
+                    <ul class="collapse flex-column" id="submenulibrary" data-bs-parent="#menu">
+                        <div class="close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <li>
+                            <a href="departments.html" class="nav-link">
+                                <i class="fa-solid fa-circle dot"></i>
+                                <span>Departments</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-circle dot"></i>
+                                <span>Departments</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-circle dot"></i>
+                                <span>Departments</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-circle dot"></i>
+                                <span>Departments</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="orders.html" class="nav-link align-middle">
+                        <img src="./media/image/icon/orders.svg" alt="icon" />
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="employees.html" class="nav-link align-middle">
+                        <img src="./media/image/icon/employees.svg" alt="icon" />
+                        <span>Employees</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="charts.html" class="nav-link align-middle">
+                        <img src="./media/image/icon/charts.svg" alt="icon" />
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="nav-item disable_mobile">
+                    <a href="messages.html" class="nav-link align-middle">
+                        <img src="./media/image/icon/messages.svg" alt="icon" />
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li class="nav-item disable_mobile">
+                    <a href="setting.html" class="nav-link align-middle">
+                        <img src="./media/image/icon/setting.svg" alt="icon" />
+                        <span>General Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="contact_us">
+                <i class="fa-solid fa-circle-question"></i>
+                <p>Need Help? <a href="#">Contact Us</a></p>
+            </div>
+        </section>
+        <!-- ======= end Sidebar ======= -->
+
+        <!-- ======= Main ======= -->
+        <section class="index_cards">
+            <!-- ======= Start navbar ======= -->
+            <nav class="navbar">
+                <div class="d-flex w-25">
+                    <div class="menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" name="" id="" class="form-control" placeholder="Search…">
+                    </div>
+                </div>
+                <div>
+                    <div class="changelocal d-inline-block">
+                        <div class="dropdown lang">
+                            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <!-- lang -->
+                                <i class="fa-solid fa-earth-americas px-2"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" onclick="changeLocaleAr()">
+                                        <img src="./media/image/saudi-arabia.png" alt="saudi-arabia">
+                                        Arabic
+                                    </a>
+                                    <a class="dropdown-item" onclick="changeLocaleEn()">
+                                        <img src="./media/image/united-kingdom.png" alt="united-kingdom">
+                                        English
+                                    </a>
+                                </li>
+                                <script>
+                                    function changeLocaleAr() {
+                                        localStorage.setItem("lang", "ar");
+                                        location.reload();
+                                    }
+                                    function changeLocaleEn() {
+                                        localStorage.setItem("lang", "en");
+                                        location.reload();
+                                    }
+                                    function readLang() {
+                                        var lang = localStorage.getItem("lang");
+                                        document.getElementById("langHtml").innerHTML = lang;
+                                    }
+                                </script>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown d-inline-block">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./media/image/7w7w.jpg" class="admin_img" alt="person" />
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="reports.html">Reports</a></li>
+                            <li><a class="dropdown-item" href="setting.html">Setting</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- ======= End navbar ======= -->
+
+            <!-- ======= Start Content ======= -->
+            <section class="content">
+                <div class="container">
+                    <div class="job_details">
+                        <div class="d-flex justify-content-between align-items-center mobile_job mb-4">
+                            <div class="title">
+                                <p>Sunior UI/UX Designer</p>
+                                <span class="status new">New</span>
+                                <!-- <span class="status cancelled">Cancelled</span>
+                                <span class="status current">Current</span>
+                                <span class="status finished">Finished</span> -->
+                            </div>
+                            <div class="actions">
+                                <button class="btn delete" data-bs-toggle="modal" data-bs-target="#exampleModal">Delete
+                                    Job</button>
+                                <button class="btn edit">Edit Job</button>
+                                <!-- <button class="btn reorder">Reorder</button>
+                                <button class="btn work">Start Work</button> -->
+
+                                <!-- Start Modal Delete job -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <img src="./media/image/contract.png" alt="contract">
+                                                <h6>Are You Sure Yow Want To Delete The Job Order ?</h6>
+                                                <div class="buttons">
+                                                    <button type="button" class="btn yes">Yes , Sure</button>
+                                                    <button type="button" class="btn back"
+                                                        data-bs-dismiss="modal">Back To Job Requests</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Modal Delete job -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Start left content -->
+                            <div class="col-lg-8 col-12">
+                                <!-- Start job details card -->
+                                <div class="job_details_card">
+                                    <h5>Job Details <span><i class="fa-regular fa-circle-check"></i> Published</span>
+                                    </h5>
+                                    <div class="d-flex flex-wrap border-bottom pb-3">
+                                        <div class="details_box">
+                                            <span>Job Creation Date</span>
+                                            <p>22 May 2022</p>
+                                        </div>
+                                        <div class="details_box">
+                                            <span>Job Type</span>
+                                            <p>Full Time</p>
+                                        </div>
+                                        <div class="details_box">
+                                            <span>Work Time</span>
+                                            <p>9Am - 5Pm</p>
+                                        </div>
+                                        <div class="details_box">
+                                            <span>Days Type</span>
+                                            <p>Continous</p>
+                                        </div>
+                                        <div class="details_box">
+                                            <span>Hiring Manager</span>
+                                            <p>Ahmed Hawam</p>
+                                        </div>
+                                        <div class="details_box location_box">
+                                            <span>Location</span>
+                                            <p>Saudi Arabian, Damam,Tawfeek St....</p>
+                                        </div>
+                                        <div class="details_box">
+                                            <span>Price</span>
+                                            <p>3000 SAR / Month</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap">
+                                        <div class="details_box">
+                                            <span>Number Of Employees</span>
+                                            <p>22</p>
+                                        </div>
+                                        <div class="details_box">
+                                            <span>Gender</span>
+                                            <p>Male & Female</p>
+                                        </div>
+                                        <div class="details_box">
+                                            <span>Number Of Males</span>
+                                            <p>10</p>
+                                        </div>
+                                        <div class="details_box">
+                                            <span>Number Of Females</span>
+                                            <p>10</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End job details card -->
+
+                                <!-- Start description card -->
+                                <div class="description_card">
+                                    <h5>Description</h5>
+                                    <p>Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod
+                                        Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At
+                                        Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd Gubergren,
+                                        No Sea Takimata Sanctus Est Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit
+                                        Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut
+                                        Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam
+                                        Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd Gubergren, No Sea Takimata
+                                        Sanctus Est Lorem Ipsum Dolor Sit Amet.
+                                        Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod
+                                        Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At
+                                        Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd Gubergren,
+                                        No Sea Takimata Sanctus Est Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit
+                                        Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut
+                                        Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam
+                                        Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd Gubergren, No Sea Takimata
+                                        Sanctus Est Lorem Ipsum Dolor Sit Amet.
+                                        Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod
+                                        Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At
+                                        Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd Gubergren,
+                                        No Sea Takimata Sanctus</p>
+                                    <div class="form-check form-switch">
+                                        <label class="form-check-label" for="flexSwitchCheckReverse">Allow Employees To
+                                            Apply</label>
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse"
+                                            checked>
+                                    </div>
+                                    <span><i class="fa-solid fa-circle-exclamation"></i> active this action when you
+                                        want job appear to employees</span>
+                                </div>
+                                <!-- End description card -->
+
+                                <!-- Start Job Applicants -->
+                                <div class="job_applicants">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5>Job Applicants</h5>
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Employees
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">All Employees</a></li>
+                                                <li><a class="dropdown-item" href="#">New Employees</a></li>
+                                                <li><a class="dropdown-item" href="#">Accepted Employees</a></li>
+                                                <li><a class="dropdown-item" href="#">Refused Employees</a></li>
+                                                <li><a class="dropdown-item" href="#">Candidate Employees</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Start empty job applicants -->
+                                    <!-- <div class="empty_job_applicants">
+                                        <img src="./media/image/empty_job_applicants.png" alt="empty_job_applicants">
+                                        <h5>You don't have any job applicants yet!</h5>
+                                    </div> -->
+                                    <!-- End empty job applicants -->
+
+                                    <!-- Start content job applicants -->
+                                    <div class="table_details">
+                                        <div class="table-responsive">
+                                            <table class="table" id="allDepartments">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Name</th>
+                                                        <th>Position</th>
+                                                        <th>Phone Number</th>
+                                                        <th>Location</th>
+                                                        <th>Status</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- For loop this tr -->
+                                                    <tr>
+                                                        <td data-label="ID">ADM221-10</td>
+                                                        <td>
+                                                            <div class="name">
+                                                                <img src="./media/image/7w7w.jpg" alt="staffImg">
+                                                                <div class="title">
+                                                                    <p>Ahmed Hawam</p>
+                                                                    <span>ahmed@gmail.com</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td data-label="Position">Junior</td>
+                                                        <td data-label="Phone Number"><i
+                                                                class="fa-solid fa-phone"></i> 01111488849</td>
+                                                        <td data-label="Location">Damam,tawfeek st..</td>
+                                                        <td data-label="Work Type">
+                                                            <span class="status new">New</span>
+                                                        </td>
+                                                        <td data-label="Actions">
+                                                            <div class="dropdown">
+                                                                <a class="btn dropdown-toggle" href="#"
+                                                                    role="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                                </a>
+
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a class="dropdown-item"
+                                                                            href="department_details.html">view
+                                                                            details</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Accept</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                            href="#">refuse</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- For loop this tr -->
+
+                                                    <!-- For loop this tr -->
+                                                    <tr>
+                                                        <td data-label="ID">ADM221-10</td>
+                                                        <td>
+                                                            <div class="name">
+                                                                <img src="./media/image/7w7w.jpg" alt="staffImg">
+                                                                <div class="title">
+                                                                    <p>Ahmed Hawam</p>
+                                                                    <span>ahmed@gmail.com</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td data-label="Position">Junior</td>
+                                                        <td data-label="Phone Number"><i
+                                                                class="fa-solid fa-phone"></i> 01111488849</td>
+                                                        <td data-label="Location">Damam,tawfeek st..</td>
+                                                        <td data-label="Work Type">
+                                                            <span class="status accepted">Accepted</span>
+                                                        </td>
+                                                        <td data-label="Actions">
+                                                            <div class="dropdown">
+                                                                <a class="btn dropdown-toggle" href="#"
+                                                                    role="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                                </a>
+
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a class="dropdown-item"
+                                                                            href="department_details.html">view
+                                                                            details</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Accept</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                            href="#">refuse</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- For loop this tr -->
+
+                                                    <!-- For loop this tr -->
+                                                    <tr>
+                                                        <td data-label="ID">ADM221-10</td>
+                                                        <td>
+                                                            <div class="name">
+                                                                <img src="./media/image/7w7w.jpg" alt="staffImg">
+                                                                <div class="title">
+                                                                    <p>Ahmed Hawam</p>
+                                                                    <span>ahmed@gmail.com</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td data-label="Position">Junior</td>
+                                                        <td data-label="Phone Number"><i
+                                                                class="fa-solid fa-phone"></i> 01111488849</td>
+                                                        <td data-label="Location">Damam,tawfeek st..</td>
+                                                        <td data-label="Work Type">
+                                                            <span class="status refused">Refused</span>
+                                                        </td>
+                                                        <td data-label="Actions">
+                                                            <div class="dropdown">
+                                                                <a class="btn dropdown-toggle" href="#"
+                                                                    role="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                                </a>
+
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a class="dropdown-item"
+                                                                            href="department_details.html">view
+                                                                            details</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Accept</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                            href="#">refuse</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- For loop this tr -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- End content job applicants -->
+                                </div>
+                                <!-- End Job Applicants -->
+                            </div>
+                            <!-- End left content -->
+
+                            <!-- Start right content -->
+                            <div class="col-lg-4 col-12">
+                                <!-- Start skills -->
+                                <div class="skills">
+                                    <h5>Skills</h5>
+                                    <div class="skill_box">Prototype</div>
+                                    <div class="skill_box">Wireframes</div>
+                                    <div class="skill_box">Creativity</div>
+                                    <div class="skill_box">Mobile App Application</div>
+                                    <div class="skill_box">Creativity</div>
+                                    <div class="additional_requests">
+                                        <h5>Additional Requests</h5>
+                                        <ul>
+                                            <li>+3 years of experience</li>
+                                            <li>have a good portofolio</li>
+                                            <li>have a good knowledge about css ,
+                                                html , java </li>
+                                            <li>have a good portofolio</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End skills -->
+
+                                <!-- Start other jobs -->
+                                <div class="other_jobs">
+                                    <h5>Other Jobs</h5>
+                                    <!-- Start other jobs card -->
+                                    <div class="other_jobs_card">
+                                        <p class="title">Mid Level Graphic Designer Needed </p>
+                                        <span class="time">part time</span>
+                                        <span class="price">8000 /month</span>
+                                        <div class="applicants">
+                                            <i class="fa-solid fa-user-group"></i>
+                                            Applicants:
+                                            <span class="number">+30</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="#" class="see_more">see more</a>
+                                            <span class="days">3 days left</span>
+                                        </div>
+                                    </div>
+                                    <!-- End other jobs card -->
+
+                                    <!-- Start other jobs card -->
+                                    <div class="other_jobs_card">
+                                        <p class="title">Mid Level Graphic Designer Needed </p>
+                                        <span class="time">part time</span>
+                                        <span class="price">8000 /month</span>
+                                        <div class="applicants">
+                                            <i class="fa-solid fa-user-group"></i>
+                                            Applicants:
+                                            <span class="number">+30</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="#" class="see_more">see more</a>
+                                            <span class="days">3 days left</span>
+                                        </div>
+                                    </div>
+                                    <!-- End other jobs card -->
+
+                                    <!-- Start other jobs card -->
+                                    <div class="other_jobs_card">
+                                        <p class="title">Mid Level Graphic Designer Needed </p>
+                                        <span class="time">part time</span>
+                                        <span class="price">8000 /month</span>
+                                        <div class="applicants">
+                                            <i class="fa-solid fa-user-group"></i>
+                                            Applicants:
+                                            <span class="number">+30</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="#" class="see_more">see more</a>
+                                            <span class="days">3 days left</span>
+                                        </div>
+                                    </div>
+                                    <!-- End other jobs card -->
+
+                                    <a href="#" class="btn load_more">Load More ….</a>
+                                </div>
+                                <!-- End other jobs -->
+                            </div>
+                            <!-- End right content -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ======= End Content ======= -->
+        </section>
+        <!-- ======= Main ======= -->
+    </div>
+    <!-- <script>
+    AOS.init({ disable: "mobile" });
+  </script> -->
+    <!-- ? ======= footer =========== -->
+    <script src="js/main.js"></script>
+    <script src="js/counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script>
+        $('.counter').counterUp({
+            delay: 20,
+            time: 2000
+        });
+    </script>
+</body>
+
+</html>

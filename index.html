@@ -252,108 +252,7 @@
               Good Morning Crazy Idea
             </h5>
             <!-- Button trigger modal -->
-            <button class="new_job btn" data-bs-toggle="modal" data-bs-target="#newJobModal">add new job</button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="newJobModal" tabindex="-1" aria-labelledby="newJobModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="newJobModalLabel">الوظائف المضافة مؤخرا <span>(32)</span></h5>
-                  </div>
-                  <div class="modal-body">
-                    <div>
-                      <table class="table" id="newJob">
-                        <thead class="d-none">
-                          <tr>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td><i class="fa-solid fa-circle text-success"></i></td>
-                            <td class="title">مصمم وجهات مستخدم بواسطة فيجما</td>
-                            <td>مشروع ال 100 مصمم ....</td>
-                            <td>مايو 22 , 2022</td>
-                            <td>100 ريال سعودي</td>
-                            <td class="menu">
-                              <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                  aria-expanded="false">
-                                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">عرض التفاصيل</a></li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><i class="fa-solid fa-circle text-success"></i></td>
-                            <td class="title">مصمم وجهات مستخدم بواسطة فيجما</td>
-                            <td>مشروع ال 100 مصمم ....</td>
-                            <td>مايو 22 , 2022</td>
-                            <td>100 ريال سعودي</td>
-                            <td class="menu">
-                              <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                  aria-expanded="false">
-                                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">عرض التفاصيل</a></li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><i class="fa-solid fa-circle text-success"></i></td>
-                            <td class="title">مصمم وجهات مستخدم بواسطة فيجما</td>
-                            <td>مشروع ال 100 مصمم ....</td>
-                            <td>مايو 22 , 2022</td>
-                            <td>100 ريال سعودي</td>
-                            <td class="menu">
-                              <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                  aria-expanded="false">
-                                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">عرض التفاصيل</a></li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <script>
-                            $(document).ready(function () {
-                              $('#newJob').DataTable({
-                                language: {
-                                  search: "البحث",
-                                  lengthMenu: "عرض" + " _MENU_ " + "الوظائف",
-                                  paginate: {
-                                    first: "الأول",
-                                    last: "الأخير",
-                                    next: "التالي",
-                                    previous: "السابق",
-                                  },
-                                  info: "عرض" + " _START_ " + "من" + " _END_ " + "الى" + " _TOTAL_ " + "الوظائف",
-                                },
-                              });
-                            });
-                          </script>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a class="new_job btn" href="add_job.html">+ add new job</a>
           </div>
 
           <!-- ======= Start When there is content ======= -->
@@ -377,8 +276,8 @@
                 </a>
 
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">view all</a></li>
-                  <li><a class="dropdown-item" href="#">add new job</a></li>
+                  <li><a class="dropdown-item" href="orders.html">view all</a></li>
+                  <li><a class="dropdown-item" href="add_job.html">add new job</a></li>
                 </ul>
               </div>
             </div>
@@ -542,8 +441,8 @@
                     </a>
 
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">view all</a></li>
-                      <li><a class="dropdown-item" href="#">add new department</a></li>
+                      <li><a class="dropdown-item" href="departments.html">view all</a></li>
+                      <li><a class="dropdown-item" href="add_department.html">add new department</a></li>
                     </ul>
                   </div>
                 </div>
@@ -692,7 +591,7 @@
                 </a>
 
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">view all</a></li>
+                  <li><a class="dropdown-item" href="staff_rate.html">view all</a></li>
                 </ul>
               </div>
             </div>

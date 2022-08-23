@@ -1,5 +1,7 @@
-$PrimaryColor: #058A94;
-$SecondColor: #E4AA3C;
+$PrimaryColor: #058a94;
+$SecondColor: #e4aa3c;
+$PrimaryText: #011c1e;
+$SecondText: #828c8d;
 
 @font-face {
   font-family: "light";
@@ -51,8 +53,9 @@ table tbody tr td {
 
 .swal2-title {
   font-family: "semibold";
-  font-size: .9rem !important;
+  font-size: 0.9rem !important;
   margin: 0 !important;
+  color: $PrimaryText;
 }
 
 .swal2-html-container {
@@ -60,22 +63,34 @@ table tbody tr td {
   font-size: 0.8rem !important;
   width: 90% !important;
   margin: 1rem auto 0 !important;
+  color: #596364;
 
-  .need_help {
+  img {
+    width: 40%;
+  }
+
+  .view_department {
     font-family: "medium";
-    color: #596364;
-    margin-top: 1.5rem;
+    color: #fff;
+    background-color: $PrimaryColor;
+    margin: 1rem auto 0;
     display: block;
+    width: 70%;
+    font-size: 0.8rem;
+    padding: 0.75rem;
+    border-color: transparent;
+    transition: 0.7s ease-in-out;
 
-    a {
-      font-family: "medium";
-      text-decoration: none;
+    &:hover {
+      background-color: transparent;
       color: $PrimaryColor;
+      border: 1px solid $PrimaryColor;
+      transition: 0.7s ease-in-out;
     }
   }
 }
 
-.swal2-container.swal2-center>.swal2-popup {
+.swal2-container.swal2-center > .swal2-popup {
   padding: 1.5rem;
 }
 
@@ -89,7 +104,6 @@ table tbody tr td {
 }
 
 .show_project_swal {
-
   &:active,
   &:focus {
     background-color: $PrimaryColor;
@@ -122,7 +136,28 @@ table tbody tr td {
     margin: 0 0.5rem;
   }
 
-  .active>.page-link,
+  .dataTables_length,
+  .dataTables_filter,
+  .dataTables_info,
+  .dataTables_paginate {
+    font-family: "regular";
+  }
+
+  .dataTables_paginate {
+    .pagination {
+      .page-link {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .dataTables_info,
+  .dataTables_length,
+  .dataTables_filter {
+    font-size: 0.8rem;
+  }
+
+  .active > .page-link,
   .page-link.active {
     background-color: $PrimaryColor;
     border-color: $PrimaryColor;
@@ -134,12 +169,11 @@ table tbody tr td {
 
   .title_head {
     font-family: "semibold";
-    color: #011c1e;
+    color: $PrimaryText;
     margin-bottom: 0;
   }
 
   .btn {
-
     &:hover,
     &:focus,
     &:active {
@@ -148,32 +182,32 @@ table tbody tr td {
   }
 
   .content {
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
     padding: 5rem 1rem;
     min-height: 100vh;
     height: 100%;
 
     .title_section {
       font-family: "medium";
-      color: #011C1E;
+      color: $PrimaryText;
       margin-bottom: 2rem;
     }
 
     .btn_title_page {
       font-family: "semibold";
-      background-color: #058A94;
+      background-color: #058a94;
       color: #fff;
       border-radius: 12px;
       font-size: 0.8rem;
       margin-bottom: 2rem;
       padding: 0.75rem 1.5rem;
-      transition: .7s ease-in-out;
+      transition: 0.7s ease-in-out;
 
       &:hover {
         background-color: transparent;
         border: 1px solid $PrimaryColor;
         color: $PrimaryColor;
-        transition: .7s ease-in-out;
+        transition: 0.7s ease-in-out;
       }
     }
 
@@ -222,30 +256,30 @@ table tbody tr td {
 
       h4 {
         font-family: "medium";
-        color: #011C1E;
+        color: $PrimaryText;
       }
 
       p {
         font-family: "regular";
-        color: #828C8D;
-        font-size: .8rem;
+        color: $SecondText;
+        font-size: 0.8rem;
       }
 
       .nav-link {
         font-family: "regular";
-        color: #B0B9B9;
+        color: #b0b9b9;
         text-align: start;
         padding: 1rem 1rem;
         border-radius: 0;
 
         svg {
-          color: #B0B9B9;
+          color: #b0b9b9;
           padding-inline-end: 1rem;
         }
 
         &.active {
-          background-color: rgba(228, 170, 60, .1);
-          color: #011C1E;
+          background-color: rgba(228, 170, 60, 0.1);
+          color: $PrimaryText;
 
           svg {
             color: $SecondColor;
@@ -257,14 +291,9 @@ table tbody tr td {
     .tab-content {
       width: 100%;
 
-      .tab-pane {
-        background-color: #fff;
-        padding: 3rem;
-      }
-
       h5 {
         font-family: "medium";
-        color: #011C1E;
+        color: $PrimaryText;
         margin-bottom: 2rem;
       }
 
@@ -273,25 +302,24 @@ table tbody tr td {
         max-width: 205px;
 
         .avatar-edit {
-
           input {
             display: none;
 
-            +label {
+            + label {
               display: block;
               width: 100%;
-              padding: .7rem 0;
+              padding: 0.7rem 0;
               text-align: center;
               margin: 1rem 0 0;
-              font-size: .8rem;
+              font-size: 0.8rem;
               font-family: "semibold";
               color: $PrimaryColor;
               border: 1px solid $PrimaryColor;
-              background: #FFFFFF;
+              background: #ffffff;
               box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
               cursor: pointer;
               font-weight: normal;
-              transition: all .2s ease-in-out;
+              transition: all 0.2s ease-in-out;
 
               &:hover {
                 background: #f1f1f1;
@@ -306,7 +334,7 @@ table tbody tr td {
           height: 200px;
           position: relative;
           // box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-          background-color: #EBEBEB;
+          background-color: #ebebeb;
 
           .imagePreview {
             width: 100%;
@@ -330,29 +358,29 @@ table tbody tr td {
             position: absolute;
             top: 62%;
             left: 1%;
-            color: #B0B9B9;
+            color: #b0b9b9;
             z-index: 2;
           }
 
           label {
             font-family: "regular";
-            color: #011C1E;
-            margin-bottom: .5rem;
+            color: $PrimaryText;
+            margin-bottom: 0.5rem;
             display: block;
           }
 
           input {
-            font-size: .8rem;
-            padding: .75rem;
-            color: #B0B9B9;
+            font-size: 0.8rem;
+            padding: 0.75rem;
+            color: #b0b9b9;
             font-family: "regular";
             padding-inline-start: 2rem;
           }
 
           textarea {
-            font-size: .8rem;
-            padding: .75rem;
-            color: #B0B9B9;
+            font-size: 0.8rem;
+            padding: 0.75rem;
+            color: #b0b9b9;
             font-family: "regular";
             resize: none;
           }
@@ -365,7 +393,7 @@ table tbody tr td {
           }
 
           /* Firefox */
-          input[type=number] {
+          input[type="number"] {
             -moz-appearance: textfield;
           }
 
@@ -373,12 +401,12 @@ table tbody tr td {
             .dropdown-toggle {
               background-color: transparent;
               border: 1px solid #ced4da;
-              font-size: .8rem;
-              padding: .75rem;
+              font-size: 0.8rem;
+              padding: 0.75rem;
               padding-inline-start: 2rem !important;
 
               .filter-option-inner-inner {
-                color: #B0B9B9;
+                color: #b0b9b9;
                 font-family: "regular";
               }
             }
@@ -386,7 +414,7 @@ table tbody tr td {
 
           .dropdown-item {
             font-family: "regular";
-            font-size: .8rem;
+            font-size: 0.8rem;
           }
 
           .location {
@@ -419,15 +447,15 @@ table tbody tr td {
           color: #fff;
           font-family: "medium";
           width: 100%;
-          font-size: .8rem;
-          padding: 1rem .75rem;
-          transition: .7s ease-in-out;
+          font-size: 0.8rem;
+          padding: 1rem 0.75rem;
+          transition: 0.7s ease-in-out;
 
           &:hover {
             background-color: #fff;
             border: 1px solid $PrimaryColor;
             color: $PrimaryColor;
-            transition: .7s ease-in-out;
+            transition: 0.7s ease-in-out;
           }
         }
       }
@@ -520,7 +548,7 @@ table tbody tr td {
 
             td {
               font-family: "regular";
-              color: #011c1e;
+              color: $PrimaryText;
               font-size: 0.8rem;
             }
 
@@ -553,7 +581,7 @@ table tbody tr td {
 
       h5 {
         font-family: "medium";
-        color: #011C1E;
+        color: $PrimaryText;
         margin-bottom: 0;
       }
 
@@ -567,13 +595,13 @@ table tbody tr td {
         .dropdown-menu {
           .dropdown-item {
             font-family: "regular";
-            font-size: .8rem;
+            font-size: 0.8rem;
           }
         }
       }
 
       .card_order {
-        background-color: #FAFAFA;
+        background-color: #fafafa;
         width: 48%;
         margin-top: 1rem;
         margin-inline-end: 1.5%;
@@ -583,27 +611,27 @@ table tbody tr td {
 
         .title {
           font-family: "medium";
-          color: #011C1E;
-          font-size: .9rem;
+          color: $PrimaryText;
+          font-size: 0.9rem;
           margin-bottom: 0;
         }
 
         .status {
-          padding: .25rem .5rem;
+          padding: 0.25rem 0.5rem;
           color: $PrimaryColor;
-          background-color: rgba(5, 138, 148, .08);
+          background-color: rgba(5, 138, 148, 0.08);
           font-family: "regular";
-          font-size: .8rem;
+          font-size: 0.8rem;
         }
 
         .position {
           font-family: "regular";
-          color: #B0B9B9;
-          font-size: .8rem;
+          color: #b0b9b9;
+          font-size: 0.8rem;
         }
 
         .details {
-          margin-top: .5rem;
+          margin-top: 0.5rem;
           display: flex;
           justify-content: space-between;
 
@@ -611,14 +639,14 @@ table tbody tr td {
           .time,
           .posted {
             svg {
-              color: #011C1E;
-              margin-inline-end: .5rem;
+              color: $PrimaryText;
+              margin-inline-end: 0.5rem;
             }
 
             span {
-              color: #828C8D;
+              color: $SecondText;
               font-family: "regular";
-              font-size: .8rem;
+              font-size: 0.8rem;
             }
           }
         }
@@ -627,29 +655,28 @@ table tbody tr td {
           margin: 1rem 0;
           font-family: "regular";
           color: #596364;
-          font-size: .8rem;
+          font-size: 0.8rem;
         }
 
         .job_applicants {
           display: flex;
           align-items: center;
-          font-size: .8rem;
+          font-size: 0.8rem;
 
           svg {
-            color: #828C8D;
-            margin-inline-end: .5rem;
-
+            color: $SecondText;
+            margin-inline-end: 0.5rem;
           }
 
           span {
-            color: #828C8D;
+            color: $SecondText;
             font-family: "regular";
             margin-bottom: 0;
-            margin-inline-end: .5rem;
+            margin-inline-end: 0.5rem;
           }
 
           p {
-            color: #011C1E;
+            color: $PrimaryText;
             font-family: "medium";
             margin-bottom: 0;
           }
@@ -665,20 +692,20 @@ table tbody tr td {
 
       h5 {
         font-family: "medium";
-        color: #011C1E;
+        color: $PrimaryText;
         margin-bottom: 0;
       }
 
       .dropdown {
         .dropdown-toggle {
-          background-color: rgba(143, 146, 161, .05);
+          background-color: rgba(143, 146, 161, 0.05);
           font-family: "regular";
-          font-size: .8rem;
+          font-size: 0.8rem;
         }
 
         .dropdown-menu {
           .dropdown-item {
-            font-size: .8rem;
+            font-size: 0.8rem;
             font-family: "regular";
           }
         }
@@ -690,7 +717,9 @@ table tbody tr td {
       padding: 1.5rem;
       border-radius: 20px;
       width: 100%;
-      display: inline-block;
+      height: 100%;
+      display: inline-flex;
+      flex-direction: column;
 
       .dropdown-toggle::after {
         content: none;
@@ -710,14 +739,14 @@ table tbody tr td {
 
         .title {
           font-family: "medium";
-          color: #011C1E;
+          color: $PrimaryText;
           margin-bottom: 0;
         }
 
         .tag {
           font-family: "regular";
-          color: #828C8D;
-          font-size: .8rem;
+          color: $SecondText;
+          font-size: 0.8rem;
         }
 
         .circle {
@@ -726,7 +755,7 @@ table tbody tr td {
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: .8rem;
+          font-size: 0.8rem;
           font-family: "regular";
           width: 35px;
           height: 35px;
@@ -745,16 +774,18 @@ table tbody tr td {
         font-family: "regular";
         width: 100%;
         display: block;
-        padding: .75rem;
-        font-size: .8rem;
+        padding: 0.75rem;
+        font-size: 0.8rem;
         border-radius: 5px;
         text-align: center;
-        transition: .7s ease-in-out;
+        transition: 0.7s ease-in-out;
+        margin-top: auto;
+        height: auto;
 
         &:hover {
           background-color: $PrimaryColor;
           color: #fff;
-          transition: .7s ease-in-out;
+          transition: 0.7s ease-in-out;
         }
       }
     }
@@ -764,6 +795,7 @@ table tbody tr td {
       padding: 1.5rem;
       border-radius: 20px;
       width: 100%;
+      height: 100%;
       display: inline-block;
 
       .number_visitor_year {
@@ -776,8 +808,8 @@ table tbody tr td {
 
         span {
           font-family: "regular";
-          color: #8F92A1;
-          font-size: .8rem;
+          color: #8f92a1;
+          font-size: 0.8rem;
         }
       }
 
@@ -786,7 +818,7 @@ table tbody tr td {
         font-family: "regular";
 
         svg {
-          margin-inline-end: .5rem;
+          margin-inline-end: 0.5rem;
         }
       }
     }
@@ -799,7 +831,7 @@ table tbody tr td {
 
       h5 {
         font-family: "medium";
-        color: #011C1E;
+        color: $PrimaryText;
         margin-bottom: 0;
       }
 
@@ -831,8 +863,8 @@ table tbody tr td {
 
             span {
               font-family: "regular";
-              color: #8F92A1;
-              font-size: .8rem;
+              color: #8f92a1;
+              font-size: 0.8rem;
             }
           }
 
@@ -855,27 +887,27 @@ table tbody tr td {
           }
 
           &:nth-child(2) {
-            background-color: rgba(5, 138, 148, .05);
+            background-color: rgba(5, 138, 148, 0.05);
           }
 
           &:nth-child(3) {
-            background-color: rgba(228, 170, 60, .05);
+            background-color: rgba(228, 170, 60, 0.05);
           }
 
           &:nth-child(4) {
-            background-color: rgba(210, 86, 86, .05);
+            background-color: rgba(210, 86, 86, 0.05);
           }
 
           &:nth-child(5) {
-            background-color: rgba(0, 82, 204, .05);
+            background-color: rgba(0, 82, 204, 0.05);
           }
 
           &:nth-child(6) {
-            background-color: rgba(109, 204, 0, .05);
+            background-color: rgba(109, 204, 0, 0.05);
           }
 
           &:nth-child(7) {
-            background-color: rgba(245, 255, 0, .05);
+            background-color: rgba(245, 255, 0, 0.05);
           }
 
           p {
@@ -908,7 +940,7 @@ table tbody tr td {
         width: 23%;
         margin-inline-end: 1%;
         display: inline-block;
-        background-color: #FAFAFA;
+        background-color: #fafafa;
         border-radius: 6px;
         padding: 1rem;
 
@@ -919,27 +951,27 @@ table tbody tr td {
         }
 
         .name {
-          margin-top: .5rem;
+          margin-top: 0.5rem;
           margin-bottom: 0;
           font-family: "medium";
-          color: #011C1E;
+          color: $PrimaryText;
           font-size: 1rem;
         }
 
         .title {
           font-family: "regular";
           color: $PrimaryColor;
-          font-size: .8rem;
+          font-size: 0.8rem;
           margin-bottom: 1rem;
           display: block;
         }
 
         .time,
         .date {
-          color: #828C8D;
+          color: $SecondText;
           font-family: "regular";
-          font-size: .8rem;
-          margin-bottom: .5rem;
+          font-size: 0.8rem;
+          margin-bottom: 0.5rem;
         }
       }
     }
@@ -956,7 +988,7 @@ table tbody tr td {
 
       h5 {
         font-family: "medium";
-        color: #011C1E;
+        color: $PrimaryText;
         text-align: center;
         margin: 1rem 0;
       }
@@ -964,14 +996,14 @@ table tbody tr td {
       p {
         font-family: "regular";
         color: #596364;
-        font-size: .8rem;
+        font-size: 0.8rem;
         text-align: center;
         margin: 0 auto;
         width: 30%;
       }
 
       .add_department {
-        background-color: #058A94;
+        background-color: #058a94;
         color: #fff;
         text-decoration: none;
         font-family: "regular";
@@ -986,15 +1018,2255 @@ table tbody tr td {
 
         &:hover {
           background-color: #fff;
-          border: 1px solid #058A94;
-          color: #058A94;
+          border: 1px solid #058a94;
+          color: #058a94;
           transition: 0.7s ease-in-out;
         }
       }
     }
 
     .statistics_departments {
-      
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .card_statistics_departments {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // margin-bottom: 1rem;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        .title {
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-inline-end: 0.5rem;
+            width: 15px;
+            height: 15px;
+            padding: 0.7rem;
+            border-radius: 50%;
+            color: #fff;
+          }
+
+          .number {
+            span {
+              color: $SecondText;
+              font-size: 0.8rem;
+              font-family: "regular";
+            }
+
+            p {
+              font-family: "semibold";
+              color: $PrimaryText;
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        &:nth-child(1) {
+          svg {
+            background-color: $PrimaryColor;
+          }
+        }
+
+        &:nth-child(2) {
+          svg {
+            background-color: #0e0594;
+          }
+        }
+
+        &:nth-child(3) {
+          svg {
+            background-color: #940594;
+          }
+        }
+
+        &:nth-child(4) {
+          svg {
+            background-color: #c5771e;
+          }
+        }
+
+        .statistics {
+          span {
+            font-family: "medium";
+            padding: 0.3rem 0.5rem;
+            border-radius: 7px;
+            font-size: 0.8rem;
+
+            &.increase {
+              background-color: rgba(228, 170, 60, 0.1);
+              color: #e4aa3c;
+            }
+
+            &.decrease {
+              background-color: rgba(210, 86, 86, 0.1);
+              color: #d25656;
+            }
+          }
+
+          p {
+            display: inline-block;
+            font-family: "regular";
+            color: $SecondText;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    .departments_jobs {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      h5 {
+        margin-bottom: 0.5rem;
+      }
+
+      .see_all {
+        font-family: "medium";
+        color: $PrimaryColor;
+        text-decoration: none;
+      }
+
+      .job_card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1.7rem;
+
+        .title {
+          p {
+            font-family: "medium";
+            color: $PrimaryText;
+            margin-bottom: 0;
+          }
+
+          .tag {
+            font-family: "medium";
+            color: $SecondText;
+            font-size: 0.8rem;
+          }
+        }
+
+        .dropdown-toggle::after {
+          content: none;
+        }
+
+        .dropdown-item {
+          font-size: 0.8rem;
+          text-align: start;
+          font-family: "regular";
+        }
+      }
+
+      .view_all {
+        margin-top: auto;
+        width: 100%;
+        display: block;
+        border: 1px solid $PrimaryColor;
+        color: $PrimaryColor;
+        font-family: "regular";
+        border-radius: 5px;
+        font-size: 0.8rem;
+        padding: 0.75rem;
+        transition: 0.7s ease-in-out;
+
+        &:hover {
+          background-color: $PrimaryColor;
+          color: #fff;
+          transition: 0.7s ease-in-out;
+        }
+      }
+    }
+
+    .all_departments {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 20px;
+      width: 100%;
+      margin-top: 1.5rem;
+
+      .dataTables_length,
+      .dataTables_filter,
+      .dataTables_info,
+      .dataTables_paginate {
+        display: none;
+      }
+
+      table {
+        thead {
+          background-color: #fafafb;
+
+          tr {
+            th {
+              font-family: "regular";
+              color: $SecondText;
+              font-size: 0.8rem;
+              padding: 1rem 0.5rem;
+
+              &::after,
+              &::before {
+                content: unset;
+              }
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            td {
+              font-family: "medium";
+              color: $PrimaryText;
+              font-size: 0.8rem;
+
+              .dropdown-toggle::after {
+                content: none;
+              }
+
+              .dropdown-item {
+                font-size: 0.8rem;
+                text-align: start;
+                font-family: "regular";
+              }
+            }
+          }
+        }
+      }
+
+      .modal {
+        .modal-dialog {
+          max-width: 30%;
+
+          .modal-body {
+            padding: 4rem 2rem;
+
+            img {
+              margin: 0 auto;
+              width: 40%;
+              display: block;
+            }
+
+            p {
+              font-family: "semibold";
+              color: $PrimaryText;
+              text-align: center;
+              margin: 2rem auto;
+              width: 70%;
+            }
+
+            .buttons {
+              display: flex;
+              justify-content: center;
+
+              .disactive_btn {
+                background-color: $PrimaryColor;
+                color: #fff;
+                font-family: "medium";
+                font-size: 0.8rem;
+                padding: 0.75rem 2.5rem;
+                margin-inline-end: 1rem;
+              }
+
+              .back_home {
+                color: $PrimaryColor;
+                background-color: rgba(5, 138, 148, 0.1);
+                font-family: "medium";
+                font-size: 0.8rem;
+                padding: 0.75rem 2.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .statistics {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      margin-top: 1.5rem;
+
+      .chart-container {
+        height: 40vh;
+        width: 100%;
+        position: relative;
+      }
+    }
+
+    .accuracy {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      margin-top: 1.5rem;
+
+      h5 {
+        font-family: "semibold";
+        color: $PrimaryText;
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+
+      .c100 {
+        transform: scale(1.5);
+        // margin-top: 2rem;
+      }
+    }
+
+    .add_department {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+
+      h5 {
+        font-family: "medium";
+        color: $PrimaryText;
+        margin-bottom: 2rem;
+      }
+
+      .avatar-upload {
+        position: relative;
+        max-width: 205px;
+
+        .avatar-edit {
+          input {
+            display: none;
+
+            + label {
+              display: block;
+              width: 100%;
+              padding: 0.7rem 0;
+              text-align: center;
+              margin: 1rem 0 0;
+              font-size: 0.8rem;
+              font-family: "semibold";
+              color: $PrimaryColor;
+              border: 1px solid $PrimaryColor;
+              background: #ffffff;
+              box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+              cursor: pointer;
+              font-weight: normal;
+              transition: all 0.2s ease-in-out;
+
+              &:hover {
+                background: #f1f1f1;
+                border: 1px solid $PrimaryColor;
+              }
+            }
+          }
+        }
+
+        .avatar-preview {
+          width: 200px;
+          height: 200px;
+          position: relative;
+          border-radius: 50%;
+          // box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+          background-color: #ebebeb;
+
+          .imagePreview {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      .data {
+        width: 75%;
+        margin-inline-start: 3rem;
+
+        .form-group {
+          margin-bottom: 1.5rem;
+          position: relative;
+
+          svg {
+            position: absolute;
+            top: 62%;
+            left: 1%;
+            color: #b0b9b9;
+            z-index: 2;
+          }
+
+          label {
+            font-family: "regular";
+            color: $PrimaryText;
+            margin-bottom: 0.5rem;
+            display: block;
+          }
+
+          input {
+            font-size: 0.8rem;
+            padding: 0.75rem;
+            color: #b0b9b9;
+            font-family: "regular";
+            padding-inline-start: 2rem;
+          }
+
+          textarea {
+            font-size: 0.8rem;
+            padding: 0.75rem;
+            color: #b0b9b9;
+            font-family: "regular";
+            resize: none;
+          }
+
+          /* Chrome, Safari, Edge, Opera */
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          /* Firefox */
+          input[type="number"] {
+            -moz-appearance: textfield;
+          }
+
+          .bootstrap-select {
+            .dropdown-toggle {
+              background-color: transparent;
+              border: 1px solid #ced4da;
+              font-size: 0.8rem;
+              padding: 0.75rem;
+              padding-inline-start: 2rem !important;
+
+              .filter-option-inner-inner {
+                color: #b0b9b9;
+                font-family: "regular";
+              }
+            }
+          }
+
+          .dropdown-item {
+            font-family: "regular";
+            font-size: 0.8rem;
+          }
+
+          .location {
+            display: inline-block;
+            border: 0.7px solid #cccccc;
+            border-radius: 5px;
+            padding: 1.2rem 1.5rem;
+
+            svg {
+              stroke: $PrimaryColor;
+              stroke-width: 40px;
+              color: transparent;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: unset;
+              font-size: 1rem;
+            }
+          }
+
+          .lat {
+            display: inline-block;
+            font-family: "regular";
+            margin-inline-start: 0.5rem;
+          }
+        }
+
+        .submit_btn {
+          background-color: $PrimaryColor;
+          color: #fff;
+          font-family: "medium";
+          width: 100%;
+          font-size: 0.8rem;
+          padding: 1rem 0.75rem;
+          transition: 0.7s ease-in-out;
+
+          &:hover {
+            background-color: #fff;
+            border: 1px solid $PrimaryColor;
+            color: $PrimaryColor;
+            transition: 0.7s ease-in-out;
+          }
+        }
+      }
+
+      form.company_form_info {
+        margin-inline-start: 0;
+        width: 100%;
+
+        .col-lg-6 {
+          svg {
+            left: 3% !important;
+          }
+        }
+      }
+    }
+
+    .other_department {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 100%;
+
+      .see_all {
+        font-family: "Medium";
+        color: $PrimaryColor;
+        text-decoration: none;
+      }
+
+      .card_other_department {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // margin-bottom: 1rem;
+        padding: 1.5rem 0;
+        border-bottom: 0.5px solid #bebebe;
+
+        img {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+        }
+
+        .details {
+          .title {
+            font-family: "Medium";
+            color: $PrimaryText;
+            margin-bottom: 0;
+          }
+
+          .tag {
+            font-family: "regular";
+            color: #b0b9b9;
+            display: block;
+            font-size: 0.8rem;
+            margin: 0.2rem 0;
+          }
+
+          .location {
+            font-family: "regular";
+            color: $SecondText;
+            display: block;
+            font-size: 0.8rem;
+          }
+        }
+
+        .dropdown-toggle::after {
+          content: none;
+        }
+
+        .dropdown-item {
+          font-size: 0.8rem;
+          text-align: start;
+          font-family: "regular";
+        }
+
+        &:last-child {
+          border-bottom: 0;
+          padding: 1.5rem 0 0;
+        }
+      }
+    }
+
+    .table_details {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 100%;
+
+      .head_table {
+        display: flex;
+        justify-content: space-between;
+
+        .filters {
+          width: 50%;
+
+          .filter {
+            width: 30% !important;
+            display: inline-block;
+            margin-inline-end: 1rem;
+
+            .dropdown-toggle {
+              border: 1px solid #ced4da;
+              background-color: transparent;
+              padding: 0.5rem;
+
+              .filter-option-inner {
+                text-align: start;
+                font-size: 0.8rem;
+              }
+            }
+
+            .dropdown-menu {
+              .dropdown-item {
+                text-align: start;
+                font-size: 0.8rem;
+                font-family: "regular";
+              }
+            }
+          }
+        }
+
+        .description {
+          width: 50%;
+
+          .title {
+            margin-bottom: 0;
+            font-family: "regular";
+            color: $PrimaryText;
+          }
+
+          .text {
+            font-family: "regular";
+            color: $SecondText;
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .dataTables_wrapper {
+        margin-top: 2rem;
+      }
+
+      table {
+        thead {
+          tr {
+            th {
+              text-align: start;
+              font-size: 0.8rem;
+              color: $SecondText;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            td {
+              font-family: "semibold";
+              color: $PrimaryText;
+              font-size: 0.8rem;
+              vertical-align: middle;
+
+              .name {
+                display: flex;
+                align-items: center;
+
+                img {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                  margin-inline-end: 1rem;
+                }
+
+                p {
+                  font-family: "semibold";
+                  color: $PrimaryText;
+                  margin-bottom: 0;
+                }
+
+                span {
+                  font-family: "regular";
+                  color: $SecondText;
+                }
+              }
+
+              svg {
+                color: #84818a;
+                margin-inline-end: 0.5rem;
+              }
+
+              .dropdown-toggle::after {
+                content: none;
+              }
+
+              .dropdown-menu {
+                .dropdown-item {
+                  font-size: 0.8rem;
+                  text-align: start;
+                }
+              }
+            }
+
+            td.select-checkbox:after {
+              margin-top: -10px;
+            }
+
+            td.select-checkbox:before {
+              top: 2.2em;
+            }
+          }
+        }
+      }
+
+      .modal {
+        .rate {
+          display: flex;
+          justify-content: center;
+          height: 46px;
+          padding: 0 10px;
+          direction: rtl;
+        }
+
+        .rate:not(:checked) > input {
+          position: absolute;
+          top: -9999px;
+        }
+
+        .rate:not(:checked) > label {
+          float: right;
+          width: 1em;
+          overflow: hidden;
+          white-space: nowrap;
+          cursor: pointer;
+          font-size: 30px;
+          color: #e4aa3c;
+          opacity: 0.4;
+        }
+
+        .rate:not(:checked) > label:before {
+          content: "★ ";
+        }
+
+        .rate > input:checked ~ label {
+          color: #e4aa3c;
+          opacity: 1;
+        }
+
+        .rate:not(:checked) > label:hover,
+        .rate:not(:checked) > label:hover ~ label {
+          color: #e4aa3c;
+          opacity: 1;
+        }
+
+        .rate > input:checked + label:hover,
+        .rate > input:checked + label:hover ~ label,
+        .rate > input:checked ~ label:hover,
+        .rate > input:checked ~ label:hover ~ label,
+        .rate > label:hover ~ input:checked ~ label {
+          color: #c59b08;
+        }
+
+        p {
+          font-family: "semibold";
+          color: $PrimaryText;
+          text-align: center;
+          margin-top: 1rem;
+          margin-bottom: 0;
+        }
+
+        span {
+          margin: 0.5rem auto;
+          font-family: "regular";
+          font-size: 0.8rem;
+          color: #596364;
+          width: 70%;
+          display: block;
+          text-align: center;
+        }
+
+        .form-group {
+          label {
+            font-family: "regular";
+            color: $SecondText;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+          }
+
+          textarea {
+            resize: none;
+          }
+        }
+
+        .btn {
+          background-color: $PrimaryColor;
+          color: #fff;
+          font-family: "Medium";
+          font-size: 0.8rem;
+          padding: 0.5rem 2rem;
+          margin-top: 1rem;
+          transition: 0.7s ease-in-out;
+
+          &:hover {
+            background-color: transparent;
+            border: 1px solid $PrimaryColor;
+            color: $PrimaryColor;
+            transition: 0.7s ease-in-out;
+          }
+        }
+      }
+    }
+
+    .department_details {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 100%;
+
+      .nav-tabs {
+        .nav-item {
+          margin: 0 0.5rem;
+
+          .nav-link {
+            color: $SecondText;
+            font-family: "Medium";
+            font-size: 0.9rem;
+
+            &:hover,
+            &:focus {
+              border-color: transparent;
+              outline: unset;
+            }
+
+            &:focus-visible {
+              outline: unset;
+            }
+
+            &.active {
+              border: 0;
+              border-bottom: 3px solid $PrimaryColor;
+              color: $PrimaryText;
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        margin-top: 2rem;
+
+        .details_card {
+          border: 0.7px solid #ebeaed;
+          padding: 1.5rem;
+          border-radius: 4px;
+          height: 100%;
+
+          img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-inline-end: 1rem;
+          }
+
+          .title {
+            p {
+              margin-bottom: 0;
+              font-family: "Medium";
+              color: $PrimaryText;
+              font-size: 0.9rem;
+            }
+
+            span {
+              font-family: "regular";
+              color: $SecondText;
+              font-size: 0.8rem;
+            }
+          }
+
+          svg {
+            color: $SecondColor;
+            width: 15px;
+            height: 15px;
+            padding: 0.7rem;
+            background-color: rgba(228, 170, 60, 0.1);
+            border-radius: 50%;
+            margin-inline-end: 0.7rem;
+          }
+
+          .location {
+            p {
+              margin-bottom: 0;
+              font-family: "Medium";
+              color: $PrimaryText;
+              font-size: 0.9rem;
+              margin-top: 0.3rem;
+            }
+
+            span {
+              font-family: "regular";
+              color: $SecondText;
+              font-size: 0.8rem;
+            }
+          }
+
+          .card_location {
+            padding: 0 0 2rem;
+          }
+
+          .manager_details {
+            border-top: 0.5px solid #cccccc;
+            padding: 2rem 0 0;
+
+            h6 {
+              font-family: "Medium";
+              color: #596364;
+            }
+          }
+        }
+
+        .hiring_department {
+          border: 0.7px solid #ebeaed;
+          padding: 1.5rem;
+          border-radius: 4px;
+
+          h6 {
+            margin-bottom: 0;
+          }
+
+          p {
+            font-family: "Medium";
+            color: $PrimaryText;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.3rem;
+
+            svg {
+              color: #fff;
+              background-color: $PrimaryColor;
+              padding: 0.2rem;
+              width: 15px;
+              height: 15px;
+              margin-inline-start: 0.5rem;
+            }
+          }
+
+          span {
+            font-family: "regular";
+            color: $SecondText;
+            font-size: 0.8rem;
+          }
+
+          .chart-container {
+            height: 30vh;
+            width: 100%;
+            position: relative;
+            margin-top: 1rem;
+          }
+        }
+
+        .employees_orders {
+          border: 0.7px solid #ebeaed;
+          padding: 1.5rem;
+          border-radius: 4px;
+          margin-top: 2rem;
+          height: 90%;
+        }
+
+        table {
+          .status {
+            padding: 0.5rem 1rem;
+            font-size: 0.7rem;
+            border-radius: 5px;
+            width: 100px;
+            display: block;
+            text-align: center;
+          }
+
+          .full-time {
+            background-color: rgba(5, 138, 148, 0.08);
+            color: $PrimaryColor;
+          }
+
+          .part-time {
+            background-color: rgba(228, 170, 60, 0.08);
+            color: $SecondColor;
+          }
+
+          .new {
+            background-color: rgba(210, 86, 86, 0.08);
+            color: #d25656;
+          }
+        }
+
+        .accuracy_department {
+          border: 0.7px solid #ebeaed;
+          padding: 1.5rem;
+          border-radius: 4px;
+          margin-top: 2rem;
+          height: 90%;
+        }
+
+        .employees {
+          .toggleBtn {
+            border: 3px solid #ebeaed;
+            background-color: #fff;
+            color: $PrimaryColor;
+            position: absolute;
+            top: 3.7rem;
+            left: 2%;
+          }
+          div.dataTables_wrapper div.dataTables_length label {
+            margin-inline-start: 8%;
+          }
+          .table_details {
+            position: relative;
+          }
+          .table {
+            border: 1px solid #ccc;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+            border-spacing: 0;
+            transition: all 0.8s cubic-bezier(0.01, 0.98, 0.99, 0.06);
+            margin-top: 2rem !important;
+            tbody {
+              display: flex;
+              flex-wrap: wrap;
+              &.tbody {
+                display: table-row-group;
+              }
+            }
+          }
+
+          .table .tr {
+            border: 0;
+            padding: 5px;
+            transition: all 0.4s ease-in-out;
+            border: 1px solid #ebeaed;
+            transition: all 0.5s cubic-bezier(0.97, 0.86, 0.09, 0.23);
+            border-radius: 4px;
+            margin-inline-end: 1.5%;
+            margin-top: 0;
+          }
+
+          .tr {
+            transition: all 0.8s ease-in-out;
+            width: 31% !important;
+            margin-top: 15px;
+            margin-bottom: 1rem;
+            transition: all 0.2s ease-in-out;
+            height: auto;
+          }
+
+          .table.tableCard .th,
+          .table.tableCard .td {
+            padding: 10px 5%;
+            width: 90%;
+          }
+          .table.tableCard {
+            .id {
+              display: none;
+            }
+          }
+
+          .table .th {
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+          }
+
+          .table {
+            border: 0 !important;
+          }
+          .table > :not(caption) > * > * {
+            border-bottom-width: 1px !important;
+            padding: 0.9rem 0.5rem;
+          }
+          .table.tableCard > :not(caption) > * > * {
+            border-bottom-width: 0 !important;
+          }
+          .table.tableCard {
+            .flex_mobile {
+              display: flex !important;
+              justify-content: space-between;
+              align-items: center;
+              .dropdown {
+                .dropdown-toggle {
+                  padding: 0;
+                }
+              }
+              .status {
+                padding: 0.3rem 1rem;
+              }
+            }
+          }
+
+          .table .thead {
+            display: none;
+          }
+
+          .tr {
+            height: auto;
+          }
+
+          .td {
+            display: block;
+            border-top: none !important;
+            &:first-child {
+              border-bottom: 1px solid #ebeaed;
+            }
+            .name {
+              justify-content: space-between;
+            }
+          }
+
+          .table .td {
+            display: block;
+            text-align: end;
+            font-size: 13px;
+            background-color: #fff;
+          }
+
+          .table .td:last-child {
+            border-bottom: 0;
+          }
+
+          .table .td:before {
+            content: attr(data-label);
+            float: left;
+            text-align: start;
+            width: 50%;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+
+          .table .td:after {
+            float: right;
+            width: 50%;
+          }
+        }
+
+        .jobs {
+          .filters {
+            display: flex;
+            margin-bottom: 2rem;
+            .form-group {
+              position: relative;
+              width: 15%;
+              margin-inline-start: 1%;
+              input {
+                font-family: "regular";
+                color: $SecondText;
+                font-size: 0.8rem;
+                padding: 0.75rem;
+                padding-inline-start: 1.8rem;
+                background-color: rgba(143, 146, 161, 0.05);
+                border: 0;
+              }
+              svg {
+                position: absolute;
+                top: 32%;
+                left: 0.5rem;
+                color: $SecondText;
+              }
+              &:first-child {
+                width: 68%;
+                margin-inline-start: 0;
+              }
+              .bootstrap-select {
+                .dropdown-toggle {
+                  padding: 0.7rem;
+                  font-size: 0.8rem;
+                  font-family: "regular";
+                  background-color: rgba(143, 146, 161, 0.05);
+                  &:hover {
+                    background-color: rgba(143, 146, 161, 0.05);
+                  }
+                }
+                .dropdown-menu {
+                  .dropdown-item {
+                    font-family: "regular";
+                    font-size: 0.8rem;
+                  }
+                }
+              }
+            }
+          }
+          .card_job {
+            width: 49.25%;
+            margin-inline-end: 1.5%;
+            border: 0.5px solid #d2d1d4;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            &:nth-child(even) {
+              margin-inline-end: 0%;
+            }
+            .details {
+              width: 90%;
+              .job_title {
+                font-family: "Medium";
+                color: $PrimaryText;
+                margin-bottom: 0.5rem;
+              }
+              .details_card_job {
+                width: 33%;
+                font-size: 0.9rem;
+                svg {
+                  color: $SecondText;
+                }
+                .title {
+                  color: $SecondText;
+                  font-family: "regular";
+                }
+                .text {
+                  color: $PrimaryText;
+                  display: inline-block;
+                  font-family: "Medium";
+                  margin-bottom: 0;
+                }
+              }
+            }
+            .dropdown-toggle::after {
+              content: none;
+            }
+
+            .dropdown-item {
+              font-size: 0.8rem;
+              text-align: start;
+              font-family: "regular";
+            }
+            .description {
+              color: #596364;
+              font-family: "regular";
+              font-size: 0.8rem;
+              margin-top: 1rem;
+              width: 85%;
+            }
+            .job_applicants {
+              display: flex;
+              align-items: center;
+              font-size: 0.9rem;
+              svg {
+                color: $SecondText;
+                margin-inline-end: 0.5rem;
+              }
+              span {
+                color: $SecondText;
+                font-family: "regular";
+                margin-inline-end: 0.5rem;
+              }
+              p {
+                color: $PrimaryText;
+                font-family: "Medium";
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .add_job {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 100%;
+      .wizard-content-left {
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.45);
+        background-image: url("https://i.ibb.co/X292hJF/form-wizard-bg-2.jpg");
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        padding: 30px;
+      }
+      .wizard-content-left h1 {
+        color: #ffffff;
+        font-size: 38px;
+        font-weight: 600;
+        padding: 12px 20px;
+        text-align: center;
+      }
+
+      .form-wizard {
+        color: #888888;
+        padding: 30px;
+      }
+      .form-wizard .wizard-form-radio {
+        display: inline-block;
+        margin-left: 5px;
+        position: relative;
+      }
+      .form-wizard .wizard-form-radio input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        background-color: #dddddd;
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+      }
+      .form-wizard .wizard-form-radio input[type="radio"]:focus {
+        outline: 0;
+      }
+      .form-wizard .wizard-form-radio input[type="radio"]:checked {
+        background-color: #fb1647;
+      }
+      .form-wizard .wizard-form-radio input[type="radio"]:checked::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        background-color: #ffffff;
+        border-radius: 50%;
+        left: 1px;
+        right: 0;
+        margin: 0 auto;
+        top: 8px;
+      }
+      .form-wizard .wizard-form-radio input[type="radio"]:checked::after {
+        content: "";
+        display: inline-block;
+        webkit-animation: click-radio-wave 0.65s;
+        -moz-animation: click-radio-wave 0.65s;
+        animation: click-radio-wave 0.65s;
+        background: #000000;
+        content: "";
+        display: block;
+        position: relative;
+        z-index: 100;
+        border-radius: 50%;
+      }
+      .form-wizard .wizard-form-radio input[type="radio"] ~ label {
+        padding-left: 10px;
+        cursor: pointer;
+      }
+      .form-wizard .form-wizard-header {
+        text-align: center;
+      }
+      .form-wizard .form-wizard-next-btn,
+      .form-wizard .form-wizard-submit,
+      .form-wizard .form-wizard-previous-btn {
+        background-color: #058a94;
+        color: #ffffff;
+        display: inline-block;
+        min-width: 100%;
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 5px;
+        text-align: center;
+        font-family: "regular";
+        font-size: 0.8rem;
+        text-decoration: none;
+        margin-top: 2rem;
+      }
+      .form-wizard .form-wizard-previous-btn {
+      }
+      .form-wizard .double_clearfix {
+        display: flex;
+        .form-wizard-next-btn,
+        .form-wizard-submit,
+        .form-wizard-previous-btn {
+          width: 49.5%;
+          min-width: 49.5%;
+        }
+        .form-wizard-previous-btn {
+          margin-inline-end: 1%;
+        }
+      }
+      .form-wizard .form-wizard-next-btn:hover,
+      .form-wizard .form-wizard-next-btn:focus,
+      .form-wizard .form-wizard-previous-btn:hover,
+      .form-wizard .form-wizard-previous-btn:focus,
+      .form-wizard .form-wizard-submit:hover,
+      .form-wizard .form-wizard-submit:focus {
+        color: #ffffff;
+        opacity: 0.6;
+        text-decoration: none;
+      }
+      .form-wizard .wizard-fieldset {
+        display: none;
+      }
+      .form-wizard .wizard-fieldset.show {
+        display: block;
+        h5 {
+          font-family: "semibold";
+          color: $PrimaryText;
+          margin-bottom: 2rem;
+        }
+      }
+      .form-wizard .wizard-form-error {
+        display: none;
+        background-color: #d70b0b;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+      }
+      .form-wizard .form-wizard-previous-btn {
+        background-color: #fb1647;
+      }
+      .form-wizard input {
+        font-weight: 300;
+        height: auto !important;
+        padding: 0.75rem;
+        font-size: 0.8rem;
+        font-family: "regular";
+        color: #888888;
+        background-color: #ffff;
+        border: 0.7px solid #cccccc;
+      }
+      .form-wizard .bootstrap-select {
+        .dropdown-menu {
+          .dropdown-item {
+            font-size: 0.8rem;
+            font-family: "regular";
+          }
+        }
+        .filter-option-inner-inner {
+          font-family: "regular";
+        }
+      }
+      .dropdown-toggle {
+        padding: 0.7rem;
+        font-size: 0.8rem;
+        background-color: #ffff;
+        border: 0.7px solid #cccccc;
+        &:hover {
+          background-color: #ffff;
+          border: 0.7px solid #cccccc;
+        }
+      }
+      .form-wizard input:focus {
+        box-shadow: none;
+      }
+      .form-wizard .form-group {
+        position: relative;
+        margin-bottom: 1rem;
+        svg {
+          position: absolute;
+          top: 60%;
+          left: 0.5rem;
+          z-index: 9;
+        }
+        input {
+          padding-inline-start: 2rem;
+        }
+        textarea {
+          font-size: 0.8rem;
+          font-family: "regular";
+          resize: none;
+        }
+        .bootstrap-select {
+          .dropdown-toggle {
+            padding-inline-start: 2rem;
+          }
+        }
+      }
+      .form-wizard {
+        .form-check {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          input {
+            margin-top: 0;
+            padding: 0;
+            font-size: 1rem;
+            height: 1em !important;
+            &:checked[type="checkbox"] {
+              background-color: $PrimaryColor;
+              border-color: $PrimaryColor;
+            }
+          }
+          label {
+            margin-inline-start: 0.5rem;
+            font-size: 0.8rem;
+            font-family: "regular";
+            .contract {
+              color: $PrimaryColor;
+              font-family: "Medium";
+              cursor: pointer;
+            }
+          }
+        }
+        .modal {
+          .modal-dialog {
+            max-width: 40%;
+            img {
+              width: 30%;
+              display: block;
+              margin: 0 auto;
+            }
+            h5 {
+              font-family: "semibold";
+              color: $PrimaryText;
+              text-align: center;
+              margin: 1rem 0;
+            }
+            p {
+              font-family: "regular";
+              color: $SecondText;
+              font-size: 0.8rem;
+              text-align: center;
+            }
+            .btn {
+              background-color: $PrimaryColor;
+              color: #fff;
+              font-family: "Medium";
+              font-size: 0.8rem;
+              padding: 0.75rem 8rem;
+              margin: 1.5rem auto 0;
+              display: block;
+            }
+          }
+        }
+      }
+      .form-wizard .wizard-form-text-label {
+        margin-bottom: 0.5rem;
+        color: $PrimaryText;
+        font-size: 0.9rem;
+        font-family: "regular";
+      }
+      .form-wizard .form-wizard-steps {
+        margin: 0 0 30px;
+      }
+      .form-wizard .form-wizard-steps li {
+        width: 25%;
+        float: left;
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .form-wizard .form-wizard-steps li::after {
+        background-color: #f3f3f3;
+        content: "";
+        height: 5px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        border-bottom: 1px solid #dddddd;
+        border-top: 1px solid #dddddd;
+      }
+      .form-wizard .form-wizard-steps li span {
+        background-color: #dddddd;
+        border-radius: 50%;
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+        text-align: center;
+        width: 40px;
+        z-index: 1;
+      }
+      .form-wizard .form-wizard-steps li:last-child::after {
+        width: 50%;
+      }
+      .form-wizard .form-wizard-steps li.active span,
+      .form-wizard .form-wizard-steps li.activated span {
+        background-color: #e4aa3c;
+        color: #ffffff;
+      }
+      .form-wizard .form-wizard-steps li.active::after,
+      .form-wizard .form-wizard-steps li.activated::after {
+        background-color: #e4aa3c;
+        left: 50%;
+        width: 50%;
+        border-color: #e4aa3c;
+      }
+      .form-wizard .form-wizard-steps li.activated::after {
+        width: 100%;
+        border-color: #e4aa3c;
+      }
+      .form-wizard .form-wizard-steps li:last-child::after {
+        left: 0;
+      }
+      .form-wizard .wizard-password-eye {
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+      @keyframes click-radio-wave {
+        0% {
+          width: 25px;
+          height: 25px;
+          opacity: 0.35;
+          position: relative;
+        }
+        100% {
+          width: 60px;
+          height: 60px;
+          margin-left: -15px;
+          margin-top: -15px;
+          opacity: 0;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .wizard-content-left {
+          height: auto;
+        }
+      }
+    }
+
+    .job_orders {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 100%;
+      position: relative;
+      .filters {
+        display: flex;
+        margin-bottom: 0;
+        width: 80%;
+        margin-inline-start: 3rem;
+        .form-group {
+          position: relative;
+          width: 25%;
+          margin-inline-start: 1%;
+          input {
+            font-family: "regular";
+            color: $SecondText;
+            font-size: 0.8rem;
+            padding: 0.75rem;
+            padding-inline-start: 1.8rem;
+            background-color: rgba(143, 146, 161, 0.05);
+            border: 0;
+          }
+          svg {
+            position: absolute;
+            top: 32%;
+            left: 0.5rem;
+            color: $SecondText;
+          }
+          .bootstrap-select {
+            .dropdown-toggle {
+              padding: 0.7rem;
+              font-size: 0.8rem;
+              font-family: "regular";
+              background-color: rgba(143, 146, 161, 0.05);
+              &:hover {
+                background-color: rgba(143, 146, 161, 0.05);
+              }
+            }
+            .dropdown-menu {
+              .dropdown-item {
+                font-family: "regular";
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+      .toggleBtn {
+        border: 3px solid #ebeaed;
+        background-color: #fff;
+        color: $PrimaryColor;
+        position: absolute;
+        top: 2rem;
+        left: 2%;
+      }
+      div.dataTables_wrapper div.dataTables_length label {
+        margin-inline-start: 8%;
+      }
+      .table_details {
+        position: relative;
+      }
+      .table {
+        border: 1px solid #ccc;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        transition: all 0.8s cubic-bezier(0.01, 0.98, 0.99, 0.06);
+        margin-top: 2rem !important;
+        tbody {
+          display: flex;
+          flex-wrap: wrap;
+          &.tbody {
+            display: table-row-group;
+          }
+        }
+        .status {
+          padding: 0.5rem 1rem;
+          font-size: 0.7rem;
+          border-radius: 5px;
+          width: 100px;
+          display: block;
+          text-align: center;
+        }
+
+        .new {
+          background-color: rgba(5, 138, 148, 0.08);
+          color: $PrimaryColor;
+        }
+        .cancelled {
+          background-color: rgba(210, 86, 86, 0.08);
+          color: #d25656;
+        }
+        .current {
+          background-color: rgba(228, 170, 60, 0.08);
+          color: $SecondColor;
+        }
+        .finished {
+          background-color: rgba(71, 60, 228, 0.08);
+          color: #473ce4;
+        }
+      }
+
+      .table .tr {
+        border: 0;
+        padding: 5px;
+        transition: all 0.4s ease-in-out;
+        border: 1px solid #ebeaed;
+        transition: all 0.5s cubic-bezier(0.97, 0.86, 0.09, 0.23);
+        border-radius: 4px;
+        margin-inline-end: 1.5%;
+        margin-top: 0;
+      }
+
+      .tr {
+        transition: all 0.8s ease-in-out;
+        width: 31% !important;
+        margin-top: 15px;
+        margin-bottom: 1rem;
+        transition: all 0.2s ease-in-out;
+        height: auto;
+      }
+
+      .table.tableCard .th,
+      .table.tableCard .td {
+        padding: 10px 5%;
+        width: 90%;
+      }
+      .table.tableCard {
+        .id {
+          display: none;
+        }
+        .name {
+          text-align: center;
+        }
+      }
+
+      .table .th {
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+
+      .table {
+        border: 0 !important;
+      }
+      .table > :not(caption) > * > * {
+        border-bottom-width: 1px !important;
+        padding: 0.9rem 0.5rem;
+      }
+      .table.tableCard > :not(caption) > * > * {
+        border-bottom-width: 0 !important;
+      }
+      .table.tableCard {
+        .flex_mobile {
+          display: flex !important;
+          justify-content: space-between;
+          align-items: center;
+          .dropdown {
+            .dropdown-toggle {
+              padding: 0;
+            }
+          }
+          .status {
+            padding: 0.3rem 1rem;
+          }
+        }
+      }
+
+      .table .thead {
+        display: none;
+      }
+
+      .tr {
+        height: auto;
+      }
+
+      .td {
+        display: block;
+        border-top: none !important;
+        &:first-child {
+          border-bottom: 1px solid #ebeaed;
+        }
+        .name {
+          justify-content: space-between;
+        }
+      }
+
+      .table .td {
+        display: block;
+        text-align: end;
+        font-size: 13px;
+        background-color: #fff;
+      }
+
+      .table .td:last-child {
+        border-bottom: 0;
+      }
+
+      .table .td:before {
+        content: attr(data-label);
+        float: left;
+        text-align: start;
+        width: 50%;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .table .td:after {
+        float: right;
+        width: 50%;
+      }
+    }
+
+    .job_details {
+      .title {
+        display: flex;
+        p {
+          margin-bottom: 0;
+          font-family: "Medium";
+          color: $PrimaryText;
+        }
+        .status {
+          font-family: "regular";
+          font-size: 0.8rem;
+          padding: 0.2rem 1rem;
+          border-radius: 5px;
+          margin-inline-start: 1rem;
+        }
+        .new {
+          color: $PrimaryColor;
+          background-color: rgba(5, 138, 148, 0.08);
+        }
+        .cancelled {
+          background-color: rgba(210, 86, 86, 0.08);
+          color: #d25656;
+        }
+        .current {
+          background-color: rgba(228, 170, 60, 0.08);
+          color: $SecondColor;
+        }
+        .finished {
+          background-color: rgba(71, 60, 228, 0.08);
+          color: #473ce4;
+        }
+      }
+      .actions {
+        .delete {
+          background-color: #fff;
+          border: 0.5px solid #c9c9c9;
+          border-radius: 8px;
+          font-family: "Medium";
+          font-size: 0.8rem;
+          padding: 0.75rem 1.5rem;
+          transition: 0.7s ease-in-out;
+          margin-inline-end: .5rem;
+          &:hover {
+            background-color: #dc3545;
+            color: #fff;
+            transition: 0.7s ease-in-out;
+          }
+        }
+        .edit {
+          background-color: $PrimaryColor;
+          color: #fff;
+          border-radius: 8px;
+          font-family: "Medium";
+          font-size: 0.8rem;
+          padding: 0.75rem 1.5rem;
+          transition: 0.7s ease-in-out;
+          &:hover {
+            background-color: #fff;
+            border: 1px solid $PrimaryColor;
+            color: $PrimaryColor;
+            transition: 0.7s ease-in-out;
+          }
+        }
+        .reorder, .work {
+          background-color: $PrimaryColor;
+          color: #fff;
+          border-radius: 8px;
+          font-family: "Medium";
+          font-size: 0.8rem;
+          padding: 0.75rem 1.5rem;
+          transition: 0.7s ease-in-out;
+          &:hover {
+            background-color: #fff;
+            border: 1px solid $PrimaryColor;
+            color: $PrimaryColor;
+            transition: 0.7s ease-in-out;
+          }
+        }
+      }
+      .job_details_card {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 20px;
+        width: 100%;
+        h5 {
+          font-family: "Medium";
+          color: $PrimaryText;
+          span {
+            font-family: "regular";
+            color: $SecondText;
+            font-size: 0.9rem;
+            margin-inline-start: 1rem;
+          }
+        }
+        .details_box {
+          width: 25%;
+          margin-top: 1rem;
+          span {
+            font-family: "regular";
+            color: $SecondText;
+            font-size: 0.8rem;
+          }
+          p {
+            font-family: "Medium";
+            color: $PrimaryText;
+            margin-top: 0.2rem;
+            margin-bottom: 0;
+          }
+        }
+        .location_box {
+          width: 50%;
+        }
+      }
+      .description_card {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 20px;
+        width: 100%;
+        margin-top: 1rem;
+        h5 {
+          font-family: "Medium";
+          color: #011c1e;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-family: "regular";
+          font-size: 0.8rem;
+          color: #596364;
+          width: 90%;
+          line-height: 1.8;
+        }
+        .form-switch {
+          width: fit-content;
+          display: inline-block;
+          .form-check-label {
+            font-family: "regular";
+            color: $PrimaryText;
+            font-size: 0.8rem;
+            margin-inline-start: 0.7rem;
+          }
+          .form-check-input {
+            transform: scale(1.5);
+            &:checked {
+              background-color: $PrimaryColor;
+              border-color: $PrimaryColor;
+            }
+            &:focus {
+              box-shadow: 0 0 0 0.25rem rgb(5 138 148 / 25%);
+            }
+          }
+        }
+        span {
+          font-family: "regular";
+          color: #B0B9B9;
+          font-size: .7rem;
+          margin-inline-start: 1rem;
+        }
+      }
+      .job_applicants {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 20px;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        h5 {
+          font-family: "Medium";
+          color: #011c1e;
+          margin-bottom: 0;
+        }
+        .dropdown {
+          .dropdown-toggle {
+            font-size: .8rem;
+            padding: .6rem 1.5rem;
+            font-family: "regular";
+            background-color: rgba(143, 146, 161, .05);
+          }
+          .dropdown-menu {
+            .dropdown-item {
+              font-family: "regular";
+              font-size: .8rem;
+            }
+          }
+        }
+        .empty_job_applicants {
+          img {
+            margin: 2rem auto 0;
+            display: block;
+          }
+          h5 {
+            text-align: center;
+          }
+        }
+      }
+      .skills {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 20px;
+        width: 100%;
+        h5 {
+          font-family: "Medium";
+          color: #011c1e;
+          margin-bottom: 1rem;
+        }
+        .skill_box {
+          display: inline-block;
+          padding: .4rem 1rem;
+          background-color: #F0F0F0;
+          color: #596364;
+          font-family: "regular";
+          border-radius: 14px;
+          font-size: .8rem;
+          margin-bottom: .8rem;
+          margin-inline-end: .8rem;
+        }
+        .additional_requests {
+          h5 {
+            margin-top: 1rem;
+          }
+          ul {
+            list-style: none;
+            padding: 0;
+            li {
+              font-family: "regular";
+              color: $PrimaryText;
+              font-size: .9rem;
+              margin-bottom: 1rem;
+              display: flex;
+              align-items: center;
+              &:before {
+                color: transparent;
+                font-size: 1px;
+                content: " ";
+                margin-left: -1.3em;
+                margin-right: 15px;
+                padding: 8px;
+                background-color: $PrimaryColor;
+                -webkit-mask-image: url("../media/image/icon/list_style.svg");
+                -webkit-mask-size: cover;
+              }
+            }
+          }
+        }
+      }
+      .other_jobs {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 20px;
+        width: 100%;
+        margin-top: 1rem;
+        h5 {
+          font-family: "Medium";
+          color: #011c1e;
+          margin-bottom: 1rem;
+        }
+        .other_jobs_card {
+          background-color: rgba(5, 138, 148, 0.04);
+          padding: 1rem;
+          border-radius: 6px;
+          margin-bottom: 1rem;
+          .title {
+            display: block;
+            font-family: "Medium";
+            color: $PrimaryText;
+            margin-bottom: .3rem;
+          }
+          .time {
+            display: block;
+            font-family: "regular";
+            font-size: .9rem;
+            color: $PrimaryColor;
+            margin-bottom: .3rem;
+          }
+          .price {
+            display: block;
+            font-family: "Medium";
+            color: $PrimaryText;
+            font-size: .9rem;
+            margin-bottom: .3rem;
+          }
+          .applicants {
+            color: $SecondText;
+            font-family: "regular";
+            font-size: .9rem;
+            margin-bottom: 1rem;
+            .number {
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              background-color: $SecondColor;
+              color: #fff;
+              width: 30px;
+              height: 30px;
+              font-size: .7rem;
+              padding: .2rem;
+              border-radius: 50%;
+              margin-inline-start: .5rem;
+            }
+          }
+          .see_more {
+            background-color: #fff;
+            color: $PrimaryText;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: "Medium";
+            font-size: .8rem;
+            padding: .5rem 1rem;
+          }
+          .days {
+            font-family: "regular";
+            color: $SecondText;
+            font-size: .8rem;
+          }
+        }
+        .load_more {
+          background-color: $PrimaryColor;
+          color: #fff;
+          font-family: "Medium";
+          font-size: .8rem;
+          padding: .75rem;
+          width: 100%;
+          margin-top: .5rem;
+          transition: .7s ease-in-out;
+          &:hover {
+            background-color: #fff;
+            border: 1px solid $PrimaryColor;
+            color: $PrimaryColor;
+            transition: .7s ease-in-out;
+          }
+        }
+      }
+      .modal {
+        .modal-dialog {
+          max-width: 25%;
+          .modal-body {
+            padding: 3rem 2rem;
+            img {
+              width: 30%;
+              display: block;
+              margin: 0 auto;
+            }
+            h6 {
+              font-family: "semibold";
+              color: $PrimaryText;
+              text-align: center;
+              margin: 1rem 0;
+            }
+            .buttons {
+              display: flex;
+              justify-content: center;
+              margin-top: 1.5rem;
+              .yes {
+                margin-inline-end: 1rem;
+                background-color: $PrimaryColor;
+                color: #fff;
+                font-family: "regular";
+                font-size: 0.8rem;
+                padding: .6rem 2.5rem;
+                transition: .7s ease-in-out;
+                &:hover {
+                  background-color: #fff;
+                  border: 1px solid $PrimaryColor;
+                  color: $PrimaryColor;
+                  transition: .7s ease-in-out;
+                }
+              }
+              .back {
+                background-color: rgba(5, 138, 148, 0.08);
+                color: $PrimaryColor;
+                font-family: "regular";
+                font-size: 0.8rem;
+                padding: .6rem 2.5rem;
+                transition: .7s ease-in-out;
+                &:hover {
+                  background-color: #fff;
+                  border: 1px solid $PrimaryColor;
+                  color: $PrimaryColor;
+                  transition: .7s ease-in-out;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .table_details {
+        margin-top: 1.5rem;
+        padding: 0;
+        .dropdown-toggle {
+          background-color: transparent !important;
+          padding: 0 !important;
+          &::after {
+            content: none;
+          }
+        }
+
+        .dropdown-item {
+          font-size: 0.8rem;
+          text-align: start;
+        }
+        .name {
+          .title {
+            display: block;
+          }
+        }
+        .status {
+          padding: 0.5rem 1rem;
+          font-size: 0.7rem;
+          border-radius: 5px;
+          width: 100px;
+          display: block;
+          text-align: center;
+        }
+        .new {
+          background-color: rgba(5, 138, 148, 0.08);
+          color: #058a94;
+        }
+        .accepted {
+          background-color: rgba(228, 170, 60, 0.08);
+          color: #e4aa3c;
+        }
+        .refused {
+          background-color: rgba(210, 86, 86, 0.08);
+          color: #d25656;
+        }
+      }
     }
   }
 }
@@ -1031,8 +3303,8 @@ table tbody tr td {
         padding-inline-end: 2%;
 
         .nav-link {
-          font-size: .8rem;
-          padding: .5rem;
+          font-size: 0.8rem;
+          padding: 0.5rem;
         }
       }
 
@@ -1062,6 +3334,14 @@ table tbody tr td {
         .data {
           width: 100%;
           margin-inline-start: 0;
+        }
+      }
+
+      .job_details {
+        .modal {
+          .modal-dialog {
+            max-width: 50%;
+          }
         }
       }
     }
@@ -1101,12 +3381,148 @@ table tbody tr td {
             .price,
             .time,
             .posted {
-              margin-bottom: .5rem;
+              margin-bottom: 0.5rem;
             }
           }
 
           .job_applicants {
-            font-size: .7rem;
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      .table-responsive table {
+        border: 0;
+        width: 100% !important;
+      }
+
+      .table-responsive caption {
+        font-size: 1.3em;
+      }
+
+      .table-responsive thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      .table-responsive tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 0.625em;
+      }
+
+      .table-responsive td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 0.8em;
+        text-align: end !important;
+      }
+
+      .table-responsive td.title {
+        text-align: center !important;
+      }
+
+      .table-responsive td.name .d-flex,
+      .table-responsive td.name .details_team {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      .table-responsive td.name .d-flex img,
+      .table-responsive td.name .details_team img {
+        margin: 0;
+      }
+
+      .table-responsive td::before {
+        /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .table-responsive td:last-child {
+        border-bottom: 0;
+      }
+
+      .table-responsive .select-checkbox {
+        display: none;
+      }
+
+      .table-responsive .custom_checkbox {
+        display: block !important;
+      }
+
+      table tbody tr td .status,
+      table tbody tr td .type_work {
+        display: inline-block !important;
+      }
+
+      table tbody tr td .d-flex,
+      table tbody tr td .details_team {
+        display: inline-flex !important;
+        justify-content: center;
+        text-align: center;
+      }
+
+      table tbody tr td .d-flex img {
+        margin: 0 auto;
+      }
+
+      .dataTables_length {
+        margin-bottom: 1rem;
+      }
+
+      .table_details table tbody tr td .name {
+        justify-content: space-between;
+      }
+
+      .department_details {
+        .tab-content {
+          .employees {
+            .toggleBtn {
+              display: none;
+            }
+          }
+          .jobs {
+            .filters {
+              flex-wrap: wrap;
+              .form-group {
+                width: 49%;
+                &:first-child {
+                  width: 100%;
+                  margin-bottom: 0.5rem;
+                }
+              }
+            }
+            .card_job {
+              width: 100%;
+              margin-inline-end: 0;
+            }
+          }
+        }
+      }
+
+      .job_orders {
+        .toggleBtn {
+          display: none;
+        }
+      }
+      .job_details {
+        .modal {
+          .modal-dialog {
+            max-width: 60%;
           }
         }
       }
@@ -1134,7 +3550,7 @@ table tbody tr td {
 
         .nav-link {
           span {
-            font-size: .5rem;
+            font-size: 0.5rem;
           }
         }
 
@@ -1155,7 +3571,7 @@ table tbody tr td {
         .card_order {
           width: 100%;
           margin-inline-end: 0;
-          margin-bottom: .5rem;
+          margin-bottom: 0.5rem;
         }
       }
 
@@ -1183,6 +3599,98 @@ table tbody tr td {
         .card_staff_rate {
           width: 100%;
           margin-inline-end: 0;
+        }
+      }
+
+      .department_details {
+        padding: 1rem;
+
+        .nav-tabs {
+          .nav-item {
+            margin: 0;
+
+            .nav-link {
+              font-size: 0.7rem;
+            }
+          }
+        }
+
+        .tab-content {
+          .details_card {
+            .card_location,
+            .manager_details {
+              .d-flex {
+                flex-direction: column;
+
+                .d-inline-flex {
+                  margin-top: 1rem;
+                }
+
+                .mx-3 {
+                  margin-right: 0 !important;
+                  margin-left: 0 !important;
+                }
+              }
+            }
+          }
+          .jobs {
+            .card_job {
+              .job_applicants {
+                font-size: 0.7rem;
+              }
+              .details {
+                .details_card_job {
+                  width: 100%;
+                  margin-bottom: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .accuracy {
+        h5 {
+          margin-bottom: 2rem;
+        }
+
+        .c100 {
+          transform: scale(1);
+        }
+      }
+
+      .mobile_job {
+        flex-direction: column;
+        .actions {
+          margin-top: 1rem;
+        }
+      }
+
+      .job_details {
+        .modal {
+          .modal-dialog {
+            max-width: 100%;
+            .modal-body {
+              .buttons {
+                .back, .yes {
+                  padding: 0.6rem 1rem;
+                }
+              }
+            }
+          }
+        }
+        .description_card {
+          p {
+            width: 100%;
+          }
+        }
+        .job_details_card {
+          .details_box {
+            width: 50%;
+          }
+          .location_box {
+            width: 100%;
+          }
         }
       }
     }
