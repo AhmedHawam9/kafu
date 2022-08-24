@@ -4787,6 +4787,140 @@ table tbody tr td {
   padding: 0.5rem;
   border-radius: 50%;
 }
+.index_cards .content .contact .contact_form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.index_cards .content .contact .contact_form h6 {
+  font-family: "regular";
+  color: #011c1e;
+  width: 60%;
+}
+.index_cards .content .contact .contact_form .form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.index_cards .content .contact .contact_form .form-group label {
+  font-family: "regular";
+  color: #011c1e;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+.index_cards .content .contact .contact_form .form-group svg {
+  position: absolute;
+  top: 2.8rem;
+  left: 0.5rem;
+  color: #828c8d;
+}
+.index_cards .content .contact .contact_form .form-group input {
+  font-family: "regular";
+  font-size: 0.8rem;
+  padding: 0.75rem;
+  -webkit-padding-start: 1.8rem;
+          padding-inline-start: 1.8rem;
+  color: #828c8d;
+}
+.index_cards .content .contact .contact_form .form-group textarea {
+  font-family: "regular";
+  font-size: 0.8rem;
+  padding: 0.75rem;
+  color: #828c8d;
+  resize: none;
+}
+.index_cards .content .contact .contact_form .btn {
+  background-color: #058a94;
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: "Medium";
+  padding: 1rem;
+  width: 100%;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .contact .contact_form .btn:hover {
+  background-color: #fff;
+  border: 1px solid #058a94;
+  color: #058a94;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .contact iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.index_cards .content .charts {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+}
+.index_cards .content .charts .nav-tabs .nav-item {
+  margin: 0 0.5rem;
+}
+.index_cards .content .charts .nav-tabs .nav-item .nav-link {
+  color: #828c8d;
+  font-family: "Medium";
+  font-size: 0.9rem;
+}
+.index_cards .content .charts .nav-tabs .nav-item .nav-link:hover, .index_cards .content .charts .nav-tabs .nav-item .nav-link:focus {
+  border-color: transparent;
+  outline: unset;
+}
+.index_cards .content .charts .nav-tabs .nav-item .nav-link:focus-visible {
+  outline: unset;
+}
+.index_cards .content .charts .nav-tabs .nav-item .nav-link.active {
+  border: 0;
+  border-bottom: 3px solid #058a94;
+  color: #011c1e;
+}
+.index_cards .content .charts .tab-content {
+  margin-top: 2rem;
+}
+.index_cards .content .charts .hiring_department {
+  border: 0.7px solid #ebeaed;
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+.index_cards .content .charts .hiring_department h6 {
+  margin-bottom: 0;
+}
+.index_cards .content .charts .hiring_department p {
+  font-family: "Medium";
+  color: #011c1e;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+.index_cards .content .charts .hiring_department p svg {
+  color: #fff;
+  background-color: #058a94;
+  padding: 0.2rem;
+  width: 15px;
+  height: 15px;
+  -webkit-margin-start: 0.5rem;
+          margin-inline-start: 0.5rem;
+}
+.index_cards .content .charts .hiring_department span {
+  font-family: "regular";
+  color: #828c8d;
+  font-size: 0.8rem;
+}
+.index_cards .content .charts .hiring_department .chart-container {
+  height: 30vh;
+  width: 100%;
+  position: relative;
+  margin-top: 1rem;
+}
+.index_cards .content .charts .accuracy_department, .index_cards .content .charts .visitors_year, .index_cards .content .charts .employment_rate, .index_cards .content .charts .statistics {
+  border: 0.7px solid #ebeaed;
+  padding: 1.5rem;
+  border-radius: 4px;
+  height: 100%;
+  margin-top: 0;
+}
 
 /* ======= 4K style ======= */
 @media (min-width: 1600px) and (max-width: 2600px) {
@@ -5032,6 +5166,9 @@ table tbody tr td {
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
     min-height: fit-content;
+  }
+  .index_cards .content .contact iframe {
+    height: 600px;
   }
 }
 @media only screen and (max-width: 600px) {

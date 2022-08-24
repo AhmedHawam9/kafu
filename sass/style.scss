@@ -4422,6 +4422,158 @@ table tbody tr td {
         }
       }
     }
+
+    .contact {
+      .contact_form {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 20px;
+        width: 100%;
+        margin-bottom: 1rem;
+        h6 {
+          font-family: "regular";
+          color: $PrimaryText;
+          width: 60%;
+        }
+        .form-group {
+          position: relative;
+          margin-bottom: 1rem;
+          label {
+            font-family: "regular";
+            color: $PrimaryText;
+            margin-bottom: .5rem;
+            font-size: .8rem;
+          }
+          svg {
+            position: absolute;
+            top: 2.8rem;
+            left: .5rem;
+            color: $SecondText;
+          }
+          input {
+            font-family: "regular";
+            font-size: .8rem;
+            padding: .75rem;
+            padding-inline-start: 1.8rem;
+            color: $SecondText;
+          }
+          textarea {
+            font-family: "regular";
+            font-size: .8rem;
+            padding: .75rem;
+            color: $SecondText;
+            resize: none;
+          }
+        }
+        .btn {
+          background-color: $PrimaryColor;
+          color: #fff;
+          font-size: .8rem;
+          font-family: "Medium";
+          padding: 1rem;
+          width: 100%;
+          transition: .7s ease-in-out;
+          &:hover {
+            background-color: #fff;
+            border: 1px solid $PrimaryColor;
+            color: $PrimaryColor;
+            transition: .7s ease-in-out;
+          }
+        }
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    .charts {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 100%;
+
+      .nav-tabs {
+        .nav-item {
+          margin: 0 0.5rem;
+
+          .nav-link {
+            color: $SecondText;
+            font-family: "Medium";
+            font-size: 0.9rem;
+
+            &:hover,
+            &:focus {
+              border-color: transparent;
+              outline: unset;
+            }
+
+            &:focus-visible {
+              outline: unset;
+            }
+
+            &.active {
+              border: 0;
+              border-bottom: 3px solid $PrimaryColor;
+              color: $PrimaryText;
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        margin-top: 2rem;
+      }
+
+      .hiring_department {
+        border: 0.7px solid #ebeaed;
+        padding: 1.5rem;
+        border-radius: 4px;
+
+        h6 {
+          margin-bottom: 0;
+        }
+
+        p {
+          font-family: "Medium";
+          color: $PrimaryText;
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.3rem;
+
+          svg {
+            color: #fff;
+            background-color: $PrimaryColor;
+            padding: 0.2rem;
+            width: 15px;
+            height: 15px;
+            margin-inline-start: 0.5rem;
+          }
+        }
+
+        span {
+          font-family: "regular";
+          color: $SecondText;
+          font-size: 0.8rem;
+        }
+
+        .chart-container {
+          height: 30vh;
+          width: 100%;
+          position: relative;
+          margin-top: 1rem;
+        }
+      }
+
+      .accuracy_department, .visitors_year, .employment_rate, .statistics {
+        border: 0.7px solid #ebeaed;
+        padding: 1.5rem;
+        border-radius: 4px;
+        height: 100%;
+        margin-top: 0;
+      }
+    }
   }
 }
 
@@ -4779,6 +4931,12 @@ table tbody tr td {
             margin-bottom: 1.5rem;
             min-height: fit-content;
           }
+        }
+      }
+
+      .contact {
+        iframe {
+          height: 600px;
         }
       }
     }
