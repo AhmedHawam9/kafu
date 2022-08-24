@@ -386,6 +386,8 @@
   }
   .sidebar.open ~ .index_cards {
     width: 100%;
+    -webkit-margin-start: 0 !important;
+            margin-inline-start: 0 !important;
   }
   .sidebar.open {
     width: 100%;

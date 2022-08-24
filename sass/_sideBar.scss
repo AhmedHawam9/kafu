@@ -361,7 +361,7 @@
 
   .sidebar.open ~ .index_cards {
     width: 100%;
-    margin-inline-start: 0;
+    margin-inline-start: 0 !important;
   }
 
   .sidebar.open {
