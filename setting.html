@@ -375,6 +375,184 @@
                             <!-- Start content Account Settings -->
                             <div class="tab-pane fade" id="account-tab-pane" role="tabpanel"
                                 aria-labelledby="account-tab" tabindex="0">
+                                <!-- Start form change password -->
+                                <form action="" class="form_change">
+                                    <h6 class="title_section">Password</h6>
+                                    <div class="form-group">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <label for="">Password</label>
+                                        <input type="password" id="txtPassword" class="form-control" name="txtPassword"
+                                            placeholder="**********">
+                                        <button type="button" id="btnToggle" class="togglePassword btn"><i id="eyeIcon"
+                                                class="fas fa-eye-slash"></i></button>
+                                        <!-- =========== show password =========== -->
+                                        <script>
+                                            let passwordInput = document.getElementById('txtPassword'),
+                                                toggle = document.getElementById('btnToggle'),
+                                                icon = document.getElementById('eyeIcon');
+
+                                            function togglePassword() {
+                                                if (passwordInput.type === 'password') {
+                                                    passwordInput.type = 'text';
+                                                    icon.classList.add("fa-eye-slash");
+                                                    toggle.innerHTML = '<i class="fa fa-eye"></i>';
+                                                } else {
+                                                    passwordInput.type = 'password';
+                                                    icon.classList.remove("fa-eye-slash");
+                                                    toggle.innerHTML = '<i class="fas fa-eye-slash"></i>';
+                                                }
+                                            }
+
+                                            toggle.addEventListener('click', togglePassword, false);
+                                                    // passwordInput.addEventListener('keyup', checkInput, false);
+                                        </script>
+                                        <!-- =========== show password =========== -->
+                                    </div>
+                                    <div class="form-group">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <label for="">Confirm Password</label>
+                                        <input type="password" id="txtPasswordCheck" class="form-control"
+                                            name="txtPasswordCheck" placeholder="**********">
+                                        <button type="button" id="btnToggleCheck" class="togglePassword btn"><i
+                                                id="eyeIcon" class="fas fa-eye-slash"></i></button>
+                                        <!-- =========== show password =========== -->
+                                        <script>
+                                            let passwordInputCheck = document.getElementById('txtPasswordCheck'),
+                                                toggleCheck = document.getElementById('btnToggleCheck'),
+                                                iconCheck = document.getElementById('eyeIcon');
+
+                                            function togglePassword() {
+                                                if (passwordInputCheck.type === 'password') {
+                                                    passwordInputCheck.type = 'text';
+                                                    iconCheck.classList.add("fa-eye-slash");
+                                                    toggleCheck.innerHTML = '<i class="fa fa-eye"></i>';
+                                                } else {
+                                                    passwordInputCheck.type = 'password';
+                                                    iconCheck.classList.remove("fa-eye-slash");
+                                                    toggleCheck.innerHTML = '<i class="fas fa-eye-slash"></i>';
+                                                }
+                                            }
+
+                                            toggleCheck.addEventListener('click', togglePassword, false);
+                                                    // passwordInputCheck.addEventListener('keyup', checkInput, false);
+                                        </script>
+                                        <!-- =========== show password =========== -->
+                                    </div>
+                                    <button type="submit" class="btn submit_form">Save Changes</button>
+                                </form>
+                                <!-- End form change password -->
+
+                                <!-- Start form Commercial Name -->
+                                <form action="" class="form_change">
+                                    <h6 class="title_section">Commercial Name</h6>
+                                    <div class="form-group">
+                                        <i class="fa-solid fa-building"></i>
+                                        <input type="text" id="" class="form-control" name="" value="Crazy Idea Company"
+                                            placeholder="">
+                                        <small>you can chang the commercial name only twice.</small>
+                                    </div>
+                                    <button type="submit" class="btn submit_form">Save Changes</button>
+                                </form>
+                                <!-- End form Commercial Name -->
+
+                                <!-- Start form change password -->
+                                <form action="" class="form_change">
+                                    <h6 class="title_section">Email Address</h6>
+                                    <div class="form-group">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <label for="">Current Password</label>
+                                        <input type="password" id="txtPasswordEmail" class="form-control"
+                                            name="txtPassword" placeholder="**********">
+                                        <button type="button" id="btnToggleEmail" class="togglePassword btn"><i
+                                                id="eyeIconEmail" class="fas fa-eye-slash"></i></button>
+                                        <!-- =========== show password =========== -->
+                                        <script>
+                                            let passwordInputEmail = document.getElementById('txtPasswordEmail'),
+                                                toggleEmail = document.getElementById('btnToggleEmail'),
+                                                iconEmail = document.getElementById('eyeIconEmail');
+
+                                            function togglePassword() {
+                                                if (passwordInputEmail.type === 'password') {
+                                                    passwordInputEmail.type = 'text';
+                                                    iconEmail.classList.add("fa-eye-slash");
+                                                    toggleEmail.innerHTML = '<i class="fa fa-eye"></i>';
+                                                } else {
+                                                    passwordInputEmail.type = 'password';
+                                                    iconEmail.classList.remove("fa-eye-slash");
+                                                    toggleEmail.innerHTML = '<i class="fas fa-eye-slash"></i>';
+                                                }
+                                            }
+
+                                            toggleEmail.addEventListener('click', togglePassword, false);
+                                                    // passwordInput.addEventListener('keyup', checkInput, false);
+                                        </script>
+                                        <!-- =========== show password =========== -->
+                                    </div>
+                                    <div class="form-group">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <label for="">New Email Address</label>
+                                        <input type="password" id="" class="form-control" name=""
+                                            placeholder="someone@gmail.com">
+                                    </div>
+                                    <button type="submit" class="btn submit_form">Update E-Mail</button>
+                                </form>
+                                <!-- End form change password -->
+
+                                <!-- Start form Bank Account Information -->
+                                <form action="" class="form_change">
+                                    <h6 class="title_section">Bank Account Information</h6>
+                                    <div class="form-group">
+                                        <i class="fa-solid fa-building-columns"></i>
+                                        <label for="">Bank Name</label>
+                                        <input type="text" id="" class="form-control" name="" placeholder="Bank Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <i class="fa-solid fa-money-bill-transfer"></i>
+                                        <label for="">Ipan</label>
+                                        <input type="number" id="" class="form-control" name=""
+                                            placeholder="-- --- -------------">
+                                    </div>
+                                    <div class="form-group">
+                                        <i class="fa-solid fa-repeat"></i>
+                                        <label for="">Swift Code</label>
+                                        <input type="number" id="" class="form-control" name=""
+                                            placeholder="-- --- -------------">
+                                    </div>
+                                    <button type="submit" class="btn submit_form">Save Changes</button>
+                                </form>
+                                <!-- End form Bank Account Information -->
+
+                                <!-- Start change language -->
+                                <div class="language">
+                                    <div class="title">
+                                        <h6 class="title_section">Language</h6>
+                                        <span>choose the language you want to use in KAFU, Your current Language Is English
+                                            (US) </span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Language
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                          <li><a class="dropdown-item" href="#">Arabic</a></li>
+                                          <li><a class="dropdown-item" href="#">English</a></li>
+                                        </ul>
+                                      </div>
+                                </div>
+                                <!-- End change language -->
+
+                                <!-- Start change sign out -->
+                                <div class="sign_out">
+                                    <div class="title">
+                                        <h6 class="title_section">Sign out all other sessions</h6>
+                                        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</span>
+                                    </div>
+                                    <button class="btn sign_out_btn">Signout</button>
+                                </div>
+                                <!-- End change sign out -->
+
+                                <!-- Start delete account -->
                                 <div class="delete_account">
                                     <div class="check_delete">
                                         <h6 class="title_section">Delete Account</h6>
@@ -390,6 +568,7 @@
                                     </div>
                                     <button class="btn delete_btn">Delete Now</button>
                                 </div>
+                                <!-- End delete account -->
                             </div>
                             <!-- End content Account Settings -->
 
