@@ -4746,7 +4746,7 @@ table tbody tr td {
   margin-bottom: 0.5rem;
 }
 .index_cards .content .messages .tab-content .messages_section .recive .text {
-  background-color: #EBEAED;
+  background-color: #ebeaed;
   color: #011c1e;
   font-family: "regular";
   width: -webkit-fit-content;
@@ -4768,7 +4768,7 @@ table tbody tr td {
   display: flex;
 }
 .index_cards .content .messages .tab-content .form-group input {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   border-radius: 45px;
   font-family: "regular";
   font-size: 0.8rem;
@@ -4914,12 +4914,182 @@ table tbody tr td {
   position: relative;
   margin-top: 1rem;
 }
-.index_cards .content .charts .accuracy_department, .index_cards .content .charts .visitors_year, .index_cards .content .charts .employment_rate, .index_cards .content .charts .statistics {
+.index_cards .content .charts .accuracy_department,
+.index_cards .content .charts .visitors_year,
+.index_cards .content .charts .employment_rate,
+.index_cards .content .charts .statistics {
   border: 0.7px solid #ebeaed;
   padding: 1.5rem;
   border-radius: 4px;
   height: 100%;
   margin-top: 0;
+}
+.index_cards .content .title_setting {
+  -webkit-margin-start: 2rem;
+          margin-inline-start: 2rem;
+}
+.index_cards .content .setting {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 70%;
+  -webkit-margin-start: 2rem;
+          margin-inline-start: 2rem;
+}
+.index_cards .content .setting .nav-tabs .nav-item {
+  margin: 0 0.5rem;
+}
+.index_cards .content .setting .nav-tabs .nav-item .nav-link {
+  color: #828c8d;
+  font-family: "Medium";
+  font-size: 0.9rem;
+}
+.index_cards .content .setting .nav-tabs .nav-item .nav-link:hover, .index_cards .content .setting .nav-tabs .nav-item .nav-link:focus {
+  border-color: transparent;
+  outline: unset;
+}
+.index_cards .content .setting .nav-tabs .nav-item .nav-link:focus-visible {
+  outline: unset;
+}
+.index_cards .content .setting .nav-tabs .nav-item .nav-link.active {
+  border: 0;
+  border-bottom: 3px solid #058a94;
+  color: #011c1e;
+}
+.index_cards .content .setting .tab-content {
+  margin-top: 2rem;
+}
+.index_cards .content .setting .tab-content .data {
+  width: 85%;
+}
+.index_cards .content .setting .tab-content .notifications h6 {
+  font-family: "Medium";
+  color: #011c1e;
+}
+.index_cards .content .setting .tab-content .notifications p {
+  font-family: "regular";
+  font-size: 0.8rem;
+  color: #828282;
+  width: 70%;
+}
+.index_cards .content .setting .tab-content .notifications .form-check {
+  font-family: "Medium";
+  color: #011c1e;
+  margin-bottom: 1rem;
+}
+.index_cards .content .setting .tab-content .notifications .form-check .form-check-input {
+  float: left;
+  margin-right: 1em;
+}
+.index_cards .content .setting .tab-content .notifications .form-check .form-check-input:checked {
+  background-color: #058a94;
+  border-color: #058a94;
+}
+.index_cards .content .setting .tab-content .notifications .form-check span {
+  display: block;
+  margin-left: 0.8em;
+  width: 60%;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  font-family: "regular";
+  color: #828c8d;
+}
+.index_cards .content .setting .tab-content .notifications .email_notifications {
+  border-bottom: 0.7px solid #d6d6d6;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.index_cards .content .setting .tab-content .notifications .email_notifications .title,
+.index_cards .content .setting .tab-content .notifications .email_notifications .actions {
+  width: 50%;
+}
+.index_cards .content .setting .tab-content .notifications .btn {
+  background-color: #058a94;
+  color: #fff;
+  font-family: "Medium";
+  font-size: 0.8rem;
+  padding: 0.75rem 2rem;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .setting .tab-content .notifications .btn:hover {
+  background-color: #fff;
+  color: #058a94;
+  border: 1px solid #058a94;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .setting .tab-content .accordion .accordion-item {
+  border: none;
+  border-bottom: 1px solid #ebeaed;
+}
+.index_cards .content .setting .tab-content .accordion .accordion-item .accordion-header .accordion-button {
+  font-family: "Medium";
+  color: #011c1e;
+  background-color: transparent;
+  box-shadow: unset;
+}
+.index_cards .content .setting .tab-content .accordion .accordion-item .accordion-header .accordion-button::after {
+  filter: invert(1) brightness(0);
+}
+.index_cards .content .setting .tab-content .accordion .accordion-item .accordion-collapse .accordion-body {
+  font-family: "regular";
+  font-size: 0.8rem;
+  color: #828c8d;
+  padding-top: 0;
+  width: 80%;
+}
+.index_cards .content .setting .tab-content .delete_account {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.index_cards .content .setting .tab-content .delete_account h6 {
+  margin-bottom: 1rem;
+}
+.index_cards .content .setting .tab-content .delete_account p {
+  font-family: "regular";
+  color: #828282;
+  font-size: 0.8rem;
+  width: 60%;
+}
+.index_cards .content .setting .tab-content .delete_account .form-check {
+  font-family: "regular";
+  color: #595959;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+.index_cards .content .setting .tab-content .delete_account .form-check .form-check-input {
+  float: left;
+  margin-right: 1em;
+  transform: scale(1.3);
+}
+.index_cards .content .setting .tab-content .delete_account .form-check .form-check-input:checked {
+  background-color: #058a94;
+  border-color: #058a94;
+}
+.index_cards .content .setting .tab-content .delete_account .form-check .form-check-input:focus {
+  box-shadow: unset;
+  border-color: #058a94;
+}
+.index_cards .content .setting .tab-content .delete_account .delete_btn {
+  background-color: #d25656;
+  color: #fff;
+  border-radius: 5px;
+  font-family: "regular";
+  font-size: 0.8rem;
+  padding: 0.6rem 2rem;
+  margin-top: 1rem;
+  width: 15%;
+  transition: 0.7s ease-in-out;
+}
+.index_cards .content .setting .tab-content .delete_account .delete_btn:hover {
+  background-color: #fff;
+  color: #d25656;
+  border: 1px solid #d25656;
+  transition: 0.7s ease-in-out;
 }
 
 /* ======= 4K style ======= */
@@ -4964,7 +5134,7 @@ table tbody tr td {
     margin-bottom: 2rem;
   }
   .index_cards .content .tab-content .data {
-    width: 100%;
+    width: 100% !important;
     -webkit-margin-start: 0;
             margin-inline-start: 0;
   }
@@ -5170,6 +5340,22 @@ table tbody tr td {
   .index_cards .content .contact iframe {
     height: 600px;
   }
+  .index_cards .content .title_setting {
+    -webkit-margin-start: 0;
+            margin-inline-start: 0;
+  }
+  .index_cards .content .setting {
+    width: 100%;
+    -webkit-margin-start: 0;
+            margin-inline-start: 0;
+  }
+  .index_cards .content .setting .tab-content .delete_account p {
+    width: 80%;
+  }
+  .index_cards .content .setting .tab-content .delete_account .delete_btn {
+    width: 40%;
+    padding: 0.6rem 0;
+  }
 }
 @media only screen and (max-width: 600px) {
   .tableAllProjects {
@@ -5322,6 +5508,32 @@ table tbody tr td {
   }
   .index_cards .content .employee_description .tab-content .tab-pane.general .employee_rates .text_rate {
     width: 70%;
+  }
+  .index_cards .content .setting .nav-tabs .nav-item {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .index_cards .content .setting .nav-tabs .nav-item .nav-link {
+    padding: 0.5rem 0;
+  }
+  .index_cards .content .setting .tab-content .notifications .email_notifications {
+    flex-wrap: wrap;
+  }
+  .index_cards .content .setting .tab-content .notifications .email_notifications .title,
+.index_cards .content .setting .tab-content .notifications .email_notifications .actions {
+    width: 100%;
+  }
+  .index_cards .content .setting .tab-content .accordion .accordion-item .accordion-collapse .accordion-body {
+    width: 100%;
+  }
+  .index_cards .content .setting .tab-content .delete_account {
+    flex-wrap: wrap;
+  }
+  .index_cards .content .setting .tab-content .delete_account .check_delete {
+    width: 100%;
+  }
+  .index_cards .content .setting .tab-content .delete_account .check_delete p {
+    width: 100% !important;
   }
   .index_cards .content .employees_tables .tab-content .all .table_details,
 .index_cards .content .employees_tables .tab-content .new .table_details,

@@ -4354,7 +4354,7 @@ table tbody tr td {
           overflow-y: auto;
           .send {
             width: fit-content;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
             .text {
               background-color: $PrimaryColor;
               color: #fff;
@@ -4368,9 +4368,9 @@ table tbody tr td {
               text-align: end;
               font-family: "regular";
               color: $SecondText;
-              font-size: .7rem;
+              font-size: 0.7rem;
               display: block;
-              margin-top: .2rem;
+              margin-top: 0.2rem;
             }
           }
           .recive {
@@ -4379,9 +4379,9 @@ table tbody tr td {
             justify-content: end;
             align-items: end;
             width: 100%;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
             .text {
-              background-color: #EBEAED;
+              background-color: #ebeaed;
               color: $PrimaryText;
               font-family: "regular";
               width: fit-content;
@@ -4393,19 +4393,19 @@ table tbody tr td {
               text-align: end;
               font-family: "regular";
               color: $SecondText;
-              font-size: .7rem;
+              font-size: 0.7rem;
               display: block;
             }
           }
         }
         .form-group {
           display: flex;
-          input{
-            background-color: #F7F7F7;
+          input {
+            background-color: #f7f7f7;
             border-radius: 45px;
             font-family: "regular";
-            font-size: .8rem;
-            padding: .75rem;
+            font-size: 0.8rem;
+            padding: 0.75rem;
           }
           .btn {
             padding: 0;
@@ -4415,7 +4415,7 @@ table tbody tr td {
               color: #fff;
               height: 20px;
               width: 20px;
-              padding: .5rem;
+              padding: 0.5rem;
               border-radius: 50%;
             }
           }
@@ -4441,26 +4441,26 @@ table tbody tr td {
           label {
             font-family: "regular";
             color: $PrimaryText;
-            margin-bottom: .5rem;
-            font-size: .8rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
           }
           svg {
             position: absolute;
             top: 2.8rem;
-            left: .5rem;
+            left: 0.5rem;
             color: $SecondText;
           }
           input {
             font-family: "regular";
-            font-size: .8rem;
-            padding: .75rem;
+            font-size: 0.8rem;
+            padding: 0.75rem;
             padding-inline-start: 1.8rem;
             color: $SecondText;
           }
           textarea {
             font-family: "regular";
-            font-size: .8rem;
-            padding: .75rem;
+            font-size: 0.8rem;
+            padding: 0.75rem;
             color: $SecondText;
             resize: none;
           }
@@ -4468,16 +4468,16 @@ table tbody tr td {
         .btn {
           background-color: $PrimaryColor;
           color: #fff;
-          font-size: .8rem;
+          font-size: 0.8rem;
           font-family: "Medium";
           padding: 1rem;
           width: 100%;
-          transition: .7s ease-in-out;
+          transition: 0.7s ease-in-out;
           &:hover {
             background-color: #fff;
             border: 1px solid $PrimaryColor;
             color: $PrimaryColor;
-            transition: .7s ease-in-out;
+            transition: 0.7s ease-in-out;
           }
         }
       }
@@ -4566,12 +4566,213 @@ table tbody tr td {
         }
       }
 
-      .accuracy_department, .visitors_year, .employment_rate, .statistics {
+      .accuracy_department,
+      .visitors_year,
+      .employment_rate,
+      .statistics {
         border: 0.7px solid #ebeaed;
         padding: 1.5rem;
         border-radius: 4px;
         height: 100%;
         margin-top: 0;
+      }
+    }
+
+    .title_setting {
+      margin-inline-start: 2rem;
+    }
+
+    .setting {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 70%;
+      margin-inline-start: 2rem;
+
+      .nav-tabs {
+        .nav-item {
+          margin: 0 0.5rem;
+
+          .nav-link {
+            color: $SecondText;
+            font-family: "Medium";
+            font-size: 0.9rem;
+
+            &:hover,
+            &:focus {
+              border-color: transparent;
+              outline: unset;
+            }
+
+            &:focus-visible {
+              outline: unset;
+            }
+
+            &.active {
+              border: 0;
+              border-bottom: 3px solid $PrimaryColor;
+              color: $PrimaryText;
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        margin-top: 2rem;
+        .data {
+          width: 85%;
+        }
+        .notifications {
+          h6 {
+            font-family: "Medium";
+            color: $PrimaryText;
+          }
+
+          p {
+            font-family: "regular";
+            font-size: 0.8rem;
+            color: #828282;
+            width: 70%;
+          }
+
+          .form-check {
+            font-family: "Medium";
+            color: $PrimaryText;
+            margin-bottom: 1rem;
+
+            .form-check-input {
+              float: left;
+              margin-right: 1em;
+
+              &:checked {
+                background-color: $PrimaryColor;
+                border-color: $PrimaryColor;
+              }
+            }
+
+            span {
+              display: block;
+              margin-left: 0.8em;
+              width: 60%;
+              margin-top: 0.3rem;
+              font-size: 0.8rem;
+              font-family: "regular";
+              color: $SecondText;
+            }
+          }
+
+          .email_notifications {
+            border-bottom: 0.7px solid #d6d6d6;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            .title,
+            .actions {
+              width: 50%;
+            }
+          }
+
+          .btn {
+            background-color: $PrimaryColor;
+            color: #fff;
+            font-family: "Medium";
+            font-size: 0.8rem;
+            padding: 0.75rem 2rem;
+            transition: 0.7s ease-in-out;
+            &:hover {
+              background-color: #fff;
+              color: $PrimaryColor;
+              border: 1px solid $PrimaryColor;
+              transition: 0.7s ease-in-out;
+            }
+          }
+        }
+        .accordion {
+          .accordion-item {
+            border: none;
+            border-bottom: 1px solid #ebeaed;
+            .accordion-header {
+              .accordion-button {
+                font-family: "Medium";
+                color: $PrimaryText;
+                background-color: transparent;
+                box-shadow: unset;
+                &::after {
+                  filter: invert(1) brightness(0);
+                }
+              }
+            }
+            .accordion-collapse {
+              .accordion-body {
+                font-family: "regular";
+                font-size: 0.8rem;
+                color: $SecondText;
+                padding-top: 0;
+                width: 80%;
+              }
+            }
+          }
+        }
+        .delete_account {
+          background-color: #fff;
+          padding: 2rem;
+          border-radius: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          h6 {
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-family: "regular";
+            color: #828282;
+            font-size: 0.8rem;
+            width: 60%;
+          }
+
+          .form-check {
+            font-family: "regular";
+            color: #595959;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+
+            .form-check-input {
+              float: left;
+              margin-right: 1em;
+              transform: scale(1.3);
+
+              &:checked {
+                background-color: $PrimaryColor;
+                border-color: $PrimaryColor;
+              }
+
+              &:focus {
+                box-shadow: unset;
+                border-color: $PrimaryColor;
+              }
+            }
+          }
+
+          .delete_btn {
+            background-color: #d25656;
+            color: #fff;
+            border-radius: 5px;
+            font-family: "regular";
+            font-size: 0.8rem;
+            padding: 0.6rem 2rem;
+            margin-top: 1rem;
+            width: 15%;
+            transition: 0.7s ease-in-out;
+            &:hover {
+              background-color: #fff;
+              color: #d25656;
+              border: 1px solid #d25656;
+              transition: 0.7s ease-in-out;
+            }
+          }
+        }
       }
     }
   }
@@ -4638,7 +4839,7 @@ table tbody tr td {
         }
 
         .data {
-          width: 100%;
+          width: 100% !important;
           margin-inline-start: 0;
         }
       }
@@ -4939,6 +5140,26 @@ table tbody tr td {
           height: 600px;
         }
       }
+
+      .title_setting {
+        margin-inline-start: 0;
+      }
+
+      .setting {
+        width: 100%;
+        margin-inline-start: 0;
+        .tab-content {
+          .delete_account {
+            p {
+              width: 80%;
+            }
+            .delete_btn {
+              width: 40%;
+              padding: 0.6rem 0;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -5181,6 +5402,47 @@ table tbody tr td {
                 .text_rate {
                   width: 70%;
                 }
+              }
+            }
+          }
+        }
+      }
+
+      .setting {
+        .nav-tabs {
+          .nav-item {
+            width: 100%;
+            margin-bottom: 1rem;
+            .nav-link {
+              padding: 0.5rem 0;
+            }
+          }
+        }
+        .tab-content {
+          .notifications {
+            .email_notifications {
+              flex-wrap: wrap;
+              .title,
+              .actions {
+                width: 100%;
+              }
+            }
+          }
+          .accordion {
+            .accordion-item {
+              .accordion-collapse {
+                .accordion-body {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          .delete_account {
+            flex-wrap: wrap;
+            .check_delete {
+              width: 100%;
+              p {
+                width: 100% !important;
               }
             }
           }
