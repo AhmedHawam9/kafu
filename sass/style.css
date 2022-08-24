@@ -4419,7 +4419,7 @@ table tbody tr td {
   margin: 2rem auto 0;
 }
 .index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table {
-  border: 0.7px solid #EBEAED;
+  border: 0.7px solid #ebeaed;
   padding: 1.5rem;
 }
 .index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table .form-group {
@@ -4444,7 +4444,7 @@ table tbody tr td {
   border: 0;
 }
 .index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table thead {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 .index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table thead tr th {
   color: #828282;
@@ -4453,22 +4453,25 @@ table tbody tr td {
   padding: 1rem 0.5rem;
   text-align: center;
 }
-.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr th, .index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr td {
-  color: #102B21;
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr th,
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr td {
+  color: #102b21;
   font-family: "regular";
   font-size: 0.8rem;
   padding: 1rem 0.5rem;
   text-align: center;
 }
-.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr th .absence, .index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr td .absence {
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr th .absence,
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr td .absence {
   background-color: rgba(210, 86, 86, 0.1);
-  color: #D25656;
+  color: #d25656;
   padding: 0.3rem 0.7rem;
   border-radius: 34px;
 }
-.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr th .vacation, .index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr td .vacation {
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr th .vacation,
+.index_cards .content .employee_description .tab-content .tab-pane.attendance .activity_table table tbody tr td .vacation {
   background-color: rgba(36, 104, 79, 0.1);
-  color: #24684F;
+  color: #24684f;
   padding: 0.3rem 0.7rem;
   border-radius: 34px;
 }
@@ -4527,13 +4530,13 @@ table tbody tr td {
   margin: 0.5rem 0;
 }
 .index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions:nth-child(1) {
-  background-color: #011C1E;
+  background-color: #011c1e;
 }
 .index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions:nth-child(2) {
-  background-color: #E4AA3C;
+  background-color: #e4aa3c;
 }
 .index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .card_financial_transactions:nth-child(3) {
-  background-color: #058A94;
+  background-color: #058a94;
 }
 .index_cards .content .employee_description .tab-content .tab-pane.financial .history .title_section {
   margin-bottom: 1rem;
@@ -4580,7 +4583,7 @@ table tbody tr td {
 }
 .index_cards .content .employee_description .tab-content .tab-pane.financial .history .card_history.decrease .title svg {
   background-color: rgba(210, 86, 86, 0.08);
-  color: #D25656;
+  color: #d25656;
   padding: 0.8rem;
   width: 20px;
   height: 20px;
@@ -4590,6 +4593,199 @@ table tbody tr td {
   font-family: "regular";
   color: #828282;
   font-size: 0.8rem;
+}
+.index_cards .content .messages .nav-pills {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  min-height: 70vh;
+}
+.index_cards .content .messages .nav-pills .form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.index_cards .content .messages .nav-pills .form-group svg {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.5rem;
+  color: #8f92a1;
+}
+.index_cards .content .messages .nav-pills .form-group input {
+  color: #8f92a1;
+  background-color: rgba(143, 146, 161, 0.05);
+  font-family: "regular";
+  font-size: 0.8rem;
+  padding: 0.75rem;
+  -webkit-padding-start: 2rem;
+          padding-inline-start: 2rem;
+}
+.index_cards .content .messages .nav-pills h6.title_section {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.index_cards .content .messages .nav-pills .nav-link {
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+.index_cards .content .messages .nav-pills .nav-link.active {
+  background-color: transparent;
+}
+.index_cards .content .messages .nav-pills .nav-link .person_details {
+  display: flex;
+  align-items: center;
+}
+.index_cards .content .messages .nav-pills .nav-link .person_details img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+}
+.index_cards .content .messages .nav-pills .nav-link .person_details .text .name {
+  margin-bottom: 0;
+  font-family: "semibold";
+  color: #011c1e;
+  font-size: 0.9rem;
+}
+.index_cards .content .messages .nav-pills .nav-link .person_details .text .last {
+  font-family: "regular";
+  color: #828c8d;
+  font-size: 0.7rem;
+}
+.index_cards .content .messages .nav-pills .nav-link .time {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.index_cards .content .messages .nav-pills .nav-link .time span {
+  font-family: "regular";
+  color: #b0b9b9;
+  font-size: 0.7rem;
+  display: block;
+}
+.index_cards .content .messages .nav-pills .nav-link .time .number {
+  background-color: #058a94;
+  color: white;
+  font-size: 0.7rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+.index_cards .content .messages .tab-content {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  min-height: 70vh;
+}
+.index_cards .content .messages .tab-content .head {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.7px solid #c4c4c4;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+.index_cards .content .messages .tab-content .head img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+}
+.index_cards .content .messages .tab-content .head .title p {
+  font-family: "semibold";
+  color: #011c1e;
+  margin-bottom: 0;
+}
+.index_cards .content .messages .tab-content .head .title span {
+  font-size: 0.8rem;
+  font-family: "regular";
+  color: #828c8d;
+}
+.index_cards .content .messages .tab-content .messages_section {
+  min-height: 50vh;
+  height: 50vh;
+  overflow-y: auto;
+}
+.index_cards .content .messages .tab-content .messages_section .send {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+}
+.index_cards .content .messages .tab-content .messages_section .send .text {
+  background-color: #058a94;
+  color: #fff;
+  font-family: "regular";
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  -webkit-padding-end: 5rem;
+          padding-inline-end: 5rem;
+  border-radius: 24px 24px 24px 0;
+}
+.index_cards .content .messages .tab-content .messages_section .send span {
+  text-align: end;
+  font-family: "regular";
+  color: #828c8d;
+  font-size: 0.7rem;
+  display: block;
+  margin-top: 0.2rem;
+}
+.index_cards .content .messages .tab-content .messages_section .recive {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.index_cards .content .messages .tab-content .messages_section .recive .text {
+  background-color: #EBEAED;
+  color: #011c1e;
+  font-family: "regular";
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  -webkit-padding-end: 5rem;
+          padding-inline-end: 5rem;
+  border-radius: 24px 24px 0 24px;
+}
+.index_cards .content .messages .tab-content .messages_section .recive span {
+  text-align: end;
+  font-family: "regular";
+  color: #828c8d;
+  font-size: 0.7rem;
+  display: block;
+}
+.index_cards .content .messages .tab-content .form-group {
+  display: flex;
+}
+.index_cards .content .messages .tab-content .form-group input {
+  background-color: #F7F7F7;
+  border-radius: 45px;
+  font-family: "regular";
+  font-size: 0.8rem;
+  padding: 0.75rem;
+}
+.index_cards .content .messages .tab-content .form-group .btn {
+  padding: 0;
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+}
+.index_cards .content .messages .tab-content .form-group .btn svg {
+  background-color: #058a94;
+  color: #fff;
+  height: 20px;
+  width: 20px;
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 
 /* ======= 4K style ======= */
@@ -4826,6 +5022,16 @@ table tbody tr td {
   .index_cards .content .employee_description .tab-content .tab-pane.financial .financial_transactions .d-flex .card_financial_transactions {
     width: 80%;
     margin: 0 auto 1rem;
+  }
+  .index_cards .content .messages .message_mobile_flex {
+    flex-direction: column;
+  }
+  .index_cards .content .messages .message_mobile_flex .nav-pills {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
   }
 }
 @media only screen and (max-width: 600px) {

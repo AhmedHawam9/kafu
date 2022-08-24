@@ -3945,7 +3945,8 @@ table tbody tr td {
                       border-top-left-radius: 20px;
                       border-bottom-left-radius: 20px;
                       background-color: $PrimaryColor;
-                      box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3) inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+                      box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3) inset
+                        0 -2px 6px rgba(0, 0, 0, 0.4);
                       position: relative;
                       overflow: hidden;
                       transition: width 2s ease-out;
@@ -4033,7 +4034,7 @@ table tbody tr td {
               }
             }
             .activity_table {
-              border: .7px solid #EBEAED;
+              border: 0.7px solid #ebeaed;
               padding: 1.5rem;
               .form-group {
                 position: relative;
@@ -4058,35 +4059,36 @@ table tbody tr td {
               }
               table {
                 thead {
-                  background-color: #F5F5F5;
+                  background-color: #f5f5f5;
                   tr {
                     th {
                       color: #828282;
                       font-family: "regular";
-                      font-size: .8rem;
-                      padding: 1rem .5rem;
+                      font-size: 0.8rem;
+                      padding: 1rem 0.5rem;
                       text-align: center;
                     }
                   }
                 }
                 tbody {
                   tr {
-                    th, td {
-                      color: #102B21;
+                    th,
+                    td {
+                      color: #102b21;
                       font-family: "regular";
-                      font-size: .8rem;
-                      padding: 1rem .5rem;
+                      font-size: 0.8rem;
+                      padding: 1rem 0.5rem;
                       text-align: center;
                       .absence {
-                        background-color: rgba(210, 86, 86, .1);
-                        color: #D25656;
-                        padding: .3rem .7rem;
+                        background-color: rgba(210, 86, 86, 0.1);
+                        color: #d25656;
+                        padding: 0.3rem 0.7rem;
                         border-radius: 34px;
                       }
                       .vacation {
-                        background-color: rgba(36, 104, 79, .1);
-                        color: #24684F;
-                        padding: .3rem .7rem;
+                        background-color: rgba(36, 104, 79, 0.1);
+                        color: #24684f;
+                        padding: 0.3rem 0.7rem;
                         border-radius: 34px;
                       }
                     }
@@ -4137,23 +4139,23 @@ table tbody tr td {
                   text-align: center;
                   font-family: "semibold";
                   font-size: 2rem;
-                  margin: .5rem 0;
+                  margin: 0.5rem 0;
                 }
                 .title {
                   color: #fff;
                   text-align: center;
                   font-family: "regular";
-                  font-size: .8rem;
-                  margin: .5rem 0;
+                  font-size: 0.8rem;
+                  margin: 0.5rem 0;
                 }
                 &:nth-child(1) {
-                  background-color: #011C1E;
+                  background-color: #011c1e;
                 }
                 &:nth-child(2) {
-                  background-color: #E4AA3C;
+                  background-color: #e4aa3c;
                 }
                 &:nth-child(3) {
-                  background-color: #058A94;
+                  background-color: #058a94;
                 }
               }
             }
@@ -4164,15 +4166,15 @@ table tbody tr td {
               .dropdown {
                 margin-bottom: 1rem;
                 .dropdown-toggle {
-                  background-color: rgba(143, 146, 161, .05);
-                  font-size: .8rem;
-                  padding: .75rem 1.5rem;
+                  background-color: rgba(143, 146, 161, 0.05);
+                  font-size: 0.8rem;
+                  padding: 0.75rem 1.5rem;
                   font-family: "regular";
                 }
                 .dropdown-menu {
                   .dropdown-item {
                     font-family: "regular";
-                    font-size: .8rem;
+                    font-size: 0.8rem;
                   }
                 }
               }
@@ -4185,12 +4187,11 @@ table tbody tr td {
                   display: flex;
                   align-items: center;
                   svg {
-
                   }
                   p {
                     font-family: "regular";
                     color: $PrimaryText;
-                    font-size: .9rem;
+                    font-size: 0.9rem;
                     width: 70%;
                     margin-bottom: 0;
                     margin-inline-start: 1rem;
@@ -4201,7 +4202,7 @@ table tbody tr td {
                     svg {
                       background-color: rgba(5, 138, 148, 0.08);
                       color: $PrimaryColor;
-                      padding: .8rem;
+                      padding: 0.8rem;
                       width: 20px;
                       height: 20px;
                       border-radius: 50%;
@@ -4212,8 +4213,8 @@ table tbody tr td {
                   .title {
                     svg {
                       background-color: rgba(210, 86, 86, 0.08);
-                      color: #D25656;
-                      padding: .8rem;
+                      color: #d25656;
+                      padding: 0.8rem;
                       width: 20px;
                       height: 20px;
                       border-radius: 50%;
@@ -4223,9 +4224,199 @@ table tbody tr td {
                 .date {
                   font-family: "regular";
                   color: #828282;
-                  font-size: .8rem;
+                  font-size: 0.8rem;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+
+    .messages {
+      .nav-pills {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 1.5rem;
+        min-height: 70vh;
+        .form-group {
+          position: relative;
+          margin-bottom: 1.5rem;
+          svg {
+            position: absolute;
+            top: 0.9rem;
+            left: 0.5rem;
+            color: #8f92a1;
+          }
+          input {
+            color: #8f92a1;
+            background-color: rgba(143, 146, 161, 0.05);
+            font-family: "regular";
+            font-size: 0.8rem;
+            padding: 0.75rem;
+            padding-inline-start: 2rem;
+          }
+        }
+        h6 {
+          &.title_section {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+          }
+        }
+        .nav-link {
+          padding: 0;
+          margin-bottom: 1.5rem;
+          &.active {
+            background-color: transparent;
+          }
+          .person_details {
+            display: flex;
+            align-items: center;
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              margin-inline-end: 1rem;
+            }
+            .text {
+              .name {
+                margin-bottom: 0;
+                font-family: "semibold";
+                color: $PrimaryText;
+                font-size: 0.9rem;
+              }
+              .last {
+                font-family: "regular";
+                color: $SecondText;
+                font-size: 0.7rem;
+              }
+            }
+          }
+          .time {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            span {
+              font-family: "regular";
+              color: #b0b9b9;
+              font-size: 0.7rem;
+              display: block;
+            }
+            .number {
+              background-color: $PrimaryColor;
+              color: #ffff;
+              font-size: 0.7rem;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              padding: 0.5rem;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+      .tab-content {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 1.5rem;
+        min-height: 70vh;
+        .head {
+          display: flex;
+          align-items: center;
+          border-bottom: 0.7px solid #c4c4c4;
+          padding-bottom: 1rem;
+          margin-bottom: 2rem;
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-inline-end: 1rem;
+          }
+          .title {
+            p {
+              font-family: "semibold";
+              color: $PrimaryText;
+              margin-bottom: 0;
+            }
+            span {
+              font-size: 0.8rem;
+              font-family: "regular";
+              color: $SecondText;
+            }
+          }
+        }
+        .messages_section {
+          min-height: 50vh;
+          height: 50vh;
+          overflow-y: auto;
+          .send {
+            width: fit-content;
+            margin-bottom: .5rem;
+            .text {
+              background-color: $PrimaryColor;
+              color: #fff;
+              font-family: "regular";
+              width: fit-content;
+              padding: 1rem;
+              padding-inline-end: 5rem;
+              border-radius: 24px 24px 24px 0;
+            }
+            span {
+              text-align: end;
+              font-family: "regular";
+              color: $SecondText;
+              font-size: .7rem;
+              display: block;
+              margin-top: .2rem;
+            }
+          }
+          .recive {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: end;
+            width: 100%;
+            margin-bottom: .5rem;
+            .text {
+              background-color: #EBEAED;
+              color: $PrimaryText;
+              font-family: "regular";
+              width: fit-content;
+              padding: 1rem;
+              padding-inline-end: 5rem;
+              border-radius: 24px 24px 0 24px;
+            }
+            span {
+              text-align: end;
+              font-family: "regular";
+              color: $SecondText;
+              font-size: .7rem;
+              display: block;
+            }
+          }
+        }
+        .form-group {
+          display: flex;
+          input{
+            background-color: #F7F7F7;
+            border-radius: 45px;
+            font-family: "regular";
+            font-size: .8rem;
+            padding: .75rem;
+          }
+          .btn {
+            padding: 0;
+            margin-inline-start: 1rem;
+            svg {
+              background-color: $PrimaryColor;
+              color: #fff;
+              height: 20px;
+              width: 20px;
+              padding: .5rem;
+              border-radius: 50%;
             }
           }
         }
@@ -4579,6 +4770,17 @@ table tbody tr td {
           }
         }
       }
+
+      .messages {
+        .message_mobile_flex {
+          flex-direction: column;
+          .nav-pills {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            min-height: fit-content;
+          }
+        }
+      }
     }
   }
 }
@@ -4834,14 +5036,44 @@ table tbody tr td {
     padding: 0;
   }
   .index_cards .content .employees_tables .tab-content .all .toggleBtn,
-  .index_cards .content .employees_tables .tab-content .all .toggleBtnCurrentEmployees,
-  .index_cards .content .employees_tables .tab-content .all .toggleBtnNewEmployees,
+  .index_cards
+    .content
+    .employees_tables
+    .tab-content
+    .all
+    .toggleBtnCurrentEmployees,
+  .index_cards
+    .content
+    .employees_tables
+    .tab-content
+    .all
+    .toggleBtnNewEmployees,
   .index_cards .content .employees_tables .tab-content .new .toggleBtn,
-  .index_cards .content .employees_tables .tab-content .new .toggleBtnCurrentEmployees,
-  .index_cards .content .employees_tables .tab-content .new .toggleBtnNewEmployees,
+  .index_cards
+    .content
+    .employees_tables
+    .tab-content
+    .new
+    .toggleBtnCurrentEmployees,
+  .index_cards
+    .content
+    .employees_tables
+    .tab-content
+    .new
+    .toggleBtnNewEmployees,
   .index_cards .content .employees_tables .tab-content .current .toggleBtn,
-  .index_cards .content .employees_tables .tab-content .current .toggleBtnCurrentEmployees,
-  .index_cards .content .employees_tables .tab-content .current .toggleBtnNewEmployees {
+  .index_cards
+    .content
+    .employees_tables
+    .tab-content
+    .current
+    .toggleBtnCurrentEmployees,
+  .index_cards
+    .content
+    .employees_tables
+    .tab-content
+    .current
+    .toggleBtnNewEmployees {
     display: none;
   }
 }
