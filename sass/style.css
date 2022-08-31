@@ -307,9 +307,10 @@
 }
 .sidebar .nav-pills .nav-link span {
   margin: 0 5%;
-  color: #828c8d;
+  color: #011c1e;
   display: none;
   font-size: 0.8rem;
+  font-family: "medium";
 }
 .sidebar .contact_us {
   width: 80%;
