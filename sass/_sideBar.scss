@@ -3,7 +3,8 @@
   &.open,
   &.opened {
     transition: 0.7s;
-    width: 15%;
+    width: 18%;
+    padding: 0 1.2rem;
     margin-right: 0%;
     height: 100%;
     overflow-y: auto;
@@ -47,7 +48,7 @@
 
     .image_logo {
       .logo {
-        width: 60%;
+        width: 90%;
       }
     }
 
@@ -88,7 +89,7 @@
 .sidebar.open ~ .index_cards,
 .sidebar.opened ~ .index_cards {
   width: 85%;
-  margin-inline-start: 15%;
+  margin-inline-start: 18%;
   transition: 1s ease-in-out;
 }
 
@@ -121,9 +122,9 @@
 
     .logo {
       width: 100%;
-      margin: 0 auto 1rem;
+      margin: 0 auto 3rem;
       display: block;
-      padding: 0 1.5rem;
+      padding: 0.5rem 1.5rem 0;
     }
   }
 
@@ -184,8 +185,7 @@
         transition: 0.7s ease-in-out;
 
         img {
-          filter: invert(35%) sepia(85%) saturate(875%) hue-rotate(180deg)
-            brightness(40%) contrast(95%);
+          filter: invert(20%) sepia(59%) saturate(7211%) hue-rotate(173deg) brightness(45%) contrast(74%)
         }
 
         &::after {
@@ -194,15 +194,14 @@
           width: 1rem;
           height: 1rem;
           background-size: 1rem;
-          filter: invert(22%) sepia(73%) saturate(852%) hue-rotate(169deg)
-            brightness(87%) contrast(96%);
+          filter: invert(20%) sepia(59%) saturate(7211%) hue-rotate(173deg) brightness(45%) contrast(74%)
         }
       }
     }
 
     .nav-item {
       width: 100%;
-      margin: 0.3rem 0;
+      margin: 0.3rem 0 0.7rem;
 
       ul {
         list-style: none;
@@ -239,15 +238,13 @@
       }
 
       .nav-link.active {
-        background-color: rgba(255, 255, 255, 0.12);
-        border-inline-end: 3px solid $SecondColor;
-        border-radius: 0;
+        background-color: rgba(30, 51, 95, 0.15);
+        border-radius: 8px;
         span {
-          color: $SecondColor;
+          color: $PrimaryColor;
         }
         img {
-          filter: invert(60%) sepia(40%) saturate(3280%) hue-rotate(382deg)
-            brightness(100%) contrast(115%);
+          filter: invert(20%) sepia(59%) saturate(7211%) hue-rotate(173deg) brightness(45%) contrast(74%)
         }
       }
     }
@@ -257,10 +254,10 @@
 
       span {
         margin: 0 5%;
-        color: #011c1e;
+        color: $PrimaryColor;
         display: none;
         font-size: 0.8rem;
-        font-family: "medium";
+        font-family: "semibold";
       }
     }
   }
@@ -345,9 +342,11 @@
 }
 
 @media only screen and (max-width: 991.98px) {
-  .navbar {
-    .menu {
-      display: none;
+  .index_cards {
+    .navbar {
+      .menu {
+        display: none;
+      }
     }
   }
 
@@ -359,11 +358,32 @@
       display: none !important;
     }
   }
-
-  .sidebar.open ~ .index_cards {
+  .sidebar.open ~ .index_cards,
+  .sidebar.opened ~ .index_cards {
     width: 100%;
-    margin-inline-start: 0 !important;
+    margin-inline-start: 0;
   }
+
+  // .sidebar.open ~ .index_cards .navbar {
+  //   width: 100%;
+  //   margin-inline-start: 0 !important;
+  // }
+  // .sidebar.open ~ .index_cards .content {
+  //   width: 95%;
+  //   margin-inline-start: 3%;
+  // }
+  // .sidebar.open, .sidebar.opened {
+  //   padding: 0 .5rem;
+  // }
+  // .sidebar {
+  //   .nav-pills {
+  //     .nav-link {
+  //       span {
+  //         font-size: .7rem;
+  //       }
+  //     }
+  //   }
+  // }
 
   .sidebar.open {
     width: 100%;
@@ -379,7 +399,7 @@
       flex-direction: row !important;
 
       .nav-item {
-        width: 14.28%;
+        width: 25%;
         margin: 0;
 
         .collapse.show,
@@ -403,7 +423,7 @@
             width: 100%;
             .nav-link {
               width: 100%;
-              background-color: #21765ec0;
+              background-color: $PrimaryColor;
               svg {
                 font-size: 1rem;
               }
@@ -450,7 +470,8 @@
           &.active {
             // filter: invert(68%) sepia(96%) saturate(295%) hue-rotate(112deg) brightness(91%) contrast(94%);
             border-inline-end: 0;
-            background-color: $PrimaryColor;
+            background-color: #fff;
+            border-radius: 0;
           }
         }
       }
@@ -472,16 +493,16 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .sidebar.open {
-    .nav-pills {
-      .nav-item {
-        .nav-link {
-          span {
-            font-size: 0.4rem;
-          }
-        }
-      }
-    }
-  }
-}
+// @media only screen and (max-width: 600px) {
+//   .sidebar.open {
+//     .nav-pills {
+//       .nav-item {
+//         .nav-link {
+//           span {
+//             font-size: 0.4rem;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

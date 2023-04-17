@@ -1,0 +1,22 @@
+@media only screen and (max-width: 991.98px) {
+  .index_cards {
+    .navbar {
+      width: 100%;
+      margin-inline-start: 0%;
+    }
+    .content {
+      width: 95%;
+      margin: 1rem auto;
+      padding: 1.2rem .5rem;
+      .clients {
+        .title {
+          margin-bottom: 0;
+        }
+        .search {
+          align-items: center;
+          width: 70%;
+        }
+      }
+    }
+  }
+}

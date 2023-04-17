@@ -78,14 +78,16 @@
               <i class="fa-solid fa-xmark"></i>
             </div>
             <li>
-              <a href="clients.html" class="nav-link">
-                <i class="fa-solid fa-circle dot"></i>
-                <span>Clients</span></a>
+                <a href="clients.html" class="nav-link">
+                    <i class="fa-solid fa-circle dot"></i>
+                    <span>Clients</span>
+                </a>
             </li>
             <li>
-              <a href="suppliers.html" class="nav-link">
+            <a href="suppliers.html" class="nav-link">
                 <i class="fa-solid fa-circle dot"></i>
-                <span>Suppliers</span></a>
+                <span>Suppliers</span>
+            </a>
             </li>
           </ul>
         </li>
@@ -175,7 +177,48 @@
       <!-- ======= Start Content ======= -->
       <section class="content">
         <div class="container">
-
+            <div class="clients">
+                <div class="d-flex justify-content-between">
+                    <h4 class="title">All Clients</h4>
+                    <div class="d-flex align-items-center search">
+                        <div class="form-group">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" name="" id="" class="form-control" placeholder="search by name...">
+                        </div>
+                        <a href="add_clients.html" class="btn PrimaryButton">+ New Client</a>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                      <tr>
+                        <th scope="col">Number</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Number">3412</td>
+                        <td data-label="Name">Ahmed Hawam</td>
+                        <td data-label="E-mail">someone@gmail.com</td>
+                        <td><a href="#" class="btn SecondButton">All supplires</a></td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="Number">6076</td>
+                        <td data-label="Name">Ahmed Hawam</td>
+                        <td data-label="E-mail">someone@gmail.com</td>
+                        <td><a href="#" class="btn SecondButton">All supplires</a></td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="Number">4866</td>
+                        <td data-label="Name">Ahmed Hawam</td>
+                        <td data-label="E-mail">someone@gmail.com</td>
+                        <td><a href="#" class="btn SecondButton">All supplires</a></td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
       </section>
       <!-- ======= End Content ======= -->
@@ -185,14 +228,6 @@
   <!-- ? ======= footer =========== -->
 
   <script src="js/main.js"></script>
-  <script src="js/counterup.min.js"></script>
-  <script src="js/waypoints.min.js"></script>
-  <script>
-    $('.counter').counterUp({
-      delay: 20,
-      time: 2000
-    });
-  </script>
 </body>
 
 </html>

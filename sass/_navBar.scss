@@ -1,24 +1,13 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  padding: 1rem 0;
+  background-color: #fff;
 
-  .search {
-    display: flex;
-    align-items: center;
-    margin-inline-start: 2rem;
-    width: 100%;
-
-    input {
-      font-family: "light";
-      font-size: 0.8rem;
-      margin-inline-start: .5rem;
-      border: unset;
-
-      &:focus {
-        box-shadow: none;
-        border-color: unset;
-      }
-    }
+  .navbar_name {
+    margin-inline-start: 1rem;
+    color: $PrimaryColor;
+    font-family: "bold";
   }
 
   .btn {
